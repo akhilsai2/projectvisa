@@ -3,6 +3,7 @@ import { Input } from "mdb-ui-kit"; // module
 
 import Carousel from "./Carousel";
 import WelcomeSection from "./WelcomeSection";
+import TestimonialCarousel from "./TestimonialCarousel";
 
 
 const Home = () => {
@@ -11,6 +12,7 @@ const Home = () => {
 
       <Carousel />
       <WelcomeSection/>
+      <TestimonialCarousel/>
 
     </div>
   );
