@@ -7,7 +7,7 @@ import "primeicons/primeicons.css"; // icons
 import "primeflex/primeflex.css";
 import "font-awesome/css/font-awesome.min.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Home from "./components/Home/Home";
+import Home from "./components/Home/home";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Footer from "./components/footer/footer";
 
