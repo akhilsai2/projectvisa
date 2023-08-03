@@ -1,126 +1,68 @@
 import phone from "../assets/phoneCall.png";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { Sidebar } from "primereact/sidebar";
 import { PanelMenu } from "primereact/panelmenu";
 import mail from "../assets/mail.png";
-
+import { useState } from "react";
+import "../assets/style.css";
 const Header = () => {
+  const [visible, setVisible] = useState(false);
   const items = [
     {
-      label: "File",
+      label: "Home",
       icon: "pi pi-fw pi-file",
-      items: [
-        {
-          label: "New",
-          icon: "pi pi-fw pi-plus",
-          items: [
-            {
-              label: "Bookmark",
-              icon: "pi pi-fw pi-bookmark",
-            },
-            {
-              label: "Video",
-              icon: "pi pi-fw pi-video",
-            },
-          ],
-        },
-        {
-          label: "Delete",
-          icon: "pi pi-fw pi-trash",
-        },
-        {
-          label: "Export",
-          icon: "pi pi-fw pi-external-link",
-        },
-      ],
     },
     {
-      label: "Edit",
+      label: "About",
       icon: "pi pi-fw pi-pencil",
-      items: [
-        {
-          label: "Left",
-          icon: "pi pi-fw pi-align-left",
-        },
-        {
-          label: "Right",
-          icon: "pi pi-fw pi-align-right",
-        },
-        {
-          label: "Center",
-          icon: "pi pi-fw pi-align-center",
-        },
-        {
-          label: "Justify",
-          icon: "pi pi-fw pi-align-justify",
-        },
-      ],
     },
     {
-      label: "Users",
+      label: "Study Aboard",
       icon: "pi pi-fw pi-user",
       items: [
         {
-          label: "New",
-          icon: "pi pi-fw pi-user-plus",
+          label: "Study in UK",
         },
         {
-          label: "Delete",
-          icon: "pi pi-fw pi-user-minus",
+          label: "Study in USA",
         },
         {
-          label: "Search",
-          icon: "pi pi-fw pi-users",
-          items: [
-            {
-              label: "Filter",
-              icon: "pi pi-fw pi-filter",
-              items: [
-                {
-                  label: "Print",
-                  icon: "pi pi-fw pi-print",
-                },
-              ],
-            },
-            {
-              icon: "pi pi-fw pi-bars",
-              label: "List",
-            },
-          ],
+          label: "Study in Canada",
+        },
+        {
+          label: "Study in Europe",
+        },
+        {
+          label: "Study in Australia",
+        },
+        {
+          label: "Study in NewZealand",
         },
       ],
     },
     {
-      label: "Events",
+      label: "Traning",
       icon: "pi pi-fw pi-calendar",
       items: [
         {
-          label: "Edit",
-          icon: "pi pi-fw pi-pencil",
-          items: [
-            {
-              label: "Save",
-              icon: "pi pi-fw pi-calendar-plus",
-            },
-            {
-              label: "Delete",
-              icon: "pi pi-fw pi-calendar-minus",
-            },
-          ],
+          label: "IELTS",
         },
         {
-          label: "Archive",
-          icon: "pi pi-fw pi-calendar-times",
-          items: [
-            {
-              label: "Remove",
-              icon: "pi pi-fw pi-calendar-minus",
-            },
-          ],
+          label: "TOEFL",
+        },
+        {
+          label: "GMAT",
+        },
+        {
+          label: "GRE",
         },
       ],
     },
+    {
+      label: "Contact Us",
+      icon: "pi pi-fw pi-file",
+    },
   ];
-
   return (
     <>
       <div className="sub-header">
@@ -203,13 +145,25 @@ const Header = () => {
             </li>
           </ul>
           <div className="menu-trigger">
-            <GiHamburgerMenu />
+            <GiHamburgerMenu onClick={() => setVisible(true)} />
           </div>
-          {/* <div className="card flex justify-content-center">
-            <PanelMenu model={items} className="w-full md:w-25rem" />
-          </div> */}
         </nav>
       </header>
+      <Sidebar
+        visible={visible}
+        onHide={() => setVisible(false)}
+        className="sideBar"
+        style={{
+          marginLeft: "0%",
+          height: "50%",
+          marginBottom: "53%",
+          width: "100%",
+        }}
+      >
+        <div className="card ">
+          <PanelMenu model={items} className="w-full md:w-25rem" />
+        </div>
+      </Sidebar>
     </>
   );
 };
