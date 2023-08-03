@@ -12,25 +12,23 @@ import Home from "./components/Home/Home";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Footer from "./components/footer/footer";
 
-
-
 function App() {
   return (
     <>
       {/* <div className="bg-cont">
         <Header />
       </div> */}
-       <BrowserRouter>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        {/* <Route path="/:mediaType/:id" element={<Details />} />
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          {/* <Route path="/:mediaType/:id" element={<Details />} />
         <Route path="/search/:query" element={<SearchResult />} />
         <Route path="/explore/:mediaType" element={<Explore />} />
         <Route path="*" element={<PageNotFound />} /> */}
-      </Routes>
-      <Footer />
-    </BrowserRouter>
+        </Routes>
+        <Footer />
+      </BrowserRouter>
     </>
   );
 }
