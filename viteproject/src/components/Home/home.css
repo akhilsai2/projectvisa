@@ -1,12 +1,59 @@
-.welcome-section-cont{
-    background-image: url("../../assets/off-white-bg.jpg");
-    background-size: cover;
-    padding: 40px;
-    height: 100vh;
+.welcome-section-cont {
+  background-image: url("../../assets/off-white-bg.jpg");
+  background-size: cover;
+  padding: 40px;
+  height: 100vh;
 }
 
-
-.welcome-section-headings{
-    text-align: center;
+.welcome-section-headings {
+  text-align: center;
 }
 
+.name {
+  font-size: 80px;
+  font-weight: 700;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: rgb(4, 61, 102);
+  /* text-align: center; */
+  letter-spacing: 3px;
+  font-style: oblique;
+}
+.cap {
+  font-size: 25px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: black;
+  /* text-align: center; */
+  /* padding-left: 30px; */
+  padding-right: 30px;
+  letter-spacing: 0.1em;
+}
+
+.nameCont {
+  animation-name: sampleanimation;
+  animation-iteration-count: 1;
+  animation-duration: 2s;
+}
+@keyframes sampleanimation {
+  0% {
+    left: 50%;
+    top: 55%;
+  }
+  /* 25% {
+    left: 300px;
+    top: 0px;
+  } */
+  /* 50% {
+    left: 300px;
+    top: 150px;
+  } */
+  /* 75% {
+    left: 0px;
+    top: 150px;
+  } */
+}
+@media (max-width: 867px) {
+  .nameCont {
+    display: none;
+  }
+}
