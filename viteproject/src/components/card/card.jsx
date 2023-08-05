@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 const Card=()=>{
     return(
         
-           <div class="card-deck row m-4 card-container" style={{width:"100%"}}>
+           <div class="card-deck row card-container" style={{width:"100%"}}>
             <h2 style={{color:"orange"}}> What We Offer</h2>
             <h3>Traing We Provide</h3>
   <div class="card col-lg-3 col-md-2 m-2">
