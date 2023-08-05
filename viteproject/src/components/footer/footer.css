@@ -99,7 +99,7 @@
     text-align: center;
     padding: 1rem 0;
     font-size: 15px;
-    color: white !important;
+   
 
   }
   
@@ -107,6 +107,7 @@
     margin-bottom: 0;
     font-size: 1.2rem;
     font-weight: 700;
+    color: #fff ;
   }
   .footer-card{
     /* background-image: url("https://cdn.pixabay.com/photo/2016/11/29/07/21/book-1868068_1280.jpg"); */
@@ -118,6 +119,7 @@
     color: white;
     text-decoration: underline;
     text-decoration-color: rgb(255, 140, 0) ;
+    text-decoration-style: dashed;
     font-weight: 600;
     
  }
@@ -154,3 +156,17 @@
 .card-body{
   background-color: aqua;
 }
+.footer-subcard{
+  color: white;
+  font-weight: 1000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style:inherit; 
+
+}
+@media only screen and (max-width: 768px) {
+  .total-footercard{
+    text-align: center;
+  }
+
+}
+
