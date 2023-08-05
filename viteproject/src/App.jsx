@@ -10,6 +10,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./components/Home/home";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Footer from "./components/footer/footer";
+import Card from "./components/card/card";
+import Flagscard from "./components/flagscrad/flagscard";
 
 function App() {
   return (
@@ -26,6 +28,8 @@ function App() {
         <Route path="/explore/:mediaType" element={<Explore />} />
         <Route path="*" element={<PageNotFound />} /> */}
         </Routes>
+        <Flagscard/>
+        <Card/>
         <Footer />
       </BrowserRouter>
     </>
