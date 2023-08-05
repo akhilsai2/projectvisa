@@ -71,8 +71,8 @@ const Home = () => {
       </div>
 
       <Carousel />
-      <TestimonialCarousel />
       <WelcomeSection />
+      <TestimonialCarousel />
       <Flagscard />
       <Card />
     </div>
