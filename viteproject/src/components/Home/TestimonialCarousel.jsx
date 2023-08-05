@@ -9,35 +9,6 @@ const TestimonialCarousel = () => {
       className="carousel slide carousel-dark text-center"
       data-mdb-ride="carousel"
     >
-      {/* <!-- Controls --> */}
-      <div className="d-flex justify-content-center mb-4">
-        <button
-          className="carousel-control-prev position-relative"
-          style={{ backgroundColor: "red" }}
-          type="button"
-          data-mdb-target="#carouselMultiItemExample"
-          data-mdb-slide="prev"
-        >
-          <span
-            className="carousel-control-prev-icon"
-            aria-hidden="true"
-          ></span>
-          <span className="visually-hidden">Previous</span>
-        </button>
-        <button
-          className="carousel-control-next position-relative"
-          type="button"
-          style={{ backgroundColor: "red" }}
-          data-mdb-target="#carouselMultiItemExample"
-          data-mdb-slide="next"
-        >
-          <span
-            className="carousel-control-next-icon"
-            aria-hidden="true"
-          ></span>
-          <span className="visually-hidden">Next</span>
-        </button>
-      </div>
       {/* <!-- Inner --> */}
       <div className="carousel-inner py-4">
         {/* <!-- Single item --> */}

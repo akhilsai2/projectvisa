@@ -1,31 +1,90 @@
 import React from "react";
-import "./home.css"
+import { Animation } from "react-easy-animations";
+import "./home.css";
 
 const WelcomeSection = () => {
   return (
-    <div className="welcome-section-cont">
-      <div className="welcome-section-headings">
-        <p style={{fontSize: "24px"}}>Welcome To</p>
-        <h1>STEM OVERSEAS</h1>
-        <h3>EDUCATION | MIGRATION | TRAINING</h3>
-      </div>
-      <div>
-        <p>
-          15 years of expertise We, the team at STEM are committed to provide
-          the best possible options for those who are aspirant and ambitious.
-          Since we started the journey at STEM, we have been respected and
-          valued in Overseas Education sector in and around Vijayawada. We work
-          based on the four pillars of trust, honesty, quality and transparency.
-          From the concrete research and admission process to student visa and
-          landing at your dream destination, our skillful team will guide you
-          through the study abroad process journey. We understands the
-          background of the student, helps the individual to relate the
-          connection of their course to the options available across the globe
-          and further, to map the scope of their career. STEM Overseas is
-          offering services in and around Bhimavaram, Eluru, Gudivada,
-          Rajahmundry and Andhra Pradesh
-        </p>
-      </div>
+    <div className="flex  justify-content-between align-items-center welcome-section-cont w-100">
+      <Animation
+        type="fadeInFromLeft"
+        duration="1000ms"
+        delay="4s"
+        direction="normal"
+        timing="ease"
+        iteration="1"
+        fillMode="none"
+        className="col-6"
+      >
+        <img
+          src="https://cdn.pixabay.com/photo/2022/04/17/21/57/international-7139072_1280.png"
+          alt="degree"
+          // className="col-6  rounded-circle"
+          style={{ width: "550px" }}
+          className="rounded-circle"
+        />
+      </Animation>
+      <Animation
+        type="fadeInFromRight"
+        duration="1000ms"
+        delay="4s"
+        direction="normal"
+        timing="ease"
+        iteration="1"
+        fillMode="none"
+        className="col-6"
+      >
+        <div className="flex flex-column  welcome-section-headings">
+          <p
+            style={{
+              fontSize: "25px",
+              letterSpacing: "2px",
+              fontStyle: "italic",
+              fontFamily: "Times New Roman",
+              fontWeight: "600",
+            }}
+          >
+            Welcome To
+          </p>
+          <h1
+            style={{
+              fontSize: "50px",
+              letterSpacing: "2px",
+              fontStyle: "italic",
+              fontFamily: "Times New Roman",
+              fontWeight: "600",
+            }}
+          >
+            DREAM2DEGREE
+          </h1>
+          <h3
+            style={{
+              fontSize: "30px",
+              letterSpacing: "2px",
+              fontFamily: "Times New Roman",
+              fontWeight: "600",
+            }}
+          >
+            Your Gateway to Global Education!
+          </h3>
+          <p
+            className="text-center"
+            style={{
+              fontSize: "20px",
+              letterSpacing: "2px",
+              fontFamily: "Times New Roman",
+              fontWeight: "600",
+            }}
+          >
+            At Dream2Degree, we understand that studying abroad can be a
+            life-changing experience, opening up a world of opportunities and
+            shaping your future in remarkable ways. Our consultancy is dedicated
+            to making this dream a reality for students like you who aspire to
+            pursue higher education in countries renowned for their academic
+            excellence and cultural diversity, such as Australia, the UK, USA,
+            Canada, Ireland, and New Zealand.
+          </p>
+        </div>
+      </Animation>
     </div>
   );
 };

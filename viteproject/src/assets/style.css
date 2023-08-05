@@ -143,11 +143,6 @@ p {
   line-height: 25px;
   color: #2a2a2a;
 }
-
-img {
-  width: 100%;
-  overflow: hidden;
-}
 .displayPhoneCont {
   display: flex;
   justify-content: space-around;
@@ -870,4 +865,7 @@ body {
 }
 .carousel-btn {
   padding: 0px 0px !important;
+}
+.colorImg {
+  filter: brightness(0.4);
 }

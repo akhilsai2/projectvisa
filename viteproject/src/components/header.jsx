@@ -70,11 +70,11 @@ const Header = () => {
           <div className="left-content">
             <div className="displayPhoneCont">
               <div className="phoneCont">
-                <img src={phone} className="logo-icon" />{" "}
+                <img src={phone} className="logo-icon" id="callId" />{" "}
                 <p className="call">+918888888888,+919999999999</p>
               </div>
               <div className="phoneCont">
-                <img src={mail} className="logo-icon" />{" "}
+                <img src={mail} className="logo-icon" id="mailId" />{" "}
                 <p className="call">dream2de@gmail.com</p>
               </div>
             </div>
@@ -87,7 +87,9 @@ const Header = () => {
       </div>
       <header className="header-area header-sticky">
         <nav className="main-nav ">
-          <h1 className="logo">Dream2DE</h1>
+          <h1 className="logo" style={{ color: "white" }}>
+            Dream2DE
+          </h1>
           <ul className="nav ">
             <li className="scroll-to-section">
               <a href="#top" className="active">

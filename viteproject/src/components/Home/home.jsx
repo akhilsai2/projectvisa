@@ -1,84 +1,80 @@
-// import * as mdb from "mdb-ui-kit"; // lib
-// import { Input } from "mdb-ui-kit"; // module
-// import { Animation } from "react-easy-animations";
-// import { Typewriter } from "react-simple-typewriter";
-
-import Carousel from "./Carousel";
+import * as mdb from "mdb-ui-kit";
+import { Input } from "mdb-ui-kit";
+import React from "react";
 import WelcomeSection from "./WelcomeSection";
 import TestimonialCarousel from "./TestimonialCarousel";
+import Flagscard from "../flagscrad/flagscard";
+import { Animation } from "react-easy-animations";
+import Card from "../card/card";
+import { Dock } from "primereact/dock";
 
+import instaLogo from "../../assets/instagram.png";
+import whatsLogo from "../../assets/whatsapp.png";
+import facebookLogo from "../../assets/facebook.png";
+import twitterLogo from "../../assets/twitter.png";
+const Carousel = React.lazy(() => import("./Carousel"));
+// import "./DockDemo.css";
 const Home = () => {
+  const items = [
+    {
+      label: "Finder",
+      icon: () => <img alt="Finder" src={instaLogo} width="60%" />,
+    },
+    {
+      label: "App Store",
+      icon: () => <img alt="App Store" src={whatsLogo} width="60%" />,
+    },
+    {
+      label: "Photos",
+      icon: () => <img alt="Photos" src={facebookLogo} width="60%" />,
+    },
+    {
+      label: "Trash",
+      icon: () => <img alt="trash" src={twitterLogo} width="60%" />,
+    },
+  ];
+
   return (
     <div style={{ minHeight: "100vh" }}>
       <div
         style={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "between",
+          alignItems: "center",
           position: "absolute",
-          top: "10%",
-          left: "50%",
-          right: "0%",
-          bottom: "0%",
           zIndex: "2",
-          marginTop: "15vh",
+          marginTop: "25vh",
         }}
-        className="nameCont"
+        className="nameCont w-100"
       >
-        <h1 className="name">
-          <span className="intial">
-            {/* <Typewriter
-              words={["DREAM2DE"]}
-              loop={200}
-              cursor
-              cursorStyle="|"
-              cursorBlinking={false}
-              typeSpeed={100}
-              deleteSpeed={60}
-              delaySpeed={1000}
-            /> */}
-            DREAM2DE.
-          </span>
-        </h1>
-        <p className="cap">
-          {"Empowering Dreams,Embracing Diversity, Expanding Horizons."}
-        </p>
-        <h1 className="name">GREE</h1>
-        <button>READ MORE</button>
-        {/* <div
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
-              width: "30%",
-              marginTop: "30px",
-            }}
-          >
-            <a
-              href="https://www.facebook.com/akhil.sai.92123/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <AiFillFacebook  className="link" />
-            </a>
-            <a
-              href="https://github.com/akhilsai2"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <AiFillGithub className="link" />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/venkatasaiakhil/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <AiFillLinkedin className="link" />
-            </a>
-          </div> */}
+        <Dock model={items} position="left" className="ms-3 border-0 bg-none" />
+        <Animation
+          type="fadeInFromBottom"
+          duration="1000ms"
+          delay="0.3s"
+          direction="normal"
+          timing="ease-in-out"
+          iteration="1"
+          fillMode="none"
+          className="text-center d-inline"
+        >
+          <h1 className="name">
+            <span className="intial">DREAM2DE.</span>
+          </h1>
+          <p className="cap">
+            {"Empowering Dreams,Embracing Diversity, Expanding Horizons."}
+          </p>
+          <h1 className="name">GREE</h1>
+          <button>READ MORE</button>
+        </Animation>
       </div>
 
       <Carousel />
       <TestimonialCarousel />
-
       <WelcomeSection />
+      <Flagscard />
+      <Card />
     </div>
   );
 };
