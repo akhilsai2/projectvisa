@@ -1,0 +1,109 @@
+.flag-maincard{
+    background-color: rgb(9, 9, 101);
+    
+    width: 100%;
+    color: white;
+    border-radius: 20px;
+    flex-wrap: wrap;
+    /* display: flex; */
+    justify-content: center;
+}
+.flag-icon-card{
+    text-align: center;
+    position: relative;
+    display: block;
+    /* margin: 0 0 20px; */
+    /* background: linear-gradient(to top, #ededed, white); */
+    border-radius: 91px 91px 0px 0px;
+    padding: 0 0 17px;
+    box-shadow: 0px 4px 4px #a5a5a5;
+    height: 35vh;
+    background-color: aqua;
+    width: 15vw;
+}
+.icons-card{
+    display: flex;
+    justify-content: center;
+}
+.country-img{
+    height: 20vh;
+    width: 10vw;
+    margin-top: 10px;
+    border-radius: 20px;
+}
+.button{
+    height: 30px;
+    width: 60%;
+    font-size: 14px;
+    color: orange;
+    font-weight: 600;
+    font-style: oblique;
+    
+}
+.card-align1{
+    margin-top: 50px;
+    margin-left: 5px;
+}
+.card-align2{
+    margin-top: 100px;
+    margin-left: 5px;
+
+}
+.card-align3{
+    margin-top: 150px;
+    margin-left: 5px;
+
+}
+.card-align4{
+    margin-top: 100px;
+    margin-left: 5px;
+
+}
+.card-align5{
+    margin-top: 50px;
+    margin-left: 5px;
+
+}
+.world-map{
+    display: flex;
+    flex-direction: row;
+  justify-content: space-between;
+   
+}
+.left-img{
+    align-self: flex-start;
+    margin: 10px;
+}
+.right-img{
+    align-items: flex-end;
+    margin: 10px;
+}
+@media only screen and (min-width: 480px) {
+    .card-align1{
+        margin-top: none;
+        margin-left: none;
+    }
+    .card-align2{
+        margin-top: none;
+        margin-left: none;
+    
+    }
+    .card-align3{
+        margin-top: none;
+        margin-left: none;
+    
+    }
+    .card-align4{
+        margin-top: none;
+        margin-left: none;
+    
+    }
+    .card-align5{
+        margin-top: none;
+        margin-left: none;
+    
+    }
+  }
+  .main-heading-flag{
+    text-align: center;
+  }
