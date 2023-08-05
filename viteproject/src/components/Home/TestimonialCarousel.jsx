@@ -52,10 +52,10 @@ const TestimonialCarousel = () => {
   ];
 
   const settings = {
-    dots: true,
+    // dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 1,
+    slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
@@ -78,7 +78,9 @@ const TestimonialCarousel = () => {
   };
 
   return (
-    <div className="testimonial-slider" style={{ textAlign: "center" }}>
+    // <div style={{width:"100%"}}>
+
+    <div className="testimonial-slider" style={{width:"100%" ,backgroundColor:"black", textAlign: "center",padding:'30px' }}>
       <Slider {...settings}>
         {testimonials.map((testimonial) => (
           // <div key={testimonial.id} className="testimonial-item">
@@ -95,7 +97,7 @@ const TestimonialCarousel = () => {
                 src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample1.jpg"
                 alt="sq-sample1"
               />
-              <h5 style={{ color: "black" }}>
+              <h5>
                 {testimonial.name} <span> {testimonial.designation}</span>
               </h5>
             </div>
@@ -103,6 +105,8 @@ const TestimonialCarousel = () => {
         ))}
       </Slider>
     </div>
+    // </div>
+
   );
 };
 

@@ -84,8 +84,8 @@ const Header = () => {
                 </p> */}
           </div>
         </div>
-      </div>
-      <header className="header-area header-sticky">
+        </div>
+        <header className="header-area header-sticky">
         <nav className="main-nav ">
           <h1 className="logo" style={{ color: "white" }}>
             Dream2DE
