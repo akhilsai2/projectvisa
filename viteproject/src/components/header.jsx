@@ -4,9 +4,20 @@ import { Sidebar } from "primereact/sidebar";
 import { PanelMenu } from "primereact/panelmenu";
 import mail from "../assets/mail.png";
 import { useState } from "react";
+
 import "../assets/style.css";
 const Header = () => {
   const [visible, setVisible] = useState(false);
+  const [colorChange, setColorchange] = useState(false);
+  const changeNavbarColor = () => {
+    if (window.scrollY >= 630) {
+      setColorchange(true);
+    } else {
+      setColorchange(false);
+    }
+  };
+  window.addEventListener("scroll", changeNavbarColor);
+
   const items = [
     {
       label: "Home",
@@ -63,9 +74,10 @@ const Header = () => {
       icon: "pi pi-fw pi-file",
     },
   ];
+
   return (
     <>
-      <div className="sub-header">
+      <div className="sub-header" style={{ width: "100%" }}>
         <div className="col-lg-12 col-sm-4">
           <div className="left-content">
             <div className="displayPhoneCont">
@@ -78,16 +90,23 @@ const Header = () => {
                 <p className="call">dream2de@gmail.com</p>
               </div>
             </div>
-            {/* <p>
-                  This is an educational <em>HTML CSS</em> template by
-                  TemplateMo website.
-                </p> */}
           </div>
         </div>
-        </div>
-        <header className="header-area header-sticky">
+      </div>
+      <header
+        className="header-area header-sticky w-100"
+        // style={{
+        //   position: "fixed",
+        //   backgroundColor: !colorChange
+        //     ? "rgba(28, 28, 28, 0.15)"
+        //     : "#f0ebebc6",
+        // }}
+      >
         <nav className="main-nav ">
-          <h1 className="logo" style={{ color: "white" }}>
+          <h1
+            className="logo"
+            style={{ color: colorChange ? "black" : "white" }}
+          >
             Dream2DE
           </h1>
           <ul className="nav ">

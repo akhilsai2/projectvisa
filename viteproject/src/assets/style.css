@@ -410,6 +410,7 @@ body {
   line-height: 40px;
   border: transparent;
   letter-spacing: 1px;
+  margin-right: 5px;
 }
 
 .header-area .main-nav .nav li:hover a,
@@ -435,7 +436,7 @@ body {
   color: #000;
   position: absolute;
   right: 0px;
-  top: 8px;
+  top: 7px;
   margin-left: 10px;
 }
 
@@ -868,6 +869,8 @@ body {
 }
 .colorImg {
   filter: brightness(0.4);
+  width: fit-content;
+  height: 100vh;
 }
 .para {
   color: #1e1e1e;

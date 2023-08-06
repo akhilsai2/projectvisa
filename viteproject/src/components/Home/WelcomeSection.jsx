@@ -9,7 +9,7 @@ import "./home.css";
 const WelcomeSection = () => {
   return (
     <div className="welcome-section-cont">
-      <div className="flex  justify-content-between align-items-center  w-100">
+      <div className=" welcomeMobile ">
         <Animation
           type="fadeInFromLeft"
           duration="1000ms"
@@ -18,14 +18,17 @@ const WelcomeSection = () => {
           timing="ease"
           iteration="1"
           fillMode="none"
-          className="col-6"
+          className="col-md-6"
         >
           <img
-            src="https://cdn.pixabay.com/photo/2022/04/17/21/57/international-7139072_1280.png"
+            src="https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvNDgyLW1rLTU4MDQtMDFfMy5qcGc.jpg"
             alt="degree"
             // className="col-6  rounded-circle"
-            style={{ width: "550px" }}
-            className="rounded-circle"
+            style={{
+              width: "500px",
+              boxShadow: "0px 4px 16px 0px #bfbfbf",
+            }}
+            className="rounded-5 welcomeImg"
           />
         </Animation>
         <Animation
@@ -36,48 +39,13 @@ const WelcomeSection = () => {
           timing="ease"
           iteration="1"
           fillMode="none"
-          className="col-6"
+          className="col-md-6"
         >
           <div className="flex flex-column  welcome-section-headings lh-lg">
-            <p
-              style={{
-                fontSize: "25px",
-                letterSpacing: "2px",
-                fontStyle: "italic",
-                fontWeight: "600",
-                color: "Orange",
-              }}
-            >
-              Welcome To
-            </p>
-            <h1
-              style={{
-                fontSize: "50px",
-                letterSpacing: "2px",
-                fontWeight: "700",
-                color: "#014585",
-              }}
-            >
-              DREAM2DEGREE
-            </h1>
-            <h3
-              style={{
-                fontSize: "30px",
-                letterSpacing: "2px",
-                fontWeight: "600",
-              }}
-            >
-              Your Gateway to Global Education!
-            </h3>
-            <p
-              className="text-center lh-base"
-              style={{
-                fontSize: "20px",
-                letterSpacing: "1px",
-                fontWeight: "600",
-                color: "#4a4a4a",
-              }}
-            >
+            <p className="welcome">Welcome To</p>
+            <h1 className="welcome-head">DREAM2DEGREE</h1>
+            <h3 className="welcome-head1">Your Gateway to Global Education!</h3>
+            <p className="text-center lh-base welcome-para">
               At Dream2Degree, we understand that studying abroad can be a
               life-changing experience, opening up a world of opportunities and
               shaping your future in remarkable ways. Our consultancy is
@@ -124,8 +92,8 @@ const WelcomeSection = () => {
                 Personalized Guidance :-
               </p>
               <p
-                className=" para text-black font-weight-bold "
-                style={{ fontSize: "18px" }}
+                className="para  font-weight-bold "
+                style={{ fontSize: "18px", color: "#4a4a4a" }}
               >
                 {" "}
                 We believe that every student is unique, with distinct
@@ -156,8 +124,8 @@ const WelcomeSection = () => {
             <div>
               <p className="para text-decoration-underline">Expert Advice :-</p>
               <p
-                className=" para text-black font-weight-bold "
-                style={{ fontSize: "18px" }}
+                className=" para  font-weight-bold "
+                style={{ fontSize: "18px", color: "#4a4a4a" }}
               >
                 {" "}
                 Navigating the complexities of international education can be
@@ -192,8 +160,8 @@ const WelcomeSection = () => {
                 Comprehensive Services :-
               </p>
               <p
-                className=" para text-black font-weight-bold "
-                style={{ fontSize: "18px" }}
+                className=" para  font-weight-bold "
+                style={{ fontSize: "18px", color: "#4a4a4a" }}
               >
                 {" "}
                 From the moment you step through our virtual doors or contact
@@ -227,8 +195,8 @@ const WelcomeSection = () => {
                 Your Success is Our Priority :-
               </p>
               <p
-                className=" para text-black font-weight-bold "
-                style={{ fontSize: "18px" }}
+                className=" para  font-weight-bold "
+                style={{ fontSize: "18px", color: "#4a4a4a" }}
               >
                 {" "}
                 Your dreams are important to us, and your success is our
