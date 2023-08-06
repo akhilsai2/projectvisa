@@ -1,7 +1,7 @@
 import React from 'react';
 import "./footer.css"
 import 'bootstrap/dist/css/bootstrap.css';
-import { AiFillTwitterCircle, AiFillYoutube, AiFillFacebook, AiFillInstagram } from 'react-icons/ai';
+import { AiFillTwitterCircle, AiFillYoutube, AiFillFacebook, AiFillInstagram,AiFillLinkedin } from 'react-icons/ai';
 import { VscLocation } from 'react-icons/vsc';
 import { BiSolidPhoneCall } from 'react-icons/bi';
 import { FiMail } from 'react-icons/fi';
@@ -23,15 +23,9 @@ const Footer = () => {
           
             <div className="col-md-6 col-lg-4 col-12 ft-1">
               <img src="https://thumbs.dreamstime.com/b/kids-education-child-boy-study-school-thinking-bubble-dreaming-over-black-chalkboard-75214276.jpg" style={{ height: "100px", width: "100px" }} />
-              <div className="footer-icons">
-                <a href=''> <AiFillTwitterCircle style={{ fontSize: "20px", color: "white",marginRight:"7px" }} className='icons'/></a>
-                <a href='' ><AiFillYoutube style={{ fontSize: "20px", color: "white",marginRight:"7px" }}  /></a>
-                <a href='' ><AiFillFacebook style={{ fontSize: "20px", color: "white",marginRight:"7px"  }} /></a>
-                <a href='' ><AiFillInstagram style={{ fontSize: "20px", color: "white" ,marginRight:"7px" }} /></a>
-
-              </div>
+             
             </div>
-            <div className="col-md-6 col-lg-3 col-12 ft-2 ">
+            <div className="col-md-6 col-lg-3 col-12 ft-2 sub-title ">
               <h5 className='main-heading'>  STUDY ABROAD</h5>                                      
               <ul >
                 <li className="nav-item">     
@@ -55,7 +49,7 @@ const Footer = () => {
               </ul>
             </div>
            
-            <div className="col-md-6 col-lg-2 col-12 ft-2">
+            <div className="col-md-6 col-lg-2 col-12 ft-2 sub-title">
               <h5 className='main-heading'>  TRAINING</h5>
               <ul>
                 <li className="nav-item">
@@ -70,15 +64,24 @@ const Footer = () => {
                 <li className="nav-item">
                   <a className="" href="/">GRE</a>
                 </li>
+               
 
               </ul>
             </div>
            
-            <div className="col-md-6 col-lg-3 col-12 ft-3">
+            <div className="col-md-6 col-lg-3 col-12 ft-3 sub-title">
               <h5 className='main-heading'>Quick Links</h5>
               <p><VscLocation style={{ fontSize: "20px" }} /> vijayawada</p>
               <p><BiSolidPhoneCall style={{ fontSize: "20px" }} /> +918106658662</p>
               <p><FiMail style={{ fontSize: "20px" }} />vishnu123@gmail.com</p>
+              <p><AiFillLinkedin style={{ fontSize: "20px" }} /> FillLinkedin</p>
+              <div className="footer-icons">
+                <a href=''> <AiFillTwitterCircle style={{ fontSize: "20px", color: "white",marginRight:"7px" }} className='icons'/></a>
+                <a href='' ><AiFillYoutube style={{ fontSize: "20px", color: "white",marginRight:"7px" }}  /></a>
+                <a href='' ><AiFillFacebook style={{ fontSize: "20px", color: "white",marginRight:"7px"  }} /></a>
+                <a href='' ><AiFillInstagram style={{ fontSize: "20px", color: "white" ,marginRight:"7px" }} /></a>
+
+              </div>
             </div>
             <hr className='horizental'></hr>
           </div>
