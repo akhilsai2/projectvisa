@@ -1,6 +1,6 @@
 import * as mdb from "mdb-ui-kit";
 import { Input } from "mdb-ui-kit";
-import React from "react";
+import React, { useState } from "react";
 import WelcomeSection from "./WelcomeSection";
 import TestimonialCarousel from "./TestimonialCarousel";
 import Flagscard from "../flagscrad/flagscard";
@@ -13,6 +13,8 @@ import whatsLogo from "../../assets/whatsapp.png";
 import facebookLogo from "../../assets/facebook.png";
 import twitterLogo from "../../assets/twitter.png";
 import FormSection from "./FormSection";
+import ChatBot from "../ChatBot/ChatBot";
+import { AiOutlineMessage } from "react-icons/ai";
 const Carousel = React.lazy(() => import("./Carousel"));
 // import "./DockDemo.css";
 const Home = () => {
@@ -34,6 +36,11 @@ const Home = () => {
       icon: () => <img alt="trash" src={twitterLogo} width="60%" />,
     },
   ];
+  const [showChatbot, setShowChatbot] = useState(false);
+
+  const handleChatbotToggle = () => {
+    setShowChatbot(!showChatbot);
+  };
 
   return (
     <div style={{ minHeight: "100vh" }}>
@@ -93,6 +100,10 @@ const Home = () => {
       <FormSection/>
       <Flagscard />
       <Card />
+      <button className="chat-icon" onClick={handleChatbotToggle}>
+        <AiOutlineMessage  />
+      </button>
+      {showChatbot && <ChatBot/>}
     </div>
   );
 };

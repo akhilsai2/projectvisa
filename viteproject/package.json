@@ -21,6 +21,7 @@
     "primereact": "^9.6.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.8.0",
+    "react-chatbot-kit": "^2.1.2",
     "react-dom": "^18.2.0",
     "react-easy-animations": "^0.3.2",
     "react-icons": "^4.10.1",
