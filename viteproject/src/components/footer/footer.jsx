@@ -20,7 +20,7 @@ const Footer = () => {
             <div className="footer-subcard" style={{ fontWeight: 400 }}>
               {" "}
               <h6>
-                IF YOU HAVE ANY QUREY OR NEED INFORMATION ABOUT STEM OVERSERAL
+                IF YOU HAVE ANY QUREY OR NEED INFORMATION
                 PLEACE CONTACT
               </h6>
             </div>
@@ -160,7 +160,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="Last-footer">
-        <p>2023 Stem Overseas All Rights Reserved</p>
+        <p>2023 DREAM2DE All Rights Reserved</p>
       </div>
     </>
   );

@@ -60,6 +60,7 @@ const Flagscard = () => {
         <div className="row total-footercard flex justify-content-around">
           {contentFlags.map((x, idx) => (
             <Animation
+            key={idx}
               type="fadeInFromBottom"
               duration="1000ms"
               delay="3s"
@@ -76,7 +77,7 @@ const Flagscard = () => {
               //   idx + 1
               // } col-lg-2 col-md-6 col-sm-11`}
               >
-                <div class="flag-icon-card m-3 flex flex-column justify-content-around align-items-center">
+                <div className="flag-icon-card m-3 flex flex-column justify-content-around align-items-center">
                   <img
                     className="country-img rounded-circle"
                     src={x.image}

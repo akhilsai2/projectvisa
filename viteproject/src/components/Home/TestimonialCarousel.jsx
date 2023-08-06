@@ -83,7 +83,7 @@ const TestimonialCarousel = () => {
 
     <div className="testimonial-slider" style={{width:"100%" ,backgroundColor:"black", textAlign: "center",padding:'30px' }}>
       <Slider {...settings}>
-        {testimonials.map((testimonial) => (
+        {testimonials.map((testimonial,idx) => (
           // <div key={testimonial.id} className="testimonial-item">
           //   <p>{testimonial.text}</p>
           //   <div className="testimonial-info">
@@ -91,9 +91,9 @@ const TestimonialCarousel = () => {
           //     <span>{testimonial.designation}</span>
           //   </div>
           // </div>
-          <figure class="snip1192">
+          <figure className="snip1192" key={idx}>
             <blockquote>{testimonial.text}</blockquote>
-            <div class="author">
+            <div className="author">
               <img
                 src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample1.jpg"
                 alt="sq-sample1"
