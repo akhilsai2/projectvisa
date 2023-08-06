@@ -12,6 +12,7 @@ import instaLogo from "../../assets/instagram.png";
 import whatsLogo from "../../assets/whatsapp.png";
 import facebookLogo from "../../assets/facebook.png";
 import twitterLogo from "../../assets/twitter.png";
+import FormSection from "./FormSection";
 const Carousel = React.lazy(() => import("./Carousel"));
 // import "./DockDemo.css";
 const Home = () => {
@@ -89,6 +90,7 @@ const Home = () => {
       <Carousel />
       <WelcomeSection />
       <TestimonialCarousel />
+      <FormSection/>
       <Flagscard />
       <Card />
     </div>
