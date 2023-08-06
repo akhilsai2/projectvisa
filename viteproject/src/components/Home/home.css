@@ -28,12 +28,64 @@
   letter-spacing: 0.1em;
 }
 
-.nameCont {
-  display: inline;
+.customBtn:hover {
+  background-color: #014585 !important;
+  color: white !important;
+  border: 0px solid white;
+  box-shadow: 0px 2px 16px 0px rgba(203, 203, 203, 0.963);
 }
-@media (max-width: 867px) {
+.welcomeMobile {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.welcome {
+  font-size: 25px;
+  letter-spacing: 2px;
+  font-style: italic;
+  font-weight: 600;
+  color: Orange;
+}
+.welcome-head {
+  font-size: 50px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  color: #014585;
+}
+.welcome-head1 {
+  font-size: 30px;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+.welcome-para {
+  font-size: 20px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  color: #4a4a4a;
+}
+@media (max-width: 767px) {
   .nameCont {
-    display: none;
+    display: none !important;
+  }
+  .welcomeMobile {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+  }
+  .welcome-section-cont {
+    padding: 10px;
+  }
+  .welcomeImg {
+    width: 200px !important;
+  }
+  .welcome-section-headings {
+    text-align: center;
+    line-height: small;
+    width: 100%;
+  }
+  .welcome-head {
+    font-size: 35px;
   }
 }
 
@@ -48,6 +100,9 @@
   height: 3em;
 }
 
+/* .p-dock .p-dock-list {
+  background-color: black;
+} */
 .slick-dots {
   bottom: 20px;
 }

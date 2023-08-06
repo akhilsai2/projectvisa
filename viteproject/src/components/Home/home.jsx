@@ -48,7 +48,12 @@ const Home = () => {
         }}
         className="nameCont w-100"
       >
-        <Dock model={items} position="left" className="ms-3 border-0 bg-none" />
+        <Dock
+          model={items}
+          position="left"
+          className="ms-3 border-0 bg-none"
+          style={{ position: "fixed" }}
+        />
         <Animation
           type="fadeInFromBottom"
           duration="1000ms"
@@ -66,7 +71,18 @@ const Home = () => {
             {"Empowering Dreams,Embracing Diversity, Expanding Horizons."}
           </p>
           <h1 className="name">GREE</h1>
-          <button>READ MORE</button>
+          <button
+            className="customBtn rounded-5 text-weight-bold"
+            style={{
+              fontSize: "14px",
+              fontWeight: "600",
+              color: "#014585",
+              backgroundColor: "white",
+              letterSpacing: "1px",
+            }}
+          >
+            READ MORE
+          </button>
         </Animation>
       </div>
 
