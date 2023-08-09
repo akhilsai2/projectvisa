@@ -1,32 +1,34 @@
 import { Animation } from "react-easy-animations";
+import australia from "../../assets/australia.png";
+import canada from "../../assets/canada.png";
+import newZealand from "../../assets/new-zealand.png";
+import uk from "../../assets/union-jack.jpg";
+import usa from "../../assets/usa.jpg";
 import "./flagcard.css";
 import "bootstrap/dist/css/bootstrap.css";
 
 const Flagscard = () => {
   const contentFlags = [
     {
-      image:
-        "https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdnByb2plY3RvbGQxLW5pbmctMzQ3XzIuanBn.jpg",
+      image: uk,
+
       text: "UK",
     },
     {
-      image:
-        "https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdnByb2plY3RvbGQxLW5pbmctMzQ1XzIuanBn.jpg",
+      image: usa,
+
       text: "USA",
     },
     {
-      image:
-        "https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdnByb2plY3RvbGQxLW5pbmctMzY3XzIuanBn.jpg",
+      image: canada,
       text: "CANADA",
     },
     {
-      image:
-        "https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdnByb2plY3RvbGQxLW5pbmctZmxhZ3MtMjZfMi5qcGc.jpg",
+      image: newZealand,
       text: "New Zealand",
     },
     {
-      image:
-        "https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdnByb2plY3RvbGQxLW5pbmctMzY5XzIuanBn.jpg",
+      image: australia,
       text: "Australia",
     },
   ];
@@ -60,7 +62,7 @@ const Flagscard = () => {
         <div className="row total-footercard flex justify-content-around">
           {contentFlags.map((x, idx) => (
             <Animation
-            key={idx}
+              key={idx}
               type="fadeInFromBottom"
               duration="1000ms"
               delay="3s"

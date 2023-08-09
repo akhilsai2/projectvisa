@@ -401,7 +401,7 @@ body {
   font-style: italic;
   font-size: 14px;
   text-transform: uppercase;
-  color: #000;
+  color: #fff;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
@@ -433,7 +433,7 @@ body {
   font-family: FontAwesome;
   content: "\f107";
   font-size: 18px;
-  color: #000;
+  color: #fff;
   position: absolute;
   right: 0px;
   top: 7px;
