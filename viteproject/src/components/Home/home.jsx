@@ -56,12 +56,12 @@ const Home = () => {
         }}
         className="nameCont w-100"
       >
-        <Dock
+        {/* <Dock
           model={items}
           position="left"
           className="ms-3 border-0 bg-none"
           style={{ position: "fixed" }}
-        />
+        /> */}
         <Animation
           type="fadeInFromBottom"
           duration="1000ms"
@@ -97,13 +97,13 @@ const Home = () => {
       <Carousel />
       <WelcomeSection />
       <TestimonialCarousel />
-      <FormSection/>
+      <FormSection />
       <Flagscard />
       <Card />
-      <button className="chat-icon" onClick={handleChatbotToggle}>
-        <AiOutlineMessage  />
-      </button>
-      {showChatbot && <ChatBot/>}
+      {/* <button className="chat-icon" onClick={handleChatbotToggle}>
+        <AiOutlineMessage />
+      </button> */}
+      {/* {showChatbot && <ChatBot/>} */}
     </div>
   );
 };

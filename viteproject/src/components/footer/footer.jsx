@@ -16,13 +16,10 @@ const Footer = () => {
     <>
       <div className="Footer footer-card">
         <div className="container">
-          <div className="middle-crad ">
+          <div className="middle-crad">
             <div className="footer-subcard" style={{ fontWeight: 400 }}>
               {" "}
-              <h6>
-                IF YOU HAVE ANY QUREY OR NEED INFORMATION
-                PLEACE CONTACT
-              </h6>
+              <h6>IF YOU HAVE ANY QUREY OR NEED INFORMATION PLEACE CONTACT</h6>
             </div>
 
             <div className="sub-middle-card">

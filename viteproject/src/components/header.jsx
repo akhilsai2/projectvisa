@@ -4,8 +4,14 @@ import { Sidebar } from "primereact/sidebar";
 import { PanelMenu } from "primereact/panelmenu";
 import mail from "../assets/mail.png";
 import { useState } from "react";
+import instaLogo from "../assets/instagram.png";
+import whatsLogo from "../assets/whatsapp.png";
+import facebookLogo from "../assets/facebook.png";
+import twitterLogo from "../assets/twitter.png";
 
 import "../assets/style.css";
+import { Link } from "react-router-dom";
+import { Dock } from "primereact/dock";
 const Header = () => {
   const [visible, setVisible] = useState(false);
   const [colorChange, setColorchange] = useState(false);
@@ -17,7 +23,50 @@ const Header = () => {
     }
   };
   window.addEventListener("scroll", changeNavbarColor);
-
+  const studyServicesData = [
+    {
+      label: "Study in UK",
+      path: "/studies/uk",
+    },
+    {
+      label: "Study in USA",
+      path: "/studies/usa",
+    },
+    {
+      label: "Study in Canada",
+      path: "/studies/canada",
+    },
+    {
+      label: "Study in Europe",
+      path: "/studies/europe",
+    },
+    {
+      label: "Study in Australia",
+      path: "/studies/australia",
+    },
+    {
+      label: "Study in NewZealand",
+      path: "/studies/newzealand",
+    },
+  ];
+  const itemsLogo = [
+    {
+      label: "Finder",
+      icon: () => <img alt="Finder" src={instaLogo} width="60%" />,
+    },
+    {
+      label: "App Store",
+      icon: () => <img alt="App Store" src={whatsLogo} width="60%" />,
+    },
+    {
+      label: "Photos",
+      icon: () => <img alt="Photos" src={facebookLogo} width="60%" />,
+    },
+    {
+      label: "Trash",
+      icon: () => <img alt="trash" src={twitterLogo} width="60%" />,
+    },
+  ];
   const items = [
     {
       label: "Home",
@@ -78,6 +127,12 @@ const Header = () => {
   return (
     <>
       <div className="sub-header" style={{ width: "100%" }}>
+        <Dock
+          model={itemsLogo}
+          position="left"
+          className="ms-3 border-0 bg-none"
+          style={{ position: "fixed" }}
+        />
         <div className="col-lg-12 col-sm-4">
           <div className="left-content">
             <div className="displayPhoneCont">
@@ -93,15 +148,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <header
-        className="header-area header-sticky w-100"
-        // style={{
-        //   position: "fixed",
-        //   backgroundColor: !colorChange
-        //     ? "rgba(28, 28, 28, 0.15)"
-        //     : "#f0ebebc6",
-        // }}
-      >
+      <header className="header-area header-sticky w-100">
         <nav className="main-nav ">
           <h1
             className="logo"
@@ -119,26 +166,13 @@ const Header = () => {
               <a href="meetings.html">About</a>
             </li>
             <li className="has-sub">
-              <a href="#apply">Study Aboard</a>
+              <Link to="/">Study Aboard</Link>
               <ul className="sub-menu">
-                <li>
-                  <a href="meetings.html">Study in UK</a>
-                </li>
-                <li>
-                  <a href="meeting-details.html">Study in USA</a>
-                </li>
-                <li>
-                  <a href="meeting-details.html">Study in Europe</a>
-                </li>
-                <li>
-                  <a href="meeting-details.html">Study in Canada</a>
-                </li>
-                <li>
-                  <a href="meeting-details.html">Study in Australia</a>
-                </li>
-                <li>
-                  <a href="meeting-details.html">Study in New Zealand</a>
-                </li>
+                {studyServicesData.map((x, idx) => (
+                  <li key={idx}>
+                    <Link to={x.path}>{x.label}</Link>
+                  </li>
+                ))}
               </ul>
             </li>
             <li className="has-sub">

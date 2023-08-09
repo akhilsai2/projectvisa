@@ -108,6 +108,7 @@
   background-image: url("https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcm0yNy1zYXNpLTExLWRhcmsuanBn.jpg");
   /* background-color: #1f272b; */
   background-size: cover;
+  margin-top: 80px;
 }
 .main-heading {
   color: white;

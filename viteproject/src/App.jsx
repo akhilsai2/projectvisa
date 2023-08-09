@@ -12,21 +12,28 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Footer from "./components/footer/footer";
 import Card from "./components/card/card";
 import Flagscard from "./components/flagscrad/flagscard";
+import Studyuk from "./components/Studies/studyuk";
+import Studyusa from "./components/Studies/studyusa";
+import Studyeurope from "./components/Studies/studyeurope";
+import Studyaustralia from "./components/Studies/studyaustralia";
+import Studycanada from "./components/Studies/studycanada";
+import Studynewzealand from "./components/Studies/studynewzealand";
 
 function App() {
   return (
     <>
-      {/* <div className="bg-cont">
-        <Header />
-      </div> */}
       <BrowserRouter>
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          {/* <Route path="/:mediaType/:id" element={<Details />} />
-        <Route path="/search/:query" element={<SearchResult />} />
-        <Route path="/explore/:mediaType" element={<Explore />} />
-        <Route path="*" element={<PageNotFound />} /> */}
+          <Route path="studies/">
+            <Route path="uk" element={<Studyuk />} />
+            <Route path="usa" element={<Studyusa />} />
+            <Route path="europe" element={<Studyeurope />} />
+            <Route path="australia" element={<Studyaustralia />} />
+            <Route path="canada" element={<Studycanada />} />
+            <Route path="newzealand" element={<Studynewzealand />} />
+          </Route>
         </Routes>
         <Footer />
       </BrowserRouter>
