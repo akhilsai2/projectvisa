@@ -10,7 +10,7 @@ const Card = () => {
       <h2 style={{ color: "orange" }}> What We Offer</h2>
       <h3>Traing We Provide</h3>
       <div
-        className="card col-lg-3 col-md-2 m-2 p-2"
+        className="card col-lg-3 col-md-3 m-2 p-2"
         style={{ boxShadow: "0px 4px 16px 0px #bfbfbf" }}
       >
         <img

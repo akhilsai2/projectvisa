@@ -12,12 +12,15 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Footer from "./components/footer/footer";
 import Card from "./components/card/card";
 import Flagscard from "./components/flagscrad/flagscard";
+import Servicelayes from "./components/service/service";
 import Studyuk from "./components/Studies/studyuk";
 import Studyusa from "./components/Studies/studyusa";
 import Studyeurope from "./components/Studies/studyeurope";
 import Studyaustralia from "./components/Studies/studyaustralia";
 import Studycanada from "./components/Studies/studycanada";
 import Studynewzealand from "./components/Studies/studynewzealand";
+import { Story } from "./components/About/story";
+import { CoreTeam } from "./components/About/story";
 
 function App() {
   return (
@@ -33,6 +36,15 @@ function App() {
             <Route path="australia" element={<Studyaustralia />} />
             <Route path="canada" element={<Studycanada />} />
             <Route path="newzealand" element={<Studynewzealand />} />
+          </Route>
+          <Route path="services/" >
+            <Route path="admissioncounselling" element={<Servicelayes/>}/>
+
+          </Route>
+          <Route path="about/" >
+            <Route path="i20" element={<Story/>}/>
+            <Route path="coreteam" element={<CoreTeam/>}/>
+
           </Route>
         </Routes>
         <Footer />

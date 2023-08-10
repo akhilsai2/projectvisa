@@ -1,0 +1,27 @@
+.about-card{
+    background-color: azure;
+    height: 20vh;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+}
+.about-sub-card{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* align-content: center; */
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+
+}
+.image{
+    align-self: center;
+}
+#main-heading{
+    font-weight: bold;
+    text-align: center;
+    color: cadetblue;
+
+}
