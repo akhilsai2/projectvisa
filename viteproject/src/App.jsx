@@ -21,33 +21,41 @@ import Studycanada from "./components/Studies/studycanada";
 import Studynewzealand from "./components/Studies/studynewzealand";
 import { Story } from "./components/About/story";
 import { CoreTeam } from "./components/About/story";
+import About from "./pages/About/About";
+import Layout from "./components/Layout";
+import PartnerUniversities from "./pages/PartnerUniversities/PartnerUniversities";
 
 function App() {
   return (
     <>
       <BrowserRouter>
-        <Header />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="studies/">
-            <Route path="uk" element={<Studyuk />} />
-            <Route path="usa" element={<Studyusa />} />
-            <Route path="europe" element={<Studyeurope />} />
-            <Route path="australia" element={<Studyaustralia />} />
-            <Route path="canada" element={<Studycanada />} />
-            <Route path="newzealand" element={<Studynewzealand />} />
-          </Route>
-          <Route path="services/" >
-            <Route path="admissioncounselling" element={<Servicelayes/>}/>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="about/">
+              <Route index element={<About />} />
+              <Route path="i20" element={<Story />} />
+              <Route path="coreteam" element={<CoreTeam />} />
+            </Route>
 
-          </Route>
-          <Route path="about/" >
-            <Route path="i20" element={<Story/>}/>
-            <Route path="coreteam" element={<CoreTeam/>}/>
-
+            <Route
+              path="partner-universities"
+              element={<PartnerUniversities />}
+            />
+            <Route path="studies/">
+              <Route path="uk" element={<Studyuk />} />
+              <Route path="usa" element={<Studyusa />} />
+              <Route path="europe" element={<Studyeurope />} />
+              <Route path="australia" element={<Studyaustralia />} />
+              <Route path="canada" element={<Studycanada />} />
+              <Route path="newzealand" element={<Studynewzealand />} />
+            </Route>
+            <Route path="services/">
+              <Route path="admissioncounselling" element={<Servicelayes />} />
+            </Route>
+            
           </Route>
         </Routes>
-        <Footer />
       </BrowserRouter>
     </>
   );
