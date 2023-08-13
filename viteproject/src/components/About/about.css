@@ -1,27 +1,52 @@
+
+
 .about-card{
-    background-color: azure;
-    height: 20vh;
+    /* background-color: azure; */
+    background-image: url("https://img.freepik.com/free-vector/geometric-science-education-background-vector-gradient-blue-digital-remix_53876-125993.jpg");
+    height: 50vh;
     width: 100%;
     text-align: center;
-    padding: 10px;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    
 }
 .about-sub-card{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    /* align-content: center; */
+    align-content: center;
     flex-wrap: wrap;
     align-items: center;
     margin: 10px;
-    padding: 10px;
+    padding: 30px;
 
 }
 .image{
     align-self: center;
+    border-radius: 10px;
+    box-shadow: 10px 10px lightsalmon;
+
 }
 #main-heading{
     font-weight: bold;
     text-align: center;
     color: cadetblue;
 
+}
+.paragraph{
+    text-align: center;
+    padding: 20px;
+}
+.coreteam-card-icon{
+    text-align: center;
+    height: 30px;
+    width: 40px;
+    padding: 1px;
+    background-color:white;
+    box-shadow: 0.5px 0.5px 0.5px 0.5px lightblue;
+    border-radius: 30px;
+    align-self: center;
+    margin-left: 10px;
 }

@@ -4,7 +4,9 @@ import Accordion from 'react-bootstrap/Accordion';
 
 const Servicelayes=()=>{
     return(
-        <div style={{backgroundColor:"orange",height:"100%",width:"100%",padding:"10px"}} className="flex">
+      <>
+      <div className="about-card"> </div>
+        <div style={{backgroundColor:"orange",height:"100%",width:"100%",padding:"10px"}}>
            <div className="col-sm-12 col-md-6 d-flex justify-content-center" >
         <form className="form">
           <p className="title">Register </p>
@@ -40,7 +42,7 @@ const Servicelayes=()=>{
           
         </form>
      </div>
-           <div style={{width:"100%"}}>
+           <div style={{width:"100%"}} className="col-sm-12 col-lg-6 col-md-6">
           
 
     <Accordion defaultActiveKey="0">
@@ -97,6 +99,7 @@ const Servicelayes=()=>{
 
            </div>
         </div>
+        </>
     )
 }
 export default Servicelayes;
