@@ -8,7 +8,8 @@ const Studyuk = () => {
         className="flex justify-content-center align-items-end"
         style={{
           position: "absolute",
-          zIndex: "1000",
+          zIndex: "5",
+          top: "10%",
           height: "30vh",
           width: "50%",
         }}
@@ -21,7 +22,7 @@ const Studyuk = () => {
         src="https://cdn.pixabay.com/photo/2015/10/18/19/04/graduation-995042_1280.jpg"
         className="study_bg"
       />
-      <div className="p-0">
+      <div className="">
         <div className="row">
           <div className="flex flex-column justify-content-between align-items-center align-self-start col-sm-12 col-md-4">
             <img

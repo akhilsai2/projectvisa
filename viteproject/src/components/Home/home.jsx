@@ -109,3 +109,11 @@ const Home = () => {
 };
 
 export default Home;
+{
+  /* <Dock
+  model={itemsLogo}
+  position="left"
+  className="ms-3 border-0 bg-none"
+  style={{ position: "fixed" }}
+/>; */
+}

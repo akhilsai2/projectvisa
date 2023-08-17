@@ -1,0 +1,10 @@
+.NavBar {
+  height: 10vh;
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+  /* background-color: rgba(150, 149, 149, 0.641); */
+}
+.header {
+  background-color: black;
+}

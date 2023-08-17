@@ -1,6 +1,6 @@
 import "./App.css";
 import "./assets/style.css";
-import Header from "./components/header";
+// import Header from "./components/header";
 import "primereact/resources/themes/lara-light-indigo/theme.css"; // theme
 import "primereact/resources/primereact.css"; // core css
 import "primeicons/primeicons.css"; // icons
@@ -9,9 +9,9 @@ import "font-awesome/css/font-awesome.min.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./components/Home/home";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Footer from "./components/footer/footer";
-import Card from "./components/card/card";
-import Flagscard from "./components/flagscrad/flagscard";
+// import Footer from "./components/footer/footer";
+// import Card from "./components/card/card";
+// import Flagscard from "./components/flagscrad/flagscard";
 import Servicelayes from "./components/service/service";
 import Studyuk from "./components/Studies/studyuk";
 import Studyusa from "./components/Studies/studyusa";
@@ -24,6 +24,7 @@ import { CoreTeam } from "./components/About/story";
 import About from "./pages/About/About";
 import Layout from "./components/Layout";
 import PartnerUniversities from "./pages/PartnerUniversities/PartnerUniversities";
+import Contact from "./components/contact";
 
 function App() {
   return (
@@ -53,8 +54,8 @@ function App() {
             <Route path="services/">
               <Route path="admissioncounselling" element={<Servicelayes />} />
             </Route>
-            
           </Route>
+          <Route path="contact" element={<Contact />} />
         </Routes>
       </BrowserRouter>
     </>

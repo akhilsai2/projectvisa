@@ -7,7 +7,8 @@ const Studycanada = () => {
         className="flex justify-content-center align-items-end"
         style={{
           position: "absolute",
-          zIndex: "1000",
+          zIndex: "5",
+          top: "10%",
           height: "30vh",
           width: "50%",
         }}
