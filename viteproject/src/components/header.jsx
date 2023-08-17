@@ -8,8 +8,10 @@ import instaLogo from "../assets/instagram.png";
 import whatsLogo from "../assets/whatsapp.png";
 import facebookLogo from "../assets/facebook.png";
 import twitterLogo from "../assets/twitter.png";
+import { Menubar } from "primereact/menubar";
 
-import "../assets/style.css";
+// import "../assets/style.css";
+import "./header.css";
 import { Link } from "react-router-dom";
 import { Dock } from "primereact/dock";
 const Header = () => {
@@ -70,15 +72,12 @@ const Header = () => {
   const items = [
     {
       label: "Home",
-      icon: "pi pi-fw pi-file",
     },
     {
       label: "About",
-      icon: "pi pi-fw pi-pencil",
     },
     {
       label: "Study Aboard",
-      icon: "pi pi-fw pi-user",
       items: [
         {
           label: "Study in UK",
@@ -102,7 +101,6 @@ const Header = () => {
     },
     {
       label: "Traning",
-      icon: "pi pi-fw pi-calendar",
       items: [
         {
           label: "IELTS",
@@ -120,13 +118,12 @@ const Header = () => {
     },
     {
       label: "Contact Us",
-      icon: "pi pi-fw pi-file",
     },
   ];
 
   return (
     <>
-      <div className="sub-header" style={{ width: "100%" }}>
+      <div className="sub-header" style={{ width: "100%", position: "fixed" }}>
         <Dock
           model={itemsLogo}
           position="left"
@@ -148,7 +145,13 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <header className="header-area header-sticky w-100">
+      <header
+        className="header-area header-sticky w-100"
+        style={{
+          position: "fixed",
+          backgroundColor: colorChange ? "black" : " rgba(28, 28, 28, 0.15)",
+        }}
+      >
         <nav className="main-nav ">
           <h1
             className="logo"
@@ -156,17 +159,15 @@ const Header = () => {
           >
             Dream2DE
           </h1>
-          <ul className="nav ">
-            <li className="scroll-to-section">
-              <a href="#top" className="active">
-                Home
-              </a>
+          <ul className="nav">
+            <li>
+              <Link to="/">Home</Link>
             </li>
             <li>
-              <a href="meetings.html">About</a>
+              <Link to="/about">About</Link>
             </li>
             <li className="has-sub">
-              <Link to="/">Study Aboard</Link>
+              <Link>Study Aboard</Link>
               <ul className="sub-menu">
                 {studyServicesData.map((x, idx) => (
                   <li key={idx}>
@@ -195,10 +196,11 @@ const Header = () => {
             <li className="scroll-to-section">
               <a href="#courses">Courses</a>
             </li>
-            <li className="scroll-to-section">
-              <a href="#contact">Contact Us</a>
+            <li>
+              <Link to="contact">Contact Us</Link>
             </li>
           </ul>
+
           <div className="menu-trigger">
             <GiHamburgerMenu onClick={() => setVisible(true)} />
           </div>
@@ -220,6 +222,22 @@ const Header = () => {
         </div>
       </Sidebar>
     </>
+    // <>
+    //   <div className="header">
+    //     Ankith
+    //     <Dock
+    //       model={itemsLogo}
+    //       position="left"
+    //       className="ms-3 border-0 bg-none"
+    //       style={{ position: "fixed", zIndex: "1000" }}
+    //     />
+    //   </div>
+    //   <nav className="NavBar flex justify-content-around">
+    //     <div>
+    //       <h1 className="header-area logo">DREAM2DE</h1>
+    //     </div>
+    //   </nav>
+    // </>
   );
 };
 

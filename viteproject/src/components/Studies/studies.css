@@ -214,6 +214,9 @@
   right: 0;
   width: 0;
 }
+.submitformweb {
+  margin-bottom: 70px;
+}
 .submitform {
   display: none;
 }
