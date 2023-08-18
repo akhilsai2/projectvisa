@@ -1,9 +1,5 @@
-
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,800);
-
-
-
 
 .welcome-section-cont {
   /* background-image: url("../../assets/off-white-bg.jpg");
@@ -277,9 +273,6 @@ body {
   background-color: #212121;
 }
 
-
-
-
 .form {
   display: flex;
   flex-direction: column;
@@ -293,7 +286,7 @@ body {
 
 .title {
   font-size: 28px;
-  color: royalblue;
+  color: white;
   font-weight: 600;
   letter-spacing: -1px;
   position: relative;
@@ -302,7 +295,8 @@ body {
   padding-left: 30px;
 }
 
-.title::before,.title::after {
+.title::before,
+.title::after {
   position: absolute;
   content: "";
   height: 16px;
@@ -324,8 +318,9 @@ body {
   animation: pulse 1s linear infinite;
 }
 
-.message, .signin {
-  color: rgba(88, 87, 87, 0.822);
+.message,
+.signin {
+  color: white;
   font-size: 14px;
 }
 
@@ -374,7 +369,8 @@ body {
   font-size: 0.9em;
 }
 
-.form label .input:focus + span,.form label .input:valid + span {
+.form label .input:focus + span,
+.form label .input:valid + span {
   top: 0px;
   font-size: 0.7em;
   font-weight: 600;
@@ -392,7 +388,7 @@ body {
   border-radius: 10px;
   color: #fff;
   font-size: 16px;
-  transform: .3s ease;
+  transform: 0.3s ease;
 }
 
 .submit:hover {

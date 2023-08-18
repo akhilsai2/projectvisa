@@ -1,13 +1,13 @@
 const Studyaustralia = () => {
   return (
-    <div>
+    <div style={{ height: "165vh" }}>
       <div
-        className="flex justify-content-center align-items-end"
+        className="flex justify-content-start align-items-end ms-5"
         style={{
           position: "absolute",
           zIndex: "5",
           top: "10%",
-          height: "30vh",
+          height: "20vh",
           width: "50%",
         }}
       >
@@ -30,7 +30,7 @@ const Studyaustralia = () => {
               }}
               className="rounded-5 mt-2 mb-5"
             />
-            <form className="form submitformweb">
+            <form id="study" className="form submitformweb">
               <div className="flex">
                 <label>
                   <input

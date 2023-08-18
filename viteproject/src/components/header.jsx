@@ -18,7 +18,7 @@ const Header = () => {
   const [visible, setVisible] = useState(false);
   const [colorChange, setColorchange] = useState(false);
   const changeNavbarColor = () => {
-    if (window.scrollY >= 630) {
+    if (window.scrollY >= 50) {
       setColorchange(true);
     } else {
       setColorchange(false);
@@ -149,15 +149,14 @@ const Header = () => {
         className="header-area header-sticky w-100"
         style={{
           position: "fixed",
-          backgroundColor: colorChange ? "black" : " rgba(28, 28, 28, 0.15)",
+          backgroundColor: colorChange
+            ? "#201f1fd9"
+            : " rgba(28, 28, 28, 0.15)",
         }}
       >
         <nav className="main-nav ">
-          <h1
-            className="logo"
-            style={{ color: colorChange ? "black" : "white" }}
-          >
-            Dream2DE
+          <h1 className="logo" style={{ color: "white", fontStyle: "oblique" }}>
+            EXPLORENEX
           </h1>
           <ul className="nav">
             <li>

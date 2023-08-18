@@ -57,12 +57,6 @@ const Home = () => {
         }}
         className="nameCont w-100"
       >
-        {/* <Dock
-          model={items}
-          position="left"
-          className="ms-3 border-0 bg-none"
-          style={{ position: "fixed" }}
-        /> */}
         <Animation
           type="fadeInFromBottom"
           duration="1000ms"
@@ -102,20 +96,8 @@ const Home = () => {
       <FormSection />
       <Flagscard />
       <Card />
-      {/* <button className="chat-icon" onClick={handleChatbotToggle}>
-        <AiOutlineMessage />
-      </button> */}
-      {/* {showChatbot && <ChatBot/>} */}
     </div>
   );
 };
 
 export default Home;
-{
-  /* <Dock
-  model={itemsLogo}
-  position="left"
-  className="ms-3 border-0 bg-none"
-  style={{ position: "fixed" }}
-/>; */
-}
