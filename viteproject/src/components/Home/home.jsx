@@ -15,6 +15,7 @@ import twitterLogo from "../../assets/twitter.png";
 import FormSection from "./FormSection";
 import ChatBot from "../ChatBot/ChatBot";
 import { AiOutlineMessage } from "react-icons/ai";
+import CounterSection from "./CounterSection/CounterSection";
 const Carousel = React.lazy(() => import("./Carousel"));
 // import "./DockDemo.css";
 const Home = () => {
@@ -95,6 +96,7 @@ const Home = () => {
       </div>
 
       <Carousel />
+      <CounterSection/>
       <WelcomeSection />
       <TestimonialCarousel />
       <FormSection />
