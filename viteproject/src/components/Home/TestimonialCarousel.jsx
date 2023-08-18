@@ -81,7 +81,7 @@ const TestimonialCarousel = () => {
   return (
     // <div style={{width:"100%"}}>
 
-    <div className="testimonial-slider" style={{width:"100%" ,backgroundColor:"black", textAlign: "center",padding:'30px' }}>
+    <div className="testimonial-slider" style={{width:"100%" , textAlign: "center",padding:'30px' }}>
       <Slider {...settings}>
         {testimonials.map((testimonial,idx) => (
           // <div key={testimonial.id} className="testimonial-item">
