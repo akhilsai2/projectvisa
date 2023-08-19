@@ -6,30 +6,35 @@ import uk from "../../assets/union-jack.jpg";
 import usa from "../../assets/usa.jpg";
 import "./flagcard.css";
 import "bootstrap/dist/css/bootstrap.css";
+import { useNavigate } from "react-router-dom";
 
 const Flagscard = () => {
+  const navigate = useNavigate();
   const contentFlags = [
     {
       image: uk,
-
       text: "UK",
+      path: "/studies/uk",
     },
     {
       image: usa,
-
       text: "USA",
+      path: "/studies/usa",
     },
     {
       image: canada,
       text: "CANADA",
+      path: "/studies/canada",
     },
     {
       image: newZealand,
       text: "New Zealand",
+      path: "/studies/newzealand",
     },
     {
       image: australia,
       text: "Australia",
+      path: "/studies/australia",
     },
   ];
   return (
@@ -74,11 +79,7 @@ const Flagscard = () => {
                 idx + 1
               } col-lg-2 col-md-6 col-sm-11 `}
             >
-              <div
-              // className={`flag-card card-align${
-              //   idx + 1
-              // } col-lg-2 col-md-6 col-sm-11`}
-              >
+              <div>
                 <div className="flag-icon-card m-3 flex flex-column justify-content-around align-items-center">
                   <img
                     className="country-img rounded-circle"
@@ -88,7 +89,10 @@ const Flagscard = () => {
                   <h6 style={{ color: "#014585", fontWeight: "600" }}>
                     {x.text}
                   </h6>
-                  <button className="btn btn-primary text-light flagBtn">
+                  <button
+                    className="btn btn-primary text-light flagBtn"
+                    onClick={() => navigate(`${x.path}`)}
+                  >
                     Read More
                   </button>
                 </div>

@@ -8,7 +8,7 @@ import "primeflex/primeflex.css";
 import "font-awesome/css/font-awesome.min.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./components/Home/home";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 // import Footer from "./components/footer/footer";
 // import Card from "./components/card/card";
 // import Flagscard from "./components/flagscrad/flagscard";
@@ -25,38 +25,47 @@ import About from "./pages/About/About";
 import Layout from "./components/Layout";
 import PartnerUniversities from "./pages/PartnerUniversities/PartnerUniversities";
 import Contact from "./components/contact";
-
+import { useLayoutEffect } from "react";
+const Wrapper = ({ children }) => {
+  const location = useLocation();
+  useLayoutEffect(() => {
+    document.documentElement.scrollTo(0, 0);
+  }, [location.pathname]);
+  return children;
+};
 function App() {
   return (
     <>
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Layout />}>
-            <Route index element={<Home />} />
-            <Route path="about/">
-              <Route index element={<About />} />
-              <Route path="i20" element={<Story />} />
-              <Route path="coreteam" element={<CoreTeam />} />
-            </Route>
+        <Wrapper>
+          <Routes>
+            <Route path="/" element={<Layout />}>
+              <Route index path="/" element={<Home />} />
+              <Route path="about/">
+                <Route index element={<About />} />
+                <Route path="i20" element={<Story />} />
+                <Route path="coreteam" element={<CoreTeam />} />
+              </Route>
 
-            <Route
-              path="partner-universities"
-              element={<PartnerUniversities />}
-            />
-            <Route path="studies/">
-              <Route path="uk" element={<Studyuk />} />
-              <Route path="usa" element={<Studyusa />} />
-              <Route path="europe" element={<Studyeurope />} />
-              <Route path="australia" element={<Studyaustralia />} />
-              <Route path="canada" element={<Studycanada />} />
-              <Route path="newzealand" element={<Studynewzealand />} />
+              <Route
+                path="partner-universities"
+                element={<PartnerUniversities />}
+              />
+              <Route path="studies/">
+                <Route path="uk" element={<Studyuk />} />
+                <Route path="usa" element={<Studyusa />} />
+                <Route path="europe" element={<Studyeurope />} />
+                <Route path="australia" element={<Studyaustralia />} />
+                <Route path="canada" element={<Studycanada />} />
+                <Route path="newzealand" element={<Studynewzealand />} />
+              </Route>
+              <Route path="services/">
+                <Route path="admissioncounselling" element={<Servicelayes />} />
+              </Route>
+              <Route path="contact" element={<Contact />} />
             </Route>
-            <Route path="services/">
-              <Route path="admissioncounselling" element={<Servicelayes />} />
-            </Route>
-          </Route>
-          <Route path="contact" element={<Contact />} />
-        </Routes>
+          </Routes>
+        </Wrapper>
       </BrowserRouter>
     </>
   );
