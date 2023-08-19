@@ -1,7 +1,7 @@
 import React from "react";
-import contact from "../assets/workspace.jpg";
-import call from "../assets/call.png";
-import location from "../assets/placeholder.png";
+import contact from "../../assets/workspace.jpg";
+import call from "../../assets/call.png";
+import location from "../../assets/placeholder.png";
 import "./contact.css";
 
 const Contact = () => {

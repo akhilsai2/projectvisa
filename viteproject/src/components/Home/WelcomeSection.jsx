@@ -43,10 +43,10 @@ const WelcomeSection = () => {
         >
           <div className="flex flex-column justify-content-center align-items-center  welcome-section-headings lh-lg">
             <p className="welcome">Welcome To</p>
-            <h1 className="welcome-head">DREAM2DEGREE</h1>
+            <h1 className="welcome-head">EXPLORENEX</h1>
             <h3 className="welcome-head1">Your Gateway to Global Education!</h3>
             <p className="text-center lh-base welcome-para">
-              At Dream2Degree, we understand that studying abroad can be a
+              At ExploreNex, we understand that studying abroad can be a
               life-changing experience, opening up a world of opportunities and
               shaping your future in remarkable ways. Our consultancy is
               dedicated to making this dream a reality for students like you who
@@ -67,7 +67,7 @@ const WelcomeSection = () => {
               color: "#014585",
             }}
           >
-            Why Choose Dream2Degree?
+            Why Choose ExploreNex?
           </span>
         </div>
 

@@ -1,7 +1,16 @@
+import { useDispatch } from "react-redux";
+import { selectExam } from "../../globalstate";
 import "bootstrap/dist/css/bootstrap.css";
 import "../Home/home.css";
+import { useNavigate } from "react-router-dom";
 
 const Card = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const addtoExam = (Exam) => {
+    dispatch(selectExam(Exam));
+    navigate("/trainings");
+  };
   return (
     <div
       className="welcome-section-cont card-deck row card-container ms-0"
@@ -25,7 +34,12 @@ const Card = () => {
             IELTS test is both paper and computer based, Skills evaluated
             Listening, Reading, Writing & Speaking...
           </p>
-          <button className="btn btn-primary customBtn">Read more..</button>
+          <button
+            onClick={() => addtoExam("IELTS")}
+            className="btn btn-primary customBtn"
+          >
+            Read more..
+          </button>
         </div>
       </div>
       <div
@@ -38,7 +52,12 @@ const Card = () => {
             TOEFL test is computer based, Skills evaluated Speaking, Listening,
             Reading & Writing, Total score is 120...
           </p>
-          <button className="btn btn-primary">Read more..</button>
+          <button
+            onClick={() => addtoExam("TOEFL")}
+            className="btn btn-primary"
+          >
+            Read more..
+          </button>
         </div>
         <img
           className=" col-lg-3 "
@@ -67,7 +86,9 @@ const Card = () => {
             GMAT Test for students seeking admission into Masters programs in
             Management / Business...
           </p>
-          <button className="btn btn-primary">Read more..</button>
+          <button className="btn btn-primary" onClick={() => addtoExam("GMAT")}>
+            Read more..
+          </button>
         </div>
       </div>
     </div>

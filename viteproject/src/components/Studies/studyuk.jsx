@@ -21,7 +21,7 @@ const Studyuk = () => {
         src="https://cdn.pixabay.com/photo/2015/10/18/19/04/graduation-995042_1280.jpg"
         className="study_bg"
       />
-      <div className="">
+      <div>
         <div className="row">
           <div className="flex flex-column justify-content-between align-items-center align-self-start col-sm-12 col-md-4">
             <img

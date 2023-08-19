@@ -16,7 +16,7 @@ const Footer = () => {
     <>
       <div className="Footer footer-card">
         <div className="container">
-          <div className="middle-crad">
+          {/* <div className="middle-crad">
             <div className="footer-subcard" style={{ fontWeight: 400 }}>
               {" "}
               <h6>IF YOU HAVE ANY QUREY OR NEED INFORMATION PLEACE CONTACT</h6>
@@ -25,7 +25,7 @@ const Footer = () => {
             <div className="sub-middle-card">
               <h6>+91 8106658662, 123456789</h6>
             </div>
-          </div>
+          </div> */}
           <div className="row total-footercard">
             <div className="col-md-6 col-lg-4 col-12 ft-1">
               <img
@@ -48,7 +48,7 @@ const Footer = () => {
                 </li>
                 <li className="nav-item">
                   <a className="" href="/">
-                    Study in CAnada
+                    Study in Canada
                   </a>
                 </li>
                 <li className="nav-item">

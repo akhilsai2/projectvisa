@@ -68,7 +68,7 @@ const Home = () => {
           className="text-center d-inline"
         >
           <h1 className="name">
-            <span className="intial">DREAM2DE.</span>
+            <span className="intial">ExploreNex.</span>
           </h1>
           <p className="cap">
             {"Empowering Dreams,Embracing Diversity, Expanding Horizons."}
@@ -90,7 +90,7 @@ const Home = () => {
       </div>
 
       <Carousel />
-      <CounterSection/>
+      <CounterSection />
       <WelcomeSection />
       <TestimonialCarousel />
       <FormSection />

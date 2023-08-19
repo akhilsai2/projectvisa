@@ -1,6 +1,5 @@
 import "./App.css";
 import "./assets/style.css";
-// import Header from "./components/header";
 import "primereact/resources/themes/lara-light-indigo/theme.css"; // theme
 import "primereact/resources/primereact.css"; // core css
 import "primeicons/primeicons.css"; // icons
@@ -12,7 +11,7 @@ import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 // import Footer from "./components/footer/footer";
 // import Card from "./components/card/card";
 // import Flagscard from "./components/flagscrad/flagscard";
-import Servicelayes from "./components/service/service";
+import Service from "./components/service/service";
 import Studyuk from "./components/Studies/studyuk";
 import Studyusa from "./components/Studies/studyusa";
 import Studyeurope from "./components/Studies/studyeurope";
@@ -24,8 +23,10 @@ import { CoreTeam } from "./components/About/story";
 import About from "./pages/About/About";
 import Layout from "./components/Layout";
 import PartnerUniversities from "./pages/PartnerUniversities/PartnerUniversities";
-import Contact from "./components/contact";
+import Contact from "./components/Contact/contact";
 import { useLayoutEffect } from "react";
+import Trainings from "./components/service/Traning/trainings";
+
 const Wrapper = ({ children }) => {
   const location = useLocation();
   useLayoutEffect(() => {
@@ -46,7 +47,6 @@ function App() {
                 <Route path="i20" element={<Story />} />
                 <Route path="coreteam" element={<CoreTeam />} />
               </Route>
-
               <Route
                 path="partner-universities"
                 element={<PartnerUniversities />}
@@ -59,9 +59,9 @@ function App() {
                 <Route path="canada" element={<Studycanada />} />
                 <Route path="newzealand" element={<Studynewzealand />} />
               </Route>
-              <Route path="services/">
-                <Route path="admissioncounselling" element={<Servicelayes />} />
-              </Route>
+              <Route path="trainings" element={<Trainings />}></Route>
+              <Route path="services" element={<Service />} />
+
               <Route path="contact" element={<Contact />} />
             </Route>
           </Routes>

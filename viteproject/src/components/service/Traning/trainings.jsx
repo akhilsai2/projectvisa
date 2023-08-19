@@ -1,32 +1,29 @@
 import { useState } from "react";
-import Accordian from "./accordian";
-import { useDispatch, useSelector } from "react-redux";
-import { selectExam } from "../../globalstate";
-import Application from "./ServiceProvide/application";
-import Preparation from "./ServiceProvide/preparation";
-import Visainterview from "./ServiceProvide/visaapplication";
-import Mockinterview from "./ServiceProvide/mockinterview";
-import Educationloan from "./ServiceProvide/educationloan";
-import Filght from "./ServiceProvide/filght";
-
-const serviceData = [
-  { id: 1, text: "Complete Application", component: <Application /> },
-  { id: 2, text: "Preparation", component: <Preparation /> },
-  { id: 3, text: "Visa Application Help", component: <Visainterview /> },
-  { id: 4, text: "Mock Visa Interviews", component: <Mockinterview /> },
-  { id: 5, text: "Education Loan Help", component: <Educationloan /> },
-  { id: 6, text: "Flights Tickets Help", component: <Filght /> },
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { selectExam } from "../../../globalstate";
+import Accordian from "../accordian";
+import Tofel from "./Tofel";
+import Ielts from "./ielts";
+import Gre from "./gre";
+import Gmat from "./gmat";
+import "../../Studies/studies.css";
+const trainData = [
+  { id: 1, text: "TOEFL", component: <Tofel /> },
+  { id: 2, text: "IELTS", component: <Ielts /> },
+  { id: 3, text: "GRE", component: <Gre /> },
+  { id: 4, text: "GMAT", component: <Gmat /> },
 ];
-const Service = () => {
+const Trainings = () => {
   const dispatch = useDispatch();
   const { Exam } = useSelector((state) => state.globalstate);
-  const desiredComponent = serviceData.filter((x) => Exam === x.text)[0]
+  const desiredComponent = trainData.filter((x) => x.text === Exam)[0]
     .component;
   const onSelect = (i) => {
     dispatch(selectExam(i));
   };
   return (
-    <div style={{ height: "160vh" }}>
+    <div style={{ height: "150vh" }}>
       <div
         className="flex justify-content-start align-items-end ms-5"
         style={{
@@ -38,18 +35,18 @@ const Service = () => {
         }}
       >
         <h1 className="study_heading">
-          <span className="pipe">|</span>Services
+          <span className="pipe">|</span>Trainings
         </h1>
       </div>
       <img
         src="https://cdn.pixabay.com/photo/2015/10/18/19/04/graduation-995042_1280.jpg"
         className="study_bg"
       />
-      <div className="flex justfy-content-around" style={{ height: "80vh" }}>
+      <div className="flex justfy-content-center" style={{ height: "100vh" }}>
         <div className="col-4">
           <div className=" flex align-items-center justify-content-start">
             <p>
-              Services <i className="fa fa-angle-right"></i>
+              Tranings <i className="fa fa-angle-right"></i>
             </p>
 
             <p>{Exam}</p>
@@ -57,7 +54,7 @@ const Service = () => {
           <div className="flex flex-column align-items-center justify-content-between">
             <Accordian
               key={Exam}
-              items={serviceData}
+              items={trainData}
               active={Exam}
               onSelect={onSelect}
             />
@@ -111,7 +108,7 @@ const Service = () => {
                   required=""
                   value={Exam}
                 />
-                <span>Service Help</span>
+                <span>Exam</span>
               </label>
               <label>
                 <textarea
@@ -136,10 +133,12 @@ const Service = () => {
           className="col-7 bg-white m-3 rounded"
           style={{ boxShadow: "0px 4px 4px 0px #bfbfbf" }}
         >
+          {" "}
           {desiredComponent}
         </div>
       </div>
     </div>
   );
 };
-export default Service;
+
+export default Trainings;
