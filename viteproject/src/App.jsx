@@ -42,11 +42,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Layout />}>
               <Route index path="/" element={<Home />} />
-              <Route path="about/">
-                <Route index element={<About />} />
-                <Route path="i20" element={<Story />} />
-                <Route path="coreteam" element={<CoreTeam />} />
-              </Route>
+              <Route path="about" element={<Story />} />
+
               <Route
                 path="partner-universities"
                 element={<PartnerUniversities />}

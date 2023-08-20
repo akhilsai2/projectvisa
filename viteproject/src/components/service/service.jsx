@@ -26,7 +26,7 @@ const Service = () => {
     dispatch(selectExam(i));
   };
   return (
-    <div style={{ height: "160vh" }}>
+    <div style={{ height: "165vh" }}>
       <div
         className="flex justify-content-start align-items-end ms-5"
         style={{

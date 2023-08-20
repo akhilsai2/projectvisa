@@ -23,7 +23,7 @@ const Trainings = () => {
     dispatch(selectExam(i));
   };
   return (
-    <div style={{ height: "150vh" }}>
+    <div style={{ height: "155vh" }}>
       <div
         className="flex justify-content-start align-items-end ms-5"
         style={{
