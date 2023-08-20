@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 const NumberCounter = (props) => {
-  const {count,speed} = props
+  const { count, speed } = props;
   const [number, setNumber] = useState(0);
   const [isCounting, setIsCounting] = useState(false);
 
@@ -39,10 +39,10 @@ const NumberCounter = (props) => {
   }, [isCounting]);
   useEffect(() => {
     if (isCounting && number === count) {
-      setIsCounting(false)
+      setIsCounting(false);
     }
   }, [number]);
-  console.log(count)
+  // console.log(count)
 
   return (
     <div ref={counterRef} className="number-counter">

@@ -14,9 +14,12 @@ import { Menubar } from "primereact/menubar";
 import "./header.css";
 import { Link } from "react-router-dom";
 import { Dock } from "primereact/dock";
+import { selectExam, selectService } from "../globalstate";
+import { useDispatch } from "react-redux";
 const Header = () => {
   const [visible, setVisible] = useState(false);
   const [colorChange, setColorchange] = useState(false);
+  const dispatch = useDispatch();
   const changeNavbarColor = () => {
     if (window.scrollY >= 50) {
       setColorchange(true);
@@ -176,24 +179,51 @@ const Header = () => {
               </ul>
             </li>
             <li className="has-sub">
-              <a>Training</a>
+              <a>Services</a>
               <ul className="sub-menu">
                 <li>
-                  <a href="meetings.html">IELTS</a>
+                  <Link
+                    to="/trainings"
+                    onClick={() => dispatch(selectExam("TOEFL"))}
+                  >
+                    Tranings
+                  </Link>
                 </li>
                 <li>
-                  <a href="meeting-details.html">TOFEL</a>
+                  <Link
+                    to="/services"
+                    onClick={() => dispatch(selectExam("Complete Application"))}
+                  >
+                    Complete Application
+                  </Link>
                 </li>
                 <li>
-                  <a href="meeting-details.html">GMAT</a>
+                  <Link
+                    to="/services"
+                    onClick={() => dispatch(selectExam("Preparation"))}
+                  >
+                    Preparation
+                  </Link>
                 </li>
                 <li>
-                  <a href="meeting-details.html">GRE</a>
+                  <Link
+                    to="/services"
+                    onClick={() =>
+                      dispatch(selectExam("Visa Application Help"))
+                    }
+                  >
+                    Visa Application Help
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/services"
+                    onClick={() => dispatch(selectExam("Mock Visa Interviews"))}
+                  >
+                    Mock Visa Interviews
+                  </Link>
                 </li>
               </ul>
-            </li>
-            <li className="scroll-to-section">
-              <a href="#courses">Courses</a>
             </li>
             <li>
               <Link to="contact">Contact Us</Link>

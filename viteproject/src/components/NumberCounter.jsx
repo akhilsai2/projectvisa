@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 const NumberCounter = () => {
   const [count, setCount] = useState(0);
@@ -38,10 +38,10 @@ const NumberCounter = () => {
   }, [isCounting]);
   useEffect(() => {
     if (isCounting && count === 200) {
-      setIsCounting(false)
+      setIsCounting(false);
     }
   }, [count]);
-  console.log(count)
+  console.log(count);
 
   return (
     <div ref={counterRef} className="number-counter">
