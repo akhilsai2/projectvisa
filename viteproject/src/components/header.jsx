@@ -251,22 +251,6 @@ const Header = () => {
         </div>
       </Sidebar>
     </>
-    // <>
-    //   <div className="header">
-    //     Ankith
-    //     <Dock
-    //       model={itemsLogo}
-    //       position="left"
-    //       className="ms-3 border-0 bg-none"
-    //       style={{ position: "fixed", zIndex: "1000" }}
-    //     />
-    //   </div>
-    //   <nav className="NavBar flex justify-content-around">
-    //     <div>
-    //       <h1 className="header-area logo">DREAM2DE</h1>
-    //     </div>
-    //   </nav>
-    // </>
   );
 };
 

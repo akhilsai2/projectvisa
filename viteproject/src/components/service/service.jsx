@@ -45,7 +45,7 @@ const Service = () => {
         src="https://cdn.pixabay.com/photo/2015/10/18/19/04/graduation-995042_1280.jpg"
         className="study_bg"
       />
-      <div className="flex justfy-content-around" style={{ height: "80vh" }}>
+      <div className="flex justfy-content-around" style={{ height: "110vh" }}>
         <div className="col-4">
           <div className=" flex align-items-center justify-content-start">
             <p>
@@ -133,7 +133,7 @@ const Service = () => {
           </div>
         </div>
         <div
-          className="col-7 bg-white m-3 rounded"
+          className="col-7 bg-white m-4 rounded h-100"
           style={{ boxShadow: "0px 4px 4px 0px #bfbfbf" }}
         >
           {desiredComponent}
