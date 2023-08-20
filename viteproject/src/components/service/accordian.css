@@ -1,0 +1,20 @@
+.item_accordian {
+  background-color: white;
+  height: 40px;
+  border-radius: 0px;
+  font-size: 12px;
+  font-weight: 600;
+  color: black;
+  padding: 20px;
+  margin: 10px;
+  box-shadow: 0px 4px 8px 0px #bfbfbf;
+}
+.item_accordian:hover {
+  transform: scale(0.95);
+  transition: all 0.3s;
+}
+.itemSelected {
+  background-color: #0067ed;
+  color: white;
+  font-weight: 700;
+}
