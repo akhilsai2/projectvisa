@@ -130,7 +130,7 @@ const Trainings = () => {
           </div>
         </div>
         <div
-          className="col-7 bg-white m-3 rounded"
+          className="col-7 bg-white m-3 rounded h-100"
           style={{ boxShadow: "0px 4px 4px 0px #bfbfbf" }}
         >
           {" "}
