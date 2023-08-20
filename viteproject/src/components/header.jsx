@@ -166,7 +166,7 @@ const Header = () => {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/about/i20">About</Link>
+              <Link to="/about">About</Link>
             </li>
             <li className="has-sub">
               <Link>Study Aboard</Link>

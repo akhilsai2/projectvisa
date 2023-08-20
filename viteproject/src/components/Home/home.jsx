@@ -16,9 +16,11 @@ import FormSection from "./FormSection";
 import ChatBot from "../ChatBot/ChatBot";
 import { AiOutlineMessage } from "react-icons/ai";
 import CounterSection from "./CounterSection/CounterSection";
+import { useNavigate } from "react-router-dom";
 const Carousel = React.lazy(() => import("./Carousel"));
 // import "./DockDemo.css";
 const Home = () => {
+  const navigate = useNavigate();
   const items = [
     {
       label: "Finder",
@@ -83,6 +85,7 @@ const Home = () => {
               backgroundColor: "white",
               letterSpacing: "1px",
             }}
+            onClick={() => navigate("/about")}
           >
             READ MORE
           </button>
