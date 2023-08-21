@@ -12,11 +12,12 @@ import { Menubar } from "primereact/menubar";
 
 // import "../assets/style.css";
 import "./header.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Dock } from "primereact/dock";
-import { selectExam, selectService } from "../globalstate";
+import { selectExam, selectService, selectStudy } from "../globalstate";
 import { useDispatch } from "react-redux";
 const Header = () => {
+  const navigate = useNavigate();
   const [visible, setVisible] = useState(false);
   const [colorChange, setColorchange] = useState(false);
   const dispatch = useDispatch();
@@ -31,27 +32,33 @@ const Header = () => {
   const studyServicesData = [
     {
       label: "Study in UK",
-      path: "/studies/uk",
+      text: "United Kingdom",
+      path: "/studies",
     },
     {
       label: "Study in USA",
-      path: "/studies/usa",
+      text: "United States of America",
+      path: "/studies",
     },
     {
       label: "Study in Canada",
-      path: "/studies/canada",
+      text: "Canada",
+      path: "/studies",
     },
     {
-      label: "Study in Europe",
-      path: "/studies/europe",
+      label: "Study in Ireland",
+      text: "Ireland",
+      path: "/studies",
     },
     {
       label: "Study in Australia",
-      path: "/studies/australia",
+      text: "Australia",
+      path: "/studies",
     },
     {
       label: "Study in NewZealand",
-      path: "/studies/newzealand",
+      text: "New Zealand",
+      path: "/studies",
     },
   ];
   const itemsLogo = [
@@ -163,7 +170,9 @@ const Header = () => {
           </h1>
           <ul className="nav">
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/" onClick={() => navigate("/")}>
+                Home
+              </Link>
             </li>
             <li>
               <Link to="/about">About</Link>
@@ -173,7 +182,12 @@ const Header = () => {
               <ul className="sub-menu">
                 {studyServicesData.map((x, idx) => (
                   <li key={idx}>
-                    <Link to={x.path}>{x.label}</Link>
+                    <Link
+                      to="/studies"
+                      onClick={() => dispatch(selectStudy(x.text))}
+                    >
+                      {x.label}
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -192,7 +206,9 @@ const Header = () => {
                 <li>
                   <Link
                     to="/services"
-                    onClick={() => dispatch(selectExam("Complete Application"))}
+                    onClick={() =>
+                      dispatch(selectService("Complete Application"))
+                    }
                   >
                     Complete Application
                   </Link>
@@ -200,7 +216,7 @@ const Header = () => {
                 <li>
                   <Link
                     to="/services"
-                    onClick={() => dispatch(selectExam("Preparation"))}
+                    onClick={() => dispatch(selectService("Preparation"))}
                   >
                     Preparation
                   </Link>
@@ -209,7 +225,7 @@ const Header = () => {
                   <Link
                     to="/services"
                     onClick={() =>
-                      dispatch(selectExam("Visa Application Help"))
+                      dispatch(selectService("Visa Application Help"))
                     }
                   >
                     Visa Application Help
@@ -218,7 +234,9 @@ const Header = () => {
                 <li>
                   <Link
                     to="/services"
-                    onClick={() => dispatch(selectExam("Mock Visa Interviews"))}
+                    onClick={() =>
+                      dispatch(selectService("Mock Visa Interviews"))
+                    }
                   >
                     Mock Visa Interviews
                   </Link>

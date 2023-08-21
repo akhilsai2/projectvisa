@@ -7,34 +7,47 @@ import usa from "../../assets/usa.jpg";
 import "./flagcard.css";
 import "bootstrap/dist/css/bootstrap.css";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { selectExam } from "../../globalstate";
 
 const Flagscard = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const addtoExam = (Exam) => {
+    dispatch(selectExam(Exam));
+    navigate("/studies");
+  };
   const contentFlags = [
     {
       image: uk,
-      text: "UK",
-      path: "/studies/uk",
+      text: "United Kingdom",
+      abbrev: "UK",
+      path: "/studies",
     },
     {
       image: usa,
-      text: "USA",
-      path: "/studies/usa",
+      text: "United States of America",
+      abbrev: "USA",
+      path: "/studies",
     },
     {
       image: canada,
-      text: "CANADA",
-      path: "/studies/canada",
+      text: "Canada",
+      abbrev: "Canada",
+      path: "/studies",
     },
     {
       image: newZealand,
       text: "New Zealand",
-      path: "/studies/newzealand",
+      abbrev: "New Zealand",
+      path: "/studies",
     },
     {
       image: australia,
       text: "Australia",
-      path: "/studies/australia",
+      abbrev: "Australia",
+      path: "/studies",
     },
   ];
   return (
@@ -87,11 +100,11 @@ const Flagscard = () => {
                     alt={x.text}
                   />
                   <h6 style={{ color: "#014585", fontWeight: "600" }}>
-                    {x.text}
+                    {x.abbrev}
                   </h6>
                   <button
                     className="btn btn-primary text-light flagBtn"
-                    onClick={() => navigate(`${x.path}`)}
+                    onClick={() => addtoExam(x.text)}
                   >
                     Read More
                   </button>

@@ -1,32 +1,32 @@
-import Accordian from "./accordian";
+import React from "react";
+import Accordian from "../service/accordian";
 import { useDispatch, useSelector } from "react-redux";
-import { selectExam, selectService } from "../../globalstate";
-import Application from "./ServiceProvide/application";
-import Preparation from "./ServiceProvide/preparation";
-import Visainterview from "./ServiceProvide/visaapplication";
-import Mockinterview from "./ServiceProvide/mockinterview";
-import Educationloan from "./ServiceProvide/educationloan";
-import Filght from "./ServiceProvide/filght";
-
-const serviceData = [
-  { id: 1, text: "Complete Application", component: <Application /> },
-  { id: 2, text: "Preparation", component: <Preparation /> },
-  { id: 3, text: "Visa Application Help", component: <Visainterview /> },
-  { id: 4, text: "Mock Visa Interviews", component: <Mockinterview /> },
-  { id: 5, text: "Education Loan Help", component: <Educationloan /> },
-  { id: 6, text: "Flights Tickets Help", component: <Filght /> },
+import { selectExam, selectStudy } from "../../globalstate";
+import Studyuk from "./studyuk";
+import Studyusa from "./studyusa";
+import Studycanada from "./studycanada";
+import Studyeurope from "./studyeurope";
+import Studyaustralia from "./studyaustralia";
+import Studynewzealand from "./studynewzealand";
+const StudyData = [
+  { id: 1, text: "United Kingdom", component: <Studyuk /> },
+  { id: 2, text: "United States of America", component: <Studyusa /> },
+  { id: 3, text: "Canada", component: <Studycanada /> },
+  { id: 4, text: "Ireland", component: <Studyeurope /> },
+  { id: 5, text: "Australia", component: <Studyaustralia /> },
+  { id: 6, text: "New Zealand", component: <Studynewzealand /> },
 ];
-const Service = () => {
+const Study = () => {
   const dispatch = useDispatch();
-  const { Service } = useSelector((state) => state.globalstate);
-  console.log(Service);
-  const desiredComponent = serviceData.filter((x) => Service === x.text)[0]
+  const { Study } = useSelector((state) => state.globalstate);
+
+  const desiredComponent = StudyData.filter((x) => Study === x.text)[0]
     .component;
   const onSelect = (i) => {
-    dispatch(selectService(i));
+    dispatch(selectStudy(i));
   };
   return (
-    <div style={{ height: "165vh" }}>
+    <>
       <div
         className="flex justify-content-start align-items-end ms-5"
         style={{
@@ -38,27 +38,28 @@ const Service = () => {
         }}
       >
         <h1 className="study_heading">
-          <span className="pipe">|</span>Services
+          <span className="pipe">|</span>
+          {Study}
         </h1>
       </div>
       <img
         src="https://cdn.pixabay.com/photo/2015/10/18/19/04/graduation-995042_1280.jpg"
         className="study_bg"
       />
-      <div className="flex justfy-content-around" style={{ height: "110vh" }}>
+      <div className="flex justfy-content-around">
         <div className="col-4">
           <div className=" flex align-items-center justify-content-start">
             <p>
-              Services <i className="fa fa-angle-right"></i>
+              Study <i className="fa fa-angle-right"></i>
             </p>
 
-            <p>{Service}</p>
+            <p>{Study}</p>
           </div>
           <div className="flex flex-column align-items-center justify-content-between">
             <Accordian
-              key={Service}
-              items={serviceData}
-              active={Service}
+              key={Study}
+              items={StudyData}
+              active={Study}
               onSelect={onSelect}
             />
             <form className="form m-2 ">
@@ -109,9 +110,9 @@ const Service = () => {
                   placeholder=""
                   type="text"
                   required=""
-                  value={Service}
+                  value={Study}
                 />
-                <span>Service Help</span>
+                <span>Country</span>
               </label>
               <label>
                 <textarea
@@ -133,13 +134,14 @@ const Service = () => {
           </div>
         </div>
         <div
-          className="col-7 bg-white m-4 rounded h-100"
+          className="col-7 bg-white m-4 rounded"
           style={{ boxShadow: "0px 4px 4px 0px #bfbfbf" }}
         >
           {desiredComponent}
         </div>
       </div>
-    </div>
+    </>
   );
 };
-export default Service;
+
+export default Study;

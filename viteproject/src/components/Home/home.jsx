@@ -55,14 +55,14 @@ const Home = () => {
           alignItems: "center",
           position: "absolute",
           zIndex: "2",
-          marginTop: "25vh",
+          marginTop: "35vh",
         }}
         className="nameCont w-100"
       >
         <Animation
           type="fadeInFromBottom"
-          duration="1000ms"
-          delay="0.3s"
+          duration="900ms"
+          delay="0.2s"
           direction="normal"
           timing="ease-in-out"
           iteration="1"
@@ -75,7 +75,6 @@ const Home = () => {
           <p className="cap">
             {"Empowering Dreams,Embracing Diversity, Expanding Horizons."}
           </p>
-          <h1 className="name">GREE</h1>
           <button
             className="customBtn rounded-5 text-weight-bold"
             style={{
