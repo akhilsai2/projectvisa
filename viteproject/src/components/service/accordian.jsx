@@ -4,7 +4,7 @@ import "./accordian.css";
 
 const Accordian = (props) => {
   const { items, active, onSelect } = props;
-  const { Exam } = useSelector((state) => state.globalstate);
+  const { Exam, Service } = useSelector((state) => state.globalstate);
 
   const selectItem = (text) => {
     onSelect(text);
@@ -15,7 +15,7 @@ const Accordian = (props) => {
       {items.map((x, idx) => (
         <li
           className={
-            x.text === Exam
+            x.text === active
               ? "item_accordian itemSelected flex flex-row justify-content-between align-items-center"
               : "item_accordian  flex flex-row justify-content-between align-items-center"
           }
