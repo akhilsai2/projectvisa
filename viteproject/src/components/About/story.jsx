@@ -1,73 +1,107 @@
 import "./about.css"
 import { AiOutlineWhatsApp,AiFillLinkedin ,AiFillFacebook,AiFillYoutube} from 'react-icons/ai';
 import React from "react";
-import contact from "../../assets/workspace.jpg";
+import { Animation } from "react-easy-animations";
 import { BsArrowRight } from 'react-icons/bs';
 export const Story=()=>{
     return (
       <div style={{ width:"100%" }}>
         <div
-          className="flex justify-content-center align-items-center col-lg-12"
-          style={{
-            position: "absolute",
-            zIndex: "5",
-            top: "10%",
-            height: "30vh",
-            width: "100%",
-          }}
-        >
-          <h1 className="study_heading">
-            <span className="pipe">|</span>ABOUT
-          </h1>
-        </div>
-        <img src={contact} className="study_bg  " style={{marginBottom:"30px"}} />
+        className="flex justify-content-start align-items-end ms-5"
+        style={{
+          position: "absolute",
+          zIndex: "5",
+          top: "10%",
+          height: "20vh",
+          width: "50%",
+        }}
+      >
+        <h1 className="study_heading">
+          <span className="pipe">|</span>Services
+        </h1>
+      </div>
+      <img
+        src="https://cdn.pixabay.com/photo/2015/10/18/19/04/graduation-995042_1280.jpg"
+        className="study_bg"
+      />
+       
         <div className="paragraph col-lg-12 col-sm-12">
-             <p style={{fontSize:"15px",fontWeight:"400",fontStyle:"oblique"}}>Welcome to Dream2Degree, a leading consultancy dedicated to providing exceptional guidance and support for students aspiring to pursue higher education in esteemed institutions across the world. We understand that studying abroad is not merely a phase 
+        <Animation
+           type="fadeInFromBottom"
+           duration="1000ms"
+          //  delay="1s"
+           direction="normal"
+           timing="ease"
+           iteration="1"
+           fillMode="none"
+           className="w-100"
+        >
+             <p style={{fontSize:"14px",fontWeight:"500",fontStyle:"Fantasy",fontVariant:"smallCaps"}}>Welcome to Dream2Degree, a leading consultancy dedicated to providing exceptional guidance and support for students aspiring to pursue higher education in esteemed institutions across the world. We understand that studying abroad is not merely a phase 
               of academic life but a transformative journey that shapes your future and opens doors to boundless 
               opportunities. At Dream2Degree, we are committed to being your trusted companion throughout this life-changing experience</p>
+              </Animation>
                    </div>
                    <div className="about-sub-card"> 
-                     <div className="col-lg-4 col-sm-12 image">
+                     <div className="col-lg-4 col-sm-12 ">
+                     <Animation
+           type="fadeInFromLeft"
+           duration="1000ms"
+          //  delay="1s"
+           direction="normal"
+           timing="ease"
+           iteration="1"
+           fillMode="none"
+           className="w-100"
+        >
                          <img src="https:media.istockphoto.com/id/1083619800/photo/crazy-angry-professor-yelling-and-pointing-with-a-stick.jpg?s=612x612&w=0&k=20&c=ykXbJvGrrRltXpJNl9iB55cf393d4NtCkDSg9tsuqU0=" style={{height:"100%",width:"100%"}}/>
+                         </Animation>
                      </div>
+                    
                      <div className="col-lg-8 col-sm-12" style={{padding:"20px"}}>
+                     <Animation
+           type="fadeInFromRight"
+           duration="1000ms"
+          //  delay="1s"
+           direction="normal"
+           timing="ease"
+           iteration="1"
+           fillMode="none"
+           className="w-100 "
+        >
                          <h2 id="main-heading">ABOUT US</h2>
-                         <p >About Dream2Degree: Empowering Your Dreams of Global Education</p>
-                              <p>Our mission is clear - to empower and inspire students from all walks of life to achieve their dream of studying abroad.
+                         <p style={{fontStyle:"Fantasy",fontVariant:"smallCaps"}}>About Dream2Degree: Empowering Your Dreams of Global Education</p>
+                              <p  style={{fontStyle:"Fantasy",fontVariant:"smallCaps"}}>Our mission is clear - to empower and inspire students from all walks of life to achieve their dream of studying abroad.
                                  We strive to remove barriers, bridge gaps, and provide a seamless pathway to quality education in countries like Australia, the UK, USA, Canada, Ireland, and New Zealand. At Dream2Degree,
                                   we believe that education is a force that transcends borders and transforms lives. Our goal is to make this force accessible to you, regardless of your background or circumstances.</p>
-<                          h2 id="main-heading">Our Mission</h2>
-                         <p >Our mission is clear - to empower and inspire students from all walks of life to achieve their dream of studying abroad. We strive to remove barriers, bridge gaps, and provide a 
+                         <h2 id="main-heading">Our Mission</h2>
+                         <p  style={{fontStyle:"Fantasy",fontVariant:"smallCaps"}}>Our mission is clear - to empower and inspire students from all walks of life to achieve their dream of studying abroad. We strive to remove barriers, bridge gaps, and provide a 
                           seamless pathway to quality education in countries like Australia, the UK, USA, Canada, Ireland, and New Zealand. At Dream2Degree, we believe that education is a force that transcends borders and transforms lives. Our goal is
                            to make this force accessible to you, regardless of your background or circumstances.
 </p>
-                            
-                     </div>
-                     <div className="col-lg-12 col-sm-12" >
-                    <h3 style={{textAlign:"center"}}>Our Values:</h3>
+<div className="col-lg-12 col-sm-12" style={{textAlign:"start"}}>
+                    <h3 style={{textAlign:"center"}} id="main-heading">Our Values</h3>
                     <ul class="list-group">
-    <li style={{fontSize:"20px"}}><BsArrowRight style={{fontSize:"15px"}}/>  Integrity: <span style={{fontSize:"15px"}}>Honesty and transparency form the foundation of our interactions with students, parents, and partner institutions</span></li>
-    <li style={{fontSize:"20px"}}><BsArrowRight style={{fontSize:"15px"}}/>  Empathy: <span style={{fontSize:"15px"}}>We understand the hopes and dreams of aspiring students and approach our services with genuine empathy and compassion.
+    <li style={{fontSize:"16px"}}><BsArrowRight style={{fontSize:"15px"}}/>  Integrity: <span style={{fontSize:"13px",fontWeight:"600",fontStyle:"Fantasy",fontVariant:"smallCaps"}}>Honesty and transparency form the foundation of our interactions with students, parents, and partner institutions</span></li>
+    <li style={{fontSize:"16px"}}><BsArrowRight style={{fontSize:"15px"}}/>  Empathy: <span style={{fontSize:"13px",fontWeight:"600",fontStyle:"Fantasy",fontVariant:"smallCaps"}}>We understand the hopes and dreams of aspiring students and approach our services with genuine empathy and compassion.
 </span></li>
-    <li style={{fontSize:"20px"}}><BsArrowRight style={{fontSize:"15px"}}/>  Excellence: <span style={{fontSize:"15px"}}>Our commitment to excellence drives us to continually improve and deliver the best possible services to our students</span></li>
+    <li style={{fontSize:"16px"}}><BsArrowRight style={{fontSize:"15px"}}/>  Excellence: <span style={{fontSize:"13px",fontWeight:"600",fontStyle:"Fantasy",fontVariant:"smallCaps"}}>Our commitment to excellence drives us to continually improve and deliver the best possible services to our students</span></li>
   </ul>
   <div style={{textAlign:"center" ,marginTop:"10px"}}>
-  <h3>Join the Dream2Degree Family</h3>
-  <p>Embark on a life-changing journey with Dream2Degree, where your dreams take center stage. Whether you are a high school student planning for undergraduate studies or a working professional seeking advanced degrees, 
+  <h3 id="main-heading">Join the Dream2Degree Family</h3>
+  <p style={{fontStyle:"Fantasy",fontVariant:"smallCaps"}}>Embark on a life-changing journey with Dream2Degree, where your dreams take center stage. Whether you are a high school student planning for undergraduate studies or a working professional seeking advanced degrees, 
     we are here to guide you towards a brighter future</p></div>
                    </div>
+</Animation> 
+                     </div>
+                    
+                   
                    </div> 
+                  
                    
       </div>
     );
-      
-        
-        
     
 }
-
-
-
 
 
 export const CoreTeam=()=>{
