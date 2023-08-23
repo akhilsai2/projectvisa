@@ -1,14 +1,14 @@
 import { Animation } from "react-easy-animations";
-import australia from "../../assets/australia.png";
-import canada from "../../assets/canada.png";
-import newZealand from "../../assets/new-zealand.png";
-import uk from "../../assets/union-jack.jpg";
-import usa from "../../assets/usa.jpg";
+import australia from "../../../assets/australia.png";
+import canada from "../../../assets/canada.png";
+import newZealand from "../../../assets/new-zealand.png";
+import uk from "../../../assets/union-jack.jpg";
+import usa from "../../../assets/usa.jpg";
 import "./flagcard.css";
 import "bootstrap/dist/css/bootstrap.css";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { selectExam } from "../../globalstate";
+import { selectExam } from "../../../globalstate";
 
 const Flagscard = () => {
   const navigate = useNavigate();

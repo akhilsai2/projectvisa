@@ -1,7 +1,7 @@
 import { useDispatch } from "react-redux";
-import { selectExam } from "../../globalstate";
+import { selectExam } from "../../../globalstate";
 import "bootstrap/dist/css/bootstrap.css";
-import "../Home/home.css";
+import "../home.css";
 import { useNavigate } from "react-router-dom";
 
 const Card = () => {

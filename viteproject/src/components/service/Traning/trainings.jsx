@@ -8,6 +8,7 @@ import Ielts from "./ielts";
 import Gre from "./gre";
 import Gmat from "./gmat";
 import "../../Studies/studies.css";
+import FormData from "../../form";
 const trainData = [
   { id: 1, text: "TOEFL", component: <Tofel /> },
   { id: 2, text: "IELTS", component: <Ielts /> },
@@ -19,6 +20,8 @@ const Trainings = () => {
   const { Exam } = useSelector((state) => state.globalstate);
   const desiredComponent = trainData.filter((x) => x.text === Exam)[0]
     .component;
+  const value = trainData.filter((x) => Exam === x.text)[0].text;
+
   const onSelect = (i) => {
     dispatch(selectExam(i));
   };
@@ -58,75 +61,7 @@ const Trainings = () => {
               active={Exam}
               onSelect={onSelect}
             />
-            <form className="form m-2 ">
-              <div className="flex">
-                <label>
-                  <input
-                    className="input"
-                    type="text"
-                    placeholder=""
-                    required=""
-                  />
-                  <span>first name</span>
-                </label>
-
-                <label>
-                  <input
-                    className="input"
-                    type="text"
-                    placeholder=""
-                    required=""
-                  />
-                  <span>last name</span>
-                </label>
-              </div>
-
-              <label>
-                <input
-                  className="input"
-                  type="email"
-                  placeholder=""
-                  required=""
-                />
-                <span>email</span>
-              </label>
-
-              <label>
-                <input
-                  className="input"
-                  placeholder=""
-                  type="tel"
-                  required=""
-                />
-                <span>contact number</span>
-              </label>
-              <label>
-                <input
-                  className="input"
-                  placeholder=""
-                  type="text"
-                  required=""
-                  value={Exam}
-                />
-                <span>Exam</span>
-              </label>
-              <label>
-                <textarea
-                  className="input01"
-                  placeholder=""
-                  rows="3"
-                  required=""
-                ></textarea>
-                <span>message</span>
-              </label>
-
-              <button href="#" className="fancy">
-                <span className="top-key"></span>
-                <span className="text">submit</span>
-                <span className="bottom-key-1"></span>
-                <span className="bottom-key-2"></span>
-              </button>
-            </form>
+            <FormData subject={"Traning Exam"} value={value} />
           </div>
         </div>
         <div

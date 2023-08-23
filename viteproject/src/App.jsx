@@ -11,9 +11,8 @@ import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Service from "./components/service/service";
 import { Story } from "./components/About/story";
 import Layout from "./components/Layout";
-import PartnerUniversities from "./pages/PartnerUniversities/PartnerUniversities";
 import Contact from "./components/Contact/contact";
-import { useEffect, useLayoutEffect } from "react";
+import { useLayoutEffect } from "react";
 import Trainings from "./components/service/Traning/trainings";
 import Study from "./components/Studies/study";
 
@@ -34,22 +33,9 @@ function App() {
             <Route path="/" element={<Layout />}>
               <Route index element={<Home />} />
               <Route path="about" element={<Story />} />
-
-              <Route
-                path="partner-universities"
-                element={<PartnerUniversities />}
-              />
               <Route path="studies" element={<Study />} />
-              {/* <Route path="uk" element={<Studyuk />} />
-                <Route path="usa" element={<Studyusa />} />
-                <Route path="europe" element={<Studyeurope />} />
-                <Route path="australia" element={<Studyaustralia />} />
-                <Route path="canada" element={<Studycanada />} />
-                <Route path="newzealand" element={<Studynewzealand />} /> */}
-
-              <Route path="trainings" element={<Trainings />}></Route>
+              <Route path="trainings" element={<Trainings />} />
               <Route path="services" element={<Service />} />
-
               <Route path="contact" element={<Contact />} />
             </Route>
           </Routes>

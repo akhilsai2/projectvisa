@@ -3,9 +3,9 @@ import { Input } from "mdb-ui-kit";
 import React, { useState } from "react";
 import WelcomeSection from "./WelcomeSection";
 import TestimonialCarousel from "./TestimonialCarousel";
-import Flagscard from "../flagscrad/flagscard";
+import Flagscard from "./flagscrad/flagscard";
 import { Animation } from "react-easy-animations";
-import Card from "../card/card";
+import Card from "./card/card";
 import { Dock } from "primereact/dock";
 
 import instaLogo from "../../assets/instagram.png";
