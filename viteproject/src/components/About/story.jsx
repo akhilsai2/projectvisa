@@ -1,9 +1,23 @@
 import "./about.css"
 import { AiOutlineWhatsApp,AiFillLinkedin ,AiFillFacebook,AiFillYoutube} from 'react-icons/ai';
 import React from "react";
+import axios from 'axios';
 import { Animation } from "react-easy-animations";
 import { BsArrowRight } from 'react-icons/bs';
 export const Story=()=>{
+    const[name,setname]=React.useState("")
+    const[number,setnumber]=React.useState("")
+    
+const handleChange=(e)=>{
+  e.preventDefault()
+  const data={
+    name:name,
+    number:number
+  }
+  // console.log(data)
+  axios.post("https://sheet.best/api/sheets/b0481a3b-d93d-472f-a4b6-43ea6a177f79",data).then((response)=>{console.log(response)})
+}
+
     return (
       <div style={{ width:"100%" }}>
         <div
@@ -92,6 +106,15 @@ export const Story=()=>{
     we are here to guide you towards a brighter future</p></div>
                    </div>
 </Animation> 
+   <div>
+    <form autoComplete="off" onSubmit={handleChange} >
+    <label>name</label>
+    <input type="text" value={name} placeholder="Enter Name" required onChange={(e)=>setname(e.target.value)}/>
+    <label>number</label>
+    <input type="text" value={number} placeholder="Enter Name" required onChange={(e)=>setnumber(e.target.value)}/>
+    <button type="submit" className="btn btn-primary">send</button>
+    </form>
+   </div>
                      </div>
                     
                    

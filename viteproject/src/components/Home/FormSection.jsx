@@ -1,7 +1,25 @@
 import React from "react";
 import "./home.css";
+import axios from 'axios';
 
 const FormSection = () => {
+  const[name,setname]=React.useState("")
+  const[Lastname,setlastname]=React.useState("")
+    const[number,setnumber]=React.useState("")
+    const[mail,setmail]=React.useState("")
+    
+const handleChange=(e)=>{
+  e.preventDefault()
+  const data={
+    name:name,
+    Lastname:Lastname,
+    mail:mail,
+    number:number
+  }
+  // console.log(data)
+  axios.post("https://sheet.best/api/sheets/b0481a3b-d93d-472f-a4b6-43ea6a177f79",data).then((response)=>{console.log(response)})
+}
+
   return (
     <div className="d-flex flex-wrap welcome-section-cont">
       <div className=" col-sm-12 col-md-6 text-center">
@@ -30,30 +48,30 @@ const FormSection = () => {
         </p>
       </div>
       <div className="col-sm-12 col-md-6 d-flex justify-content-center">
-        <form className="form">
+        <form className="form" autoComplete="off" onSubmit={handleChange}>
           <p className="title">Register </p>
           <p className="message">
             Get In Touch With Our Experienced Counsellors.{" "}
           </p>
           <div className="flex">
             <label>
-              <input className="input" type="text" placeholder="" required="" />
+              <input className="input" type="text" placeholder="" required onChange={(e)=>setname(e.target.value)} />
               <span>Firstname</span>
             </label>
 
             <label>
-              <input className="input" type="text" placeholder="" required="" />
+              <input className="input" type="text" placeholder="" required onChange={(e)=>setlastname(e.target.value)} />
               <span>Lastname</span>
             </label>
           </div>
 
           <label>
-            <input className="input" type="email" placeholder="" required="" />
+            <input className="input" type="email" placeholder="" required onChange={(e)=>setmail(e.target.value)} />
             <span>Email</span>
           </label>
 
           <label>
-            <input className="input" type="number" placeholder="" required="" />
+            <input className="input" type="text" maxLength={20} placeholder="" required onChange={(e)=>setnumber(e.target.value)}  />
             <span>Phone Number</span>
           </label>
           <button className="submit">Submit</button>
