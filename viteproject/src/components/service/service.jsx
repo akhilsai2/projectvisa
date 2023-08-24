@@ -7,6 +7,7 @@ import Visainterview from "./ServiceProvide/visaapplication";
 import Mockinterview from "./ServiceProvide/mockinterview";
 import Educationloan from "./ServiceProvide/educationloan";
 import Filght from "./ServiceProvide/filght";
+import FormData from "../form";
 
 const serviceData = [
   { id: 1, text: "Complete Application", component: <Application /> },
@@ -22,11 +23,13 @@ const Service = () => {
   console.log(Service);
   const desiredComponent = serviceData.filter((x) => Service === x.text)[0]
     .component;
+  const value = serviceData.filter((x) => Service === x.text)[0].text;
+
   const onSelect = (i) => {
     dispatch(selectService(i));
   };
   return (
-    <div style={{ height: "165vh" }}>
+    <div>
       <div
         className="flex justify-content-start align-items-end ms-5"
         style={{
@@ -45,7 +48,7 @@ const Service = () => {
         src="https://cdn.pixabay.com/photo/2015/10/18/19/04/graduation-995042_1280.jpg"
         className="study_bg"
       />
-      <div className="flex justfy-content-around" style={{ height: "110vh" }}>
+      <div className="flex justfy-content-around">
         <div className="col-4">
           <div className=" flex align-items-center justify-content-start">
             <p>
@@ -61,79 +64,11 @@ const Service = () => {
               active={Service}
               onSelect={onSelect}
             />
-            <form className="form m-2 ">
-              <div className="flex">
-                <label>
-                  <input
-                    className="input"
-                    type="text"
-                    placeholder=""
-                    required=""
-                  />
-                  <span>first name</span>
-                </label>
-
-                <label>
-                  <input
-                    className="input"
-                    type="text"
-                    placeholder=""
-                    required=""
-                  />
-                  <span>last name</span>
-                </label>
-              </div>
-
-              <label>
-                <input
-                  className="input"
-                  type="email"
-                  placeholder=""
-                  required=""
-                />
-                <span>email</span>
-              </label>
-
-              <label>
-                <input
-                  className="input"
-                  placeholder=""
-                  type="tel"
-                  required=""
-                />
-                <span>contact number</span>
-              </label>
-              <label>
-                <input
-                  className="input"
-                  placeholder=""
-                  type="text"
-                  required=""
-                  value={Service}
-                />
-                <span>Service Help</span>
-              </label>
-              <label>
-                <textarea
-                  className="input01"
-                  placeholder=""
-                  rows="3"
-                  required=""
-                ></textarea>
-                <span>message</span>
-              </label>
-
-              <button href="#" className="fancy">
-                <span className="top-key"></span>
-                <span className="text">submit</span>
-                <span className="bottom-key-1"></span>
-                <span className="bottom-key-2"></span>
-              </button>
-            </form>
+            <FormData subject={"Service Help"} value={value} />
           </div>
         </div>
         <div
-          className="col-7 bg-white m-4 rounded h-100"
+          className="col-7 bg-white m-4 rounded "
           style={{ boxShadow: "0px 4px 4px 0px #bfbfbf" }}
         >
           {desiredComponent}
