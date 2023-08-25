@@ -48,7 +48,7 @@ const handleChange=(e)=>{
         </p>
       </div>
       <div className="col-sm-12 col-md-6 d-flex justify-content-center">
-        <form className="form" autoComplete="off" onSubmit={handleChange}>
+        <form className="form" autoComplete="off" >
           <p className="title">Register </p>
           <p className="message">
             Get In Touch With Our Experienced Counsellors.{" "}
