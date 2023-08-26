@@ -106,7 +106,7 @@ hgroup {
 
 html,
 body {
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
   font-weight: 400;
   background-color: #fff;
   font-size: 16px;
@@ -163,8 +163,8 @@ p {
 .call {
   color: yellow;
   font-weight: 400;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+  /* font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif; */
 }
 .call:hover {
   color: orange;
@@ -178,7 +178,7 @@ global styles
 html,
 body {
   background: #fff;
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
 }
 
 ::selection {
@@ -880,6 +880,6 @@ body {
 
   /* border-top-left-radius: 35px;
   border-bottom-right-radius: 35px; */
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  /* font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif; */
 }

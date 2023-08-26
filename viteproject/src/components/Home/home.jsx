@@ -92,7 +92,7 @@ const Home = () => {
       </div>
 
       <Carousel />
-      <CounterSection />
+      {/* <CounterSection /> */}
       <WelcomeSection />
       <TestimonialCarousel />
       <FormSection />
