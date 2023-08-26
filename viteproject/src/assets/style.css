@@ -328,7 +328,8 @@ body {
 }
 
 .header-area {
-  background-color: rgba(28, 28, 28, 0.15);
+  /* background-color: rgba(28, 28, 28, 0.15);
+   */
   position: absolute;
   top: 30px;
   left: 0;
@@ -638,7 +639,7 @@ body {
 }
 
 .p-panelmenu .p-panelmenu-header > a:hover {
-  background-color: rgb(255, 225, 186) !important;
+  background-color: none !important;
   border: 0px solid white !important;
 }
 @media (max-width: 1200px) {
@@ -658,8 +659,13 @@ body {
   .left-content {
     justify-content: center;
   }
-  .phoneCont {
-    margin-right: 5px;
+  .displayPhoneCont {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .secondNum {
+    display: none;
   }
   .logo-icon {
     margin-right: 2px;
@@ -673,16 +679,16 @@ body {
     opacity: 1;
   }
   .header-area.header-sticky {
-    height: 5vh;
+    min-height: 70px;
   }
   .header-area.header-sticky .nav li.search-icon a {
     width: 100%;
   }
   .header-area {
     background-color: rgba(219, 215, 215, 0.63);
-    padding: 0px 10px;
-    top: 40px;
-
+    padding: 0px 0px;
+    top: 20px;
+    height: 0vh;
     box-shadow: none;
     text-align: right;
   }
@@ -692,7 +698,7 @@ body {
   .header-area .logo {
     margin-left: 0px;
   }
-  .header-area .menu-trigger {
+  .menu-trigger {
     display: block !important;
   }
   .header-area .main-nav {
@@ -882,4 +888,38 @@ body {
   border-bottom-right-radius: 35px; */
   /* font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif; */
+}
+.logo-cont {
+  height: 150px;
+  width: 145px;
+  position: absolute;
+  top: 0vh;
+  left: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border: 10px solid #012e47;
+  border-top: 0px;
+}
+@media (max-width: 769px) {
+  .logo-cont {
+    display: none;
+  }
+}
+.dock-mobile-item {
+  display: none !important;
+}
+@media (max-width: 769px) {
+  .dock-item {
+    display: none !important;
+  }
+  .dock-mobile-item {
+    display: inline !important;
+    margin-top: 10vh !important;
+  }
+}
+.p-panelmenu .p-panelmenu-content {
+  border: 0px solid white !important;
 }

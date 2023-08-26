@@ -1,24 +1,35 @@
 import React from "react";
 import "./home.css";
-import axios from 'axios';
+import axios from "axios";
 
 const FormSection = () => {
-  const[name,setname]=React.useState("")
-  const[Lastname,setlastname]=React.useState("")
-    const[number,setnumber]=React.useState("")
-    const[mail,setmail]=React.useState("")
-    
-const handleChange=(e)=>{
-  e.preventDefault()
-  const data={
-    name:name,
-    Lastname:Lastname,
-    mail:mail,
-    number:number
-  }
-  // console.log(data)
-  axios.post("https://sheet.best/api/sheets/b0481a3b-d93d-472f-a4b6-43ea6a177f79",data).then((response)=>{console.log(response)})
-}
+  const [name, setname] = React.useState("");
+  const [Lastname, setlastname] = React.useState("");
+  const [number, setnumber] = React.useState("");
+  const [mail, setmail] = React.useState("");
+
+  const handleChange = (e) => {
+    e.preventDefault();
+    const data = {
+      name: name,
+      Lastname: Lastname,
+      mail: mail,
+      number: number,
+    };
+    // console.log(data)
+    axios
+      .post(
+        "https://sheet.best/api/sheets/b0481a3b-d93d-472f-a4b6-43ea6a177f79",
+        data
+      )
+      .then((response) => {
+        console.log(response);
+      });
+    setname("");
+    setlastname("");
+    setnumber("");
+    setmail("");
+  };
 
   return (
     <div className="d-flex flex-wrap welcome-section-cont">
@@ -55,23 +66,52 @@ const handleChange=(e)=>{
           </p>
           <div className="flex">
             <label>
-              <input className="input" type="text" placeholder="" required onChange={(e)=>setname(e.target.value)} />
+              <input
+                className="input"
+                type="text"
+                placeholder=""
+                required
+                value={name}
+                onChange={(e) => setname(e.target.value)}
+              />
               <span>Firstname</span>
             </label>
 
             <label>
-              <input className="input" type="text" placeholder="" required onChange={(e)=>setlastname(e.target.value)} />
+              <input
+                className="input"
+                type="text"
+                placeholder=""
+                required
+                value={Lastname}
+                onChange={(e) => setlastname(e.target.value)}
+              />
               <span>Lastname</span>
             </label>
           </div>
 
           <label>
-            <input className="input" type="email" placeholder="" required onChange={(e)=>setmail(e.target.value)} />
+            <input
+              className="input"
+              type="email"
+              placeholder=""
+              required
+              value={mail}
+              onChange={(e) => setmail(e.target.value)}
+            />
             <span>Email</span>
           </label>
 
           <label>
-            <input className="input" type="text" maxLength={20} placeholder="" required onChange={(e)=>setnumber(e.target.value)}  />
+            <input
+              className="input"
+              type="text"
+              maxLength={20}
+              placeholder=""
+              required
+              value={number}
+              onChange={(e) => setnumber(e.target.value)}
+            />
             <span>Phone Number</span>
           </label>
           <button className="submit">Submit</button>

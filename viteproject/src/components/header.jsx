@@ -8,9 +8,7 @@ import instaLogo from "../assets/instagram.png";
 import whatsLogo from "../assets/whatsapp.png";
 import facebookLogo from "../assets/facebook.png";
 import twitterLogo from "../assets/twitter.png";
-import { Menubar } from "primereact/menubar";
-
-// import "../assets/style.css";
+import logopng from "../assets/explorenex.png";
 import "./header.css";
 import { Link, useNavigate } from "react-router-dom";
 import { Dock } from "primereact/dock";
@@ -82,70 +80,196 @@ const Header = () => {
   const items = [
     {
       label: "Home",
+      command: () => {
+        setVisible(false);
+        navigate("/");
+      },
     },
     {
       label: "About",
+      command: () => {
+        setVisible(false);
+        navigate("/about");
+      },
     },
     {
       label: "Study Aboard",
       items: [
         {
           label: "Study in UK",
+          command: () => {
+            setVisible(false);
+            dispatch(selectStudy("United Kingdom"));
+            navigate("/studies");
+          },
         },
         {
           label: "Study in USA",
+          command: () => {
+            setVisible(false);
+            dispatch(selectStudy("United States of America"));
+            navigate("/studies");
+          },
         },
         {
           label: "Study in Canada",
+          command: () => {
+            setVisible(false);
+            dispatch(selectStudy("Canada"));
+            navigate("/studies");
+          },
         },
         {
-          label: "Study in Europe",
+          label: "Study in Ireland",
+          command: () => {
+            setVisible(false);
+            dispatch(selectStudy("Ireland"));
+            navigate("/studies");
+          },
         },
         {
           label: "Study in Australia",
+          command: () => {
+            setVisible(false);
+            dispatch(selectStudy("Australia"));
+            navigate("/studies");
+          },
         },
         {
           label: "Study in NewZealand",
+          command: () => {
+            setVisible(false);
+            dispatch(selectStudy("New Zealand"));
+            navigate("/studies");
+          },
         },
       ],
     },
     {
-      label: "Traning",
+      label: "Services",
       items: [
         {
-          label: "IELTS",
+          label: "Tranings",
+          items: [
+            {
+              label: "TOEFL",
+              command: () => {
+                setVisible(false);
+                dispatch(selectExam("TOEFL"));
+                navigate("/trainings");
+              },
+            },
+            {
+              label: "IELTS",
+              command: () => {
+                setVisible(false);
+                dispatch(selectExam("IELTS"));
+                navigate("/trainings");
+              },
+            },
+            {
+              label: "GRE",
+              command: () => {
+                setVisible(false);
+                dispatch(selectExam("GRE"));
+                navigate("/trainings");
+              },
+            },
+            {
+              label: "GMAT",
+              command: () => {
+                setVisible(false);
+                dispatch(selectExam("GMAT"));
+                navigate("/trainings");
+              },
+            },
+          ],
         },
         {
-          label: "TOEFL",
+          label: "Complete Application",
+          command: () => {
+            setVisible(false);
+            dispatch(selectService("Complete Application"));
+            navigate("/services");
+          },
         },
         {
-          label: "GMAT",
+          label: "Preparation",
+          command: () => {
+            setVisible(false);
+            dispatch(selectService("Preparation"));
+            navigate("/services");
+          },
         },
         {
-          label: "GRE",
+          label: "Visa Application Help",
+          command: () => {
+            setVisible(false);
+            dispatch(selectService("Visa Application Help"));
+            navigate("/services");
+          },
+        },
+        {
+          label: "Mock Interviews Help",
+          command: () => {
+            setVisible(false);
+            dispatch(selectService("Mock Visa Interviews"));
+            navigate("/services");
+          },
+        },
+        {
+          label: "Education Loan Help",
+          command: () => {
+            setVisible(false);
+            dispatch(selectService("Education Loan Help"));
+            navigate("/services");
+          },
+        },
+        {
+          label: "Flight Ticketing Help",
+          command: () => {
+            setVisible(false);
+            dispatch(selectService("Flights Tickets Help"));
+            navigate("/services");
+          },
         },
       ],
     },
     {
       label: "Contact Us",
+      command: () => {
+        setVisible(false);
+        navigate("/contact");
+      },
     },
   ];
 
   return (
     <>
       <div className="sub-header" style={{ width: "100%", position: "fixed" }}>
+        <div className="bg-white logo-cont">
+          <img
+            src={logopng}
+            alt="logo"
+            className="rounded-circle"
+            style={{ width: "120px" }}
+          />
+        </div>
         <Dock
           model={itemsLogo}
           position="left"
-          className="ms-3 border-0 bg-none"
+          className="ms-3 border-0 bg-none dock-item"
           style={{ position: "fixed" }}
         />
+
         <div className="col-lg-12 col-sm-4">
           <div className="left-content">
             <div className="displayPhoneCont">
               <div className="phoneCont">
                 <img src={phone} className="logo-icon" id="callId" />{" "}
-                <p className="call">+918888888888,+919999999999</p>
+                <p className="call">
+                  +918888888888<span className="secondNum">,+919999999999</span>
+                </p>
               </div>
               <div className="phoneCont">
                 <img src={mail} className="logo-icon" id="mailId" />{" "}
@@ -155,19 +279,16 @@ const Header = () => {
           </div>
         </div>
       </div>
+
       <header
         className="header-area header-sticky w-100"
         style={{
           position: "fixed",
-          backgroundColor: colorChange
-            ? "#201f1fd9"
-            : " rgba(28, 28, 28, 0.15)",
+          backgroundColor: colorChange ? " #012e47" : " rgba(28, 28, 28, 0.15)",
         }}
       >
         <nav className="main-nav ">
-          <h1 className="logo" style={{ color: "white", fontStyle: "oblique" }}>
-            EXPLORENEX
-          </h1>
+          <div></div>
           <ul className="nav">
             <li>
               <Link to="/" onClick={() => navigate("/")}>
@@ -249,7 +370,11 @@ const Header = () => {
           </ul>
 
           <div className="menu-trigger">
-            <GiHamburgerMenu onClick={() => setVisible(true)} />
+            <GiHamburgerMenu
+              className="mt-4 mx-3"
+              style={{ color: "white", fontSize: "20px" }}
+              onClick={() => setVisible(true)}
+            />
           </div>
         </nav>
       </header>
@@ -259,14 +384,26 @@ const Header = () => {
         className="sideBar"
         style={{
           marginLeft: "0%",
-          height: "50%",
-          marginBottom: "53%",
-          width: "100%",
+          marginTop: "8vh",
+          width: "60%",
         }}
       >
-        <div className="card ">
-          <PanelMenu model={items} className="w-full md:w-25rem" />
-        </div>
+        <img
+          src={logopng}
+          alt="logo"
+          style={{ width: "220px", marginTop: "0px" }}
+        />
+        <PanelMenu
+          model={items}
+          pt={{
+            root: { className: "w-full md:w-25rem" },
+          }}
+        />
+        <Dock
+          model={itemsLogo}
+          position="bottom"
+          className="mb-5 border-0 bg-none dock-mobile-item"
+        />
       </Sidebar>
     </>
   );
