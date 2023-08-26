@@ -62,7 +62,7 @@
   
   .text {
     font-size: 12px;
-    font-family: inherit;
+    /* font-family: inherit; */
     font-weight: 600;
   }
   

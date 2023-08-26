@@ -8,7 +8,7 @@ const Contact = () => {
   return (
     <div style={{ height: "130vh" }}>
       <div
-        className="flex justify-content-center align-items-center"
+        className="flex justify-content-start align-items-end ms-5 mb-5"
         style={{
           position: "absolute",
           zIndex: "5",
