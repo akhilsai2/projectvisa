@@ -51,13 +51,13 @@ const Home = () => {
         style={{
           display: "flex",
           flexDirection: "column",
-          justifyContent: "between",
+          justifyContent: "center",
           alignItems: "center",
           position: "absolute",
           zIndex: "2",
           marginTop: "35vh",
         }}
-        className="nameCont w-100"
+        className="name-cont w-100"
       >
         <Animation
           type="fadeInFromBottom"
@@ -67,7 +67,7 @@ const Home = () => {
           timing="ease-in-out"
           iteration="1"
           fillMode="none"
-          className="text-center d-inline"
+          className="text-center slideText"
         >
           <h1 className="name">
             <span className="intial">ExploreNex.</span>
