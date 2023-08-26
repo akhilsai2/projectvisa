@@ -93,11 +93,13 @@ const Home = () => {
 
       <Carousel />
       {/* <CounterSection /> */}
-      <WelcomeSection />
-      <TestimonialCarousel />
-      <FormSection />
-      <Flagscard />
-      <Card />
+      <div className="px-5">
+        <WelcomeSection />
+        <TestimonialCarousel />
+        {/* <FormSection /> */}
+        <Flagscard />
+        <Card />
+      </div>
     </div>
   );
 };

@@ -23,17 +23,21 @@ const WelcomeSection = () => {
           fillMode="none"
           className="col-md-6"
         >
+          <div className="col-12 col-md-6 w-100 h-100">
+
           <img
             src={studyAb}
             // src="https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvNDgyLW1rLTU4MDQtMDFfMy5qcGc.jpg"
             alt="degree"
             // className="col-6  rounded-circle"
             style={{
-              width: "500px",
+              width: "100%",
+              height:"100%",
               // boxShadow: "0px 4px 16px 0px #bfbfbf",
             }}
-            className="rounded-5 welcomeImg"
-          />
+            className="rounded-5 welcomeImg "
+            />
+            </div>
         </Animation>
         <Animation
           type="fadeInFromTop"
@@ -45,7 +49,7 @@ const WelcomeSection = () => {
           fillMode="none"
           className="col-md-6"
         >
-          <div className="flex flex-column justify-content-center align-items-center  welcome-section-headings lh-lg">
+          <div className="flex flex-column justify-content-center align-items-center w-100 welcome-section-headings lh-lg col-12 col-md-6">
             <p className="welcome">Welcome to Your Global Journey with </p>
             <h1 className="welcome-head">EXPLORENEX</h1>
             <h3 className="welcome-head1">Your Gateway to Global Education!</h3>
@@ -63,8 +67,8 @@ const WelcomeSection = () => {
           </div>
         </Animation>
       </div>
-      <div className="d-flex flex-wrap">
-        <div className="mt-4 col-5">
+      <div className="d-flex flex-wrap align-items-center justify-content-between">
+        <div className="mt-4 col-12 col-md-6 col-lg-8">
           <div className="mb-2">
             <span
               style={{
@@ -72,6 +76,8 @@ const WelcomeSection = () => {
                 letterSpacing: "1px",
                 fontWeight: "700",
                 color: "#014585",
+                textAlign:"center",
+                width:"100%"
               }}
             >
               Why Choose ExploreNex?
@@ -119,6 +125,7 @@ const WelcomeSection = () => {
                 </p>
               </div>
             </div>
+            
           </Animation>
 
           <Animation
@@ -335,8 +342,15 @@ const WelcomeSection = () => {
             </div>
           </Animation>
         </div>
-        <div className="mt-4 col-5">
-          
+        <div className="mt-4 col-12 col-md-6 col-lg-4">
+          <h3>Start Your Journey Today!</h3>
+          <p>
+            Join the ranks of ambitious students who have trusted [Your
+            Consultancy Name] to guide them on their educational odysseys. Your
+            global adventure begins with a single step – contact us today to
+            explore the endless possibilities that await you. Ready to embrace
+            the world? Let's make your study abroad dreams a reality!
+          </p>
           <FormData />
         </div>
       </div>
