@@ -2,8 +2,8 @@ import React from "react";
 import "./studies.css";
 const Studyusa = () => {
   return (
-    <div className="p-4 ">
-      <div className="flex flex-column  col-sm-12 col-md-12">
+    <div className="p-1 pt-3">
+      <div className="flex flex-column">
         <h2 style={{ fontWeight: "700" }}>Why USA ?</h2>
         <h4 style={{ fontStyle: "italic", textDecoration: "underline" }}>
           United States - Unlock Your Potential in a Land of Opportunities:

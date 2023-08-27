@@ -2,7 +2,7 @@ import React from "react";
 
 const Flight = () => {
   return (
-    <div className="p-3">
+    <div className="p-1 pt-3">
       <h2 style={{ fontWeight: "700" }} className="text-primary">
         Flight Ticketing Help :{" "}
       </h2>

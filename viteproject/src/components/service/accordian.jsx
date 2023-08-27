@@ -11,7 +11,7 @@ const Accordian = (props) => {
   };
 
   return (
-    <ul style={{ width: "70%" }}>
+    <ul style={{ width: "80%" }} className="accordian-mobile">
       {items.map((x, idx) => (
         <li
           className={

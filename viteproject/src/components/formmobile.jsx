@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 
-const FormData = (props) => {
+const FormDataMobile = (props) => {
   const [firstName, setfirstName] = React.useState("");
   const [lastname, setlastname] = React.useState("");
   const [email, setemail] = React.useState("");
@@ -23,7 +23,7 @@ const FormData = (props) => {
     );
   };
   return (
-    <form className="form m-2 form-mobile" onSubmit={handleChange}>
+    <form className="form w-100 mt-3" onSubmit={handleChange}>
       <div className="flex">
         <label>
           <input
@@ -100,4 +100,4 @@ const FormData = (props) => {
   );
 };
 
-export default FormData;
+export default FormDataMobile;

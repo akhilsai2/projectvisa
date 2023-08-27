@@ -2,7 +2,7 @@ import "./studies.css";
 
 const Studyuk = () => {
   return (
-    <div className="p-4">
+    <div className="p-1 pt-3">
       <div className="flex flex-column">
         <h2 style={{ fontWeight: "700" }}>Why UK ?</h2>
         <h4 style={{ fontStyle: "italic", textDecoration: "underline" }}>
