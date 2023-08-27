@@ -18,3 +18,8 @@
   color: white;
   font-weight: 700;
 }
+@media (max-width: 769px) {
+  .accordian-mobile {
+    display: none;
+  }
+}

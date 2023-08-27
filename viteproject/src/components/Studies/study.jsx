@@ -9,6 +9,7 @@ import Studyeurope from "./studyeurope";
 import Studyaustralia from "./studyaustralia";
 import Studynewzealand from "./studynewzealand";
 import FormData from "../form";
+import Dialogbox from "../dialogbox";
 const StudyData = [
   { id: 1, text: "United Kingdom", component: <Studyuk /> },
   { id: 2, text: "United States of America", component: <Studyusa /> },
@@ -20,13 +21,13 @@ const StudyData = [
 const Study = () => {
   const dispatch = useDispatch();
   const { Study } = useSelector((state) => state.globalstate);
-
   const desiredComponent = StudyData.filter((x) => Study === x.text)[0]
     .component;
   const value = StudyData.filter((x) => Study === x.text)[0].text;
   const onSelect = (i) => {
     dispatch(selectStudy(i));
   };
+
   return (
     <>
       <div
@@ -36,7 +37,7 @@ const Study = () => {
           zIndex: "5",
           top: "10%",
           height: "20vh",
-          width: "50%",
+          width: "70%",
         }}
       >
         <h1 className="study_heading">
@@ -48,16 +49,15 @@ const Study = () => {
         src="https://cdn.pixabay.com/photo/2015/10/18/19/04/graduation-995042_1280.jpg"
         className="study_bg"
       />
-      <div className="flex justfy-content-around">
-        <div className="col-4">
-          <div className=" flex align-items-center justify-content-start">
-            <p>
-              Study <i className="fa fa-angle-right"></i>
-            </p>
-
-            <p>{Study}</p>
-          </div>
-          <div className="flex flex-column align-items-center justify-content-between">
+      <div className="row m-3">
+        <div className="col-sm-12 col-md-4">
+          <div className="flex flex-column align-items-center">
+            <div className="flex align-items-center">
+              <p>
+                Study <i className="fa fa-angle-right"></i>
+              </p>
+              <p>{Study}</p>
+            </div>
             <Accordian
               key={Study}
               items={StudyData}
@@ -65,10 +65,11 @@ const Study = () => {
               onSelect={onSelect}
             />
             <FormData subject={"Country"} value={value} />
+            <Dialogbox subject={"Country"} value={value} />
           </div>
         </div>
         <div
-          className="col-7 bg-white m-4 rounded"
+          className="col-sm-12 col-md-8 bg-white rounded text-left"
           style={{ boxShadow: "0px 4px 4px 0px #bfbfbf" }}
         >
           {desiredComponent}

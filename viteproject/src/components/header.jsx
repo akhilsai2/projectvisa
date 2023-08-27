@@ -262,9 +262,12 @@ const Header = () => {
           style={{ position: "fixed" }}
         />
 
-        <div className="col-lg-12 col-sm-4">
+        <div
+          className="col-lg-12 col-sm-4"
+          style={{ backgroundColor: !colorChange ? " #012e47" : "#000" }}
+        >
           <div className="left-content">
-            <div className="displayPhoneCont">
+            <div className="displayPhoneCont pt-3">
               <div className="phoneCont">
                 <img src={phone} className="logo-icon" id="callId" />{" "}
                 <p className="call">
@@ -273,7 +276,7 @@ const Header = () => {
               </div>
               <div className="phoneCont">
                 <img src={mail} className="logo-icon" id="mailId" />{" "}
-                <p className="call">dream2de@gmail.com</p>
+                <p className="call">explorenex@gmail.com</p>
               </div>
             </div>
           </div>

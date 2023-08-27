@@ -1,6 +1,6 @@
 const Gre = () => {
   return (
-    <div className="p-4">
+    <div className="p-1 pt-3">
       <h3 className="text-primary fw-bold">Graduate Record Examination</h3>
       <ul className="lh-lg">
         <li>
@@ -24,12 +24,13 @@ const Gre = () => {
           valid for 5 years
         </li>
       </ul>
-      <h3 className="fw-bold text-black ">
+      <h3 className="fw-bold text-black link-exam">
         For More Detail Visit :
-        <span className="ms-1 bg-primary p-2 rounded-3">
+        <span className="ms-1 bg-primary p-2 rounded-3 ">
           <a
             href="https://www.ets.org/gre.html"
             target="_blank"
+            rel="noreferrer"
             className="text-white"
           >
             www.ets.org/gre

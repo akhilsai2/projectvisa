@@ -1,6 +1,6 @@
 const Gmat = () => {
   return (
-    <div className="p-4">
+    <div className="p-1 pt-3">
       <h3 className="text-primary fw-bold">
         Graduate Management Admission Test
       </h3>
@@ -30,10 +30,15 @@ const Gmat = () => {
           valid for 5 years
         </li>
       </ul>
-      <h3 className="fw-bold text-black ">
+      <h3 className="fw-bold text-black link-exam ">
         For More Detail Visit :
-        <span className="ms-1 bg-primary p-2 rounded-3">
-          <a href="https://www.mba.com/" target="_blank" className="text-white">
+        <span className="ms-1 bg-primary p-2 rounded-3 ">
+          <a
+            href="https://www.mba.com/"
+            target="_blank"
+            rel="noreferrer"
+            className="text-white "
+          >
             www.mba.com
           </a>
         </span>

@@ -9,6 +9,7 @@ import Gre from "./gre";
 import Gmat from "./gmat";
 import "../../Studies/studies.css";
 import FormData from "../../form";
+import Dialogbox from "../../dialogbox";
 const trainData = [
   { id: 1, text: "TOEFL", component: <Tofel /> },
   { id: 2, text: "IELTS", component: <Ielts /> },
@@ -26,7 +27,7 @@ const Trainings = () => {
     dispatch(selectExam(i));
   };
   return (
-    <div style={{ height: "155vh" }}>
+    <div>
       <div
         className="flex justify-content-start align-items-end ms-5"
         style={{
@@ -45,27 +46,28 @@ const Trainings = () => {
         src="https://cdn.pixabay.com/photo/2015/10/18/19/04/graduation-995042_1280.jpg"
         className="study_bg"
       />
-      <div className="flex justfy-content-center" style={{ height: "100vh" }}>
-        <div className="col-4">
-          <div className=" flex align-items-center justify-content-start">
-            <p>
-              Tranings <i className="fa fa-angle-right"></i>
-            </p>
+      <div className="row m-3">
+        <div className="col-sm-12 col-md-4">
+          <div className="flex flex-column align-items-center">
+            <div className="flex align-items-center">
+              <p>
+                Tranings <i className="fa fa-angle-right"></i>
+              </p>
 
-            <p>{Exam}</p>
-          </div>
-          <div className="flex flex-column align-items-center justify-content-between">
+              <p>{Exam}</p>
+            </div>
             <Accordian
               key={Exam}
               items={trainData}
               active={Exam}
               onSelect={onSelect}
             />
-            <FormData subject={"Traning Exam"} value={value} />
+            <FormData subject={"Training Exam"} value={value} />
+            <Dialogbox subject={"Training Exam"} value={value} />
           </div>
         </div>
         <div
-          className="col-7 bg-white m-3 rounded h-100"
+          className="col-sm-12 col-md-8 bg-white rounded text-left"
           style={{ boxShadow: "0px 4px 4px 0px #bfbfbf" }}
         >
           {" "}

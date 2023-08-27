@@ -8,6 +8,7 @@ import Mockinterview from "./ServiceProvide/mockinterview";
 import Educationloan from "./ServiceProvide/educationloan";
 import Filght from "./ServiceProvide/filght";
 import FormData from "../form";
+import Dialogbox from "../dialogbox";
 
 const serviceData = [
   { id: 1, text: "Complete Application", component: <Application /> },
@@ -48,16 +49,16 @@ const Service = () => {
         src="https://cdn.pixabay.com/photo/2015/10/18/19/04/graduation-995042_1280.jpg"
         className="study_bg"
       />
-      <div className="flex justfy-content-around">
-        <div className="col-4">
-          <div className=" flex align-items-center justify-content-start">
-            <p>
-              Services <i className="fa fa-angle-right"></i>
-            </p>
+      <div className="row m-2">
+        <div className="col-sm-12 col-md-4">
+          <div className="flex flex-column align-items-center">
+            <div className="flex align-items-center">
+              <p>
+                Services <i className="fa fa-angle-right"></i>
+              </p>
 
-            <p>{Service}</p>
-          </div>
-          <div className="flex flex-column align-items-center justify-content-between">
+              <p>{Service}</p>
+            </div>
             <Accordian
               key={Service}
               items={serviceData}
@@ -65,10 +66,12 @@ const Service = () => {
               onSelect={onSelect}
             />
             <FormData subject={"Service Help"} value={value} />
+            <Dialogbox subject={"Service Help"} value={value} />
           </div>
         </div>
+
         <div
-          className="col-7 bg-white m-4 rounded "
+          className="col-sm-12 col-md-8 bg-white  rounded text-left"
           style={{ boxShadow: "0px 4px 4px 0px #bfbfbf" }}
         >
           {desiredComponent}
