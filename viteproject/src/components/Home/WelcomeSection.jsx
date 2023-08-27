@@ -351,7 +351,7 @@ const WelcomeSection = () => {
             explore the endless possibilities that await you. Ready to embrace
             the world? Let's make your study abroad dreams a reality!
           </p>
-          <FormData />
+          <FormData mobile={false}/>
         </div>
       </div>
     </div>

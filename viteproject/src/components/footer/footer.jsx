@@ -11,6 +11,7 @@ import {
 import { VscLocation } from "react-icons/vsc";
 import { BiSolidPhoneCall } from "react-icons/bi";
 import { FiMail } from "react-icons/fi";
+import LeafletMap from "../LeafletMap/LeafletMap";
 const Footer = () => {
   return (
     <>
@@ -28,10 +29,11 @@ const Footer = () => {
           </div> */}
           <div className="row total-footercard">
             <div className="col-md-6 col-lg-4 col-12 ft-1">
-              <img
+              {/* <img
                 src="https://thumbs.dreamstime.com/b/kids-education-child-boy-study-school-thinking-bubble-dreaming-over-black-chalkboard-75214276.jpg"
                 style={{ height: "100px", width: "100px" }}
-              />
+              /> */}
+              <LeafletMap/>
             </div>
             <div className="col-md-6 col-lg-3 col-12 ft-2 sub-title ">
               <h5 className="main-heading"> STUDY ABROAD</h5>
