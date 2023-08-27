@@ -2,11 +2,13 @@ import React from "react";
 import axios from "axios";
 
 const FormData = (props) => {
+  const {mobile = true} = props
   const [firstName, setfirstName] = React.useState("");
   const [lastname, setlastname] = React.useState("");
   const [email, setemail] = React.useState("");
   const [number, setnumber] = React.useState("");
   const [msg, setmsg] = React.useState("");
+  
   const handleChange = (e) => {
     e.preventDefault();
     const data = {
@@ -23,7 +25,7 @@ const FormData = (props) => {
     );
   };
   return (
-    <form className="form m-2 form-mobile" onSubmit={handleChange}>
+    <form className={`form m-2 ${mobile && "form-mobile"}`} onSubmit={handleChange}>
       <div className="flex">
         <label>
           <input
@@ -77,7 +79,7 @@ const FormData = (props) => {
           value={props.value}
           // required onChange={(e)=>setnumber(e.target.value)}
         />
-        <span>{props.subject}</span>
+        <span>{mobile ? props.subject:"Desired Country"}</span>
       </label>
       <label>
         <textarea

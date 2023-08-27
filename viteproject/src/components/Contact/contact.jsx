@@ -6,15 +6,15 @@ import "./contact.css";
 
 const Contact = () => {
   return (
-    <div style={{ height: "130vh" }}>
+    <div style={{ minHeight: "100vh" }}>
       <div
         className="flex justify-content-start align-items-end ms-5 mb-5"
         style={{
           position: "absolute",
           zIndex: "5",
           top: "10%",
-          height: "30vh",
-          width: "100%",
+          height: "20vh",
+          width: "50%",
         }}
       >
         <h1 className="study_heading">
@@ -22,15 +22,28 @@ const Contact = () => {
         </h1>
       </div>
       <img src={contact} className="study_bg" />
-      <div className="flex justify-content-center align-items-center w-100">
-        <div className="formCont col-6 flex flex-row align-items-center justify-content-center">
-          <div className="col-6">
+
+        {/* /////////////////heading part end///////////////////////// */}
+
+
+
+
+
+
+
+      <div className="flex flex-wrap justify-content-between p-5  align-items-center w-100">
+
+
+
+
+        <div className="formCont col-12 col-md-7 d-flex flex-wrap align-items-center justify-content-center">
+          <div className="col-12 col-md-5">
             <img
               src="https://st2.depositphotos.com/3922907/12251/i/450/depositphotos_122519302-stock-photo-hand-pressing-telephone-and-mail.jpg"
-              style={{ width: "350px", borderRadius: "10px" }}
+              style={{ width: "100%", borderRadius: "10px" }}
             />
           </div>
-          <div className="col-6 flex flex-column align-items-center justify-content-center ">
+          <div className="col-12 col-md-5 flex flex-column align-items-center justify-content-center ">
             <h4 className="fw-bold">Keep in touch with us</h4>
             <form className="inCont">
               <label htmlFor="Name" className="label">
@@ -59,7 +72,7 @@ const Contact = () => {
                 className="textarea"
                 placeholder="Enter Message..."
                 rows={6}
-                cols={39}
+                cols={29}
               />
               <button type="submit" className="submitbtn">
                 Send
@@ -67,10 +80,25 @@ const Contact = () => {
             </form>
           </div>
         </div>
-        <div className="col-3">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div className="d-flex flex-column justify-content-between align-items-center col-12 col-md-3">
           <div
             className="formCont flex flex-column align-items-center justify-content-center"
-            style={{ height: "215px" }}
+            style={{minHeight:"215px" }}
           >
             <img src={call} alt="Call" style={{ width: "80px" }} />
             <h6 className="fw-bold">Call At US</h6>
@@ -78,7 +106,7 @@ const Contact = () => {
           </div>
           <div
             className="formCont flex flex-column align-items-center justify-content-center"
-            style={{ height: "215px" }}
+            style={{ minHeight:"215px" }}
           >
             <img src={location} alt="Call" style={{ width: "80px" }} />
             <h6 className="fw-bold">Locate At US</h6>

@@ -93,7 +93,7 @@ const Home = () => {
 
       <Carousel />
       {/* <CounterSection /> */}
-      <div className="px-5">
+      <div className="px-md-5">
         <WelcomeSection />
         <TestimonialCarousel />
         {/* <FormSection /> */}

@@ -4,9 +4,9 @@ import FormDataMobile from "./formmobile";
 
 const Dialogbox = (props) => {
   const [visible, setVisible] = React.useState(false);
-  React.useEffect(() => {
-    setVisible(true);
-  }, []);
+  // React.useEffect(() => {
+  //   setVisible(true);
+  // }, []);
   return (
     <div className="mobile-form">
       <p>
