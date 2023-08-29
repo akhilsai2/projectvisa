@@ -252,7 +252,7 @@ const Header = () => {
             src={logopng}
             alt="logo"
             className="rounded-circle"
-            style={{ width: "120px" }}
+            style={{ width: "120px", mixBlendMode: "" }}
           />
         </div>
         <Dock
@@ -261,7 +261,12 @@ const Header = () => {
           className="ms-3 border-0 bg-none dock-item"
           style={{ position: "fixed" }}
         />
-
+        <Dock
+          model={itemsLogo}
+          position="right"
+          className="me-3 border-0 bg-none dock-mobile-item"
+          style={{ position: "fixed" }}
+        />
         <div
           className="col-lg-12 col-sm-4"
           style={{ backgroundColor: !colorChange ? " #012e47" : "#000" }}
@@ -294,9 +299,7 @@ const Header = () => {
           <div></div>
           <ul className="nav">
             <li>
-              <Link to="/" onClick={() => navigate("/")}>
-                Home
-              </Link>
+              <Link to="/">Home</Link>
             </li>
             <li>
               <Link to="/about">About</Link>
@@ -384,10 +387,10 @@ const Header = () => {
       <Sidebar
         visible={visible}
         onHide={() => setVisible(false)}
-        className="sideBar"
+        className="sideBar "
         style={{
           marginLeft: "0%",
-          marginTop: "8vh",
+          marginTop: "9vh",
           width: "60%",
         }}
       >
@@ -401,11 +404,6 @@ const Header = () => {
           pt={{
             root: { className: "w-full md:w-25rem" },
           }}
-        />
-        <Dock
-          model={itemsLogo}
-          position="bottom"
-          className="mb-5 border-0 bg-none dock-mobile-item"
         />
       </Sidebar>
     </>

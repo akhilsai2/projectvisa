@@ -45,6 +45,16 @@ const Home = () => {
     setShowChatbot(!showChatbot);
   };
 
+  // React.useEffect(() => {
+  //   const reloadCount = sessionStorage.getItem("reloadCount");
+  //   if (reloadCount < 2) {
+  //     sessionStorage.setItem("reloadCount", String(reloadCount + 1));
+  //     window.location.reload();
+  //   } else {
+  //     sessionStorage.removeItem("reloadCount");
+  //   }
+  // }, []);
+
   return (
     <div style={{ minHeight: "100vh" }}>
       <div
@@ -97,7 +107,9 @@ const Home = () => {
         <WelcomeSection />
         <TestimonialCarousel />
         {/* <FormSection /> */}
-        <Flagscard />
+      </div>
+      <Flagscard />
+      <div className="px-3">
         <Card />
       </div>
     </div>
