@@ -7,7 +7,15 @@ import "primeflex/primeflex.css";
 import "font-awesome/css/font-awesome.min.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./components/Home/home";
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  useLocation,
+  Navigate,
+  useRoutes,
+  redirect,
+} from "react-router-dom";
 import Service from "./components/service/service";
 import { Story } from "./components/About/story";
 import Layout from "./components/Layout";
@@ -30,8 +38,8 @@ function App() {
       <BrowserRouter>
         <Wrapper>
           <Routes>
-            <Route path="/" element={<Layout />}>
-              <Route index element={<Home />} />
+            <Route element={<Layout />}>
+              <Route index path="/" element={<Home />} />
               <Route path="about" element={<Story />} />
               <Route path="studies" element={<Study />} />
               <Route path="trainings" element={<Trainings />} />
