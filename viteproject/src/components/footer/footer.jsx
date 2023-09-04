@@ -100,7 +100,7 @@ const Footer = () => {
             <div className="col-md-6 col-lg-3 col-12 ft-3 sub-title">
               <h5 className="main-heading">Quick Links</h5>
               <p>
-                <BiSolidPhoneCall style={{ fontSize: "20px",margin:"5px" }} /> +918106658662
+               <span> <BiSolidPhoneCall style={{ fontSize: "20px",margin:"5px" }} /><a href="tel:919182714452" style={{color:"white"}}> +919182714452</a> <a href="tel:919866807237"><span className="secondNum" style={{color:"white"}}></span></a></span>
               </p>
               <p>
                 <FiMail style={{ fontSize: "20px",margin:"5px" }} />
@@ -118,35 +118,36 @@ const Footer = () => {
                   {" "}
                   <AiFillTwitterCircle
                     style={{
-                      fontSize: "20px",
+                      fontSize: "30px",
                       color: "white",
                       marginRight: "7px",
                     }}
                     className="icons"
                   />
                 </a>
-                <a href="">
+                <a href="https://www.youtube.com/@explorenexoverseas">
                   <AiFillYoutube
                     style={{
-                      fontSize: "20px",
+                      fontSize: "30px",
                       color: "white",
                       marginRight: "7px",
                     }}
                   />
                 </a>
-                <a href="">
+                <a href="https://www.facebook.com/profile.php?id=61550977888032&mibextid=ZbWKwL">
                   <AiFillFacebook
                     style={{
-                      fontSize: "20px",
+                      fontSize: "30px",
                       color: "white",
                       marginRight: "7px",
+                      borderRadius:"3px"
                     }}
                   />
                 </a>
-                <a href="">
+                <a href="https://instagram.com/explorenexoverseas?utm_source=qr&igshid=MzNlNGNkZWQ4Mg==">
                   <AiFillInstagram
                     style={{
-                      fontSize: "20px",
+                      fontSize: "30px",
                       color: "white",
                       marginRight: "7px",
                     }}

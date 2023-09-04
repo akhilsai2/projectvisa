@@ -4,6 +4,7 @@ import call from "../../assets/call.png";
 import location from "../../assets/placeholder.png";
 import "./contact.css";
 import axios from "axios";
+import ReactWhatsapp from 'react-whatsapp';
 
 const Contact = () => {
   const [firstName, setfirstName] = React.useState("");
@@ -16,12 +17,12 @@ const Contact = () => {
     const data = {
       firstName: firstName,
       lastname: lastname,
-      email: email,
+      Email: email,
       number: number,
-      msg: msg,
+      Message: msg,
     };
     axios.post(
-      "https://sheet.best/api/sheets/b0481a3b-d93d-472f-a4b6-43ea6a177f79",
+      "https://sheet.best/api/sheets/3e947f87-4162-451f-aaa7-747f31a6268d",
       data
     );
   };
@@ -70,6 +71,7 @@ const Contact = () => {
                 Name
               </label>
               <input
+              style={{color:'black'}}
                 id="Name"
                 className="inputcontact"
                 type="text"
@@ -80,6 +82,7 @@ const Contact = () => {
                 Email
               </label>
               <input
+              style={{color:"black"}}
                 id="email"
                 className="inputcontact"
                 type="text"
@@ -95,6 +98,8 @@ const Contact = () => {
                 placeholder="Enter Message..."
                 rows={6}
                 cols={29}
+                style={{color:"black"}}
+                onChange={(e)=>setmsg(e.target.value)}
               />
               <button type="submit" className="submitbtn">
                 Send
@@ -122,9 +127,10 @@ const Contact = () => {
             className="formCont flex flex-column align-items-center justify-content-center"
             style={{minHeight:"215px" }}
           >
-            <img src={call} alt="Call" style={{ width: "80px" }} />
-            <h6 className="fw-bold">Call At US</h6>
-            <p>+918647364733 , +916737737373</p>
+            <ReactWhatsapp style={{border:"none"}} number="9182714452" message="I'm Interested " ><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1200px-WhatsApp.svg.png" alt="Call" style={{ width: "80px" }} /> </ReactWhatsapp>
+            
+            <h6 className="fw-bold">send Message </h6>
+            <p> <a  href="tel:16027606618" style={{color:"black"}}>+16027606618</a> <a href="tel:918499932011" style={{color:"black"}}>+918499932011</a> </p>
           </div>
           <div
             className="formCont flex flex-column align-items-center justify-content-center"

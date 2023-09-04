@@ -19,16 +19,13 @@ const FormSection = () => {
     // console.log(data)
     axios
       .post(
-        "https://sheet.best/api/sheets/b0481a3b-d93d-472f-a4b6-43ea6a177f79",
+        "https://sheet.best/api/sheets/3e947f87-4162-451f-aaa7-747f31a6268d",
         data
       )
       .then((response) => {
         console.log(response);
+        
       });
-    setname("");
-    setlastname("");
-    setnumber("");
-    setmail("");
   };
 
   return (

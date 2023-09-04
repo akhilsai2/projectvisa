@@ -3,7 +3,7 @@ import axios from "axios";
 
 const FormData = (props) => {
   const {mobile = true} = props
-  const [firstName, setfirstName] = React.useState("");
+  const [firstName, setFirstName] = React.useState("");
   const [lastname, setlastname] = React.useState("");
   const [email, setemail] = React.useState("");
   const [number, setnumber] = React.useState("");
@@ -12,23 +12,29 @@ const FormData = (props) => {
   
   const handleChange = (e) => {
     e.preventDefault();
-   
+    
+ 
     const data = {
       firstName: firstName,
       lastname: lastname,
       Email: email,
       Number: number,
-      msg: msg,
+      Message: msg,
       Gender:gendervalue
     };
+  
     // console.log(data)
     axios.post(
-      "https://sheet.best/api/sheets/b0481a3b-d93d-472f-a4b6-43ea6a177f79",
-      data
-    );
-    setfirstName("")
-    setlastname("")
-  };
+      "https://sheet.best/api/sheets/3e947f87-4162-451f-aaa7-747f31a6268d",data).then((response)=>{
+        console.log(response);
+        setFirstName(" ");
+        setlastname(" ");
+        setemail(" ");
+        setnumber(" ");
+        setmsg(" ");
+      })
+   
+  }
 
 
   return (
@@ -40,7 +46,7 @@ const FormData = (props) => {
             type="text"
             placeholder=""
             required
-            onChange={(e) => setfirstName(e.target.value)}
+            onChange={(e) => setFirstName(e.target.value)}
           />
           <span>first name</span>
         </label>
@@ -56,7 +62,7 @@ const FormData = (props) => {
           <span>last name</span>
         </label>
       </div>
-      <select class="form-select input" defaultValue={"Select Gender"} onChange={(e)=>setgendervalue(e. value)}
+      <select className="form-select input" defaultValue={"vishnu"} onChange={(e)=>setgendervalue(e.target.value)}
             required>
   <option value="male">Male</option>
   <option value="female">Female</option>
