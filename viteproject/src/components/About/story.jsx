@@ -10,25 +10,7 @@ import axios from "axios";
 import { Animation } from "react-easy-animations";
 import { BsArrowRight } from "react-icons/bs";
 export const Story = () => {
-  // const [name, setname] = React.useState("");
-  // const [number, setnumber] = React.useState("");
-
-  // const handleChange = (e) => {
-  //   e.preventDefault();
-  //   const data = {
-  //     name: name,
-  //     number: number,
-  //   };
-  //   // console.log(data)
-  //   axios
-  //     .post(
-  //       "https://sheet.best/api/sheets/b0481a3b-d93d-472f-a4b6-43ea6a177f79",
-  //       data
-  //     )
-  //     .then((response) => {
-  //       console.log(response);
-  //     });
-  // };
+ 
 
   return (
     <div style={{ width: "100%" }}>

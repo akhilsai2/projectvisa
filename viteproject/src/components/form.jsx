@@ -8,22 +8,29 @@ const FormData = (props) => {
   const [email, setemail] = React.useState("");
   const [number, setnumber] = React.useState("");
   const [msg, setmsg] = React.useState("");
+  const[gendervalue,setgendervalue]=React.useState("")
   
   const handleChange = (e) => {
     e.preventDefault();
+   
     const data = {
       firstName: firstName,
       lastname: lastname,
-      email: email,
-      number: number,
+      Email: email,
+      Number: number,
       msg: msg,
+      Gender:gendervalue
     };
     // console.log(data)
     axios.post(
       "https://sheet.best/api/sheets/b0481a3b-d93d-472f-a4b6-43ea6a177f79",
       data
     );
+    setfirstName("")
+    setlastname("")
   };
+
+
   return (
     <form className={`form m-2 ${mobile && "form-mobile"}`} onSubmit={handleChange}>
       <div className="flex">
@@ -49,6 +56,12 @@ const FormData = (props) => {
           <span>last name</span>
         </label>
       </div>
+      <select class="form-select input" defaultValue={"Select Gender"} onChange={(e)=>setgendervalue(e. value)}
+            required>
+  <option value="male">Male</option>
+  <option value="female">Female</option>
+  
+</select>
 
       <label>
         <input
@@ -86,13 +99,13 @@ const FormData = (props) => {
           className="input01"
           placeholder=""
           rows="3"
-          required
-          onChange={(e) => setmsg(e.target.value)}
+            onChange={(e) => setmsg(e.target.value)}
         ></textarea>
         <span>message</span>
       </label>
 
-      <button href="#" className="fancy">
+      <button href="#" className="fancy" onClick={()=>setemptyvalue(false
+        )}>
         <span className="top-key"></span>
         <span className="text">submit</span>
         <span className="bottom-key-1"></span>

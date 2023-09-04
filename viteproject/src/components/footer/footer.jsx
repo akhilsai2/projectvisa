@@ -100,18 +100,18 @@ const Footer = () => {
             <div className="col-md-6 col-lg-3 col-12 ft-3 sub-title">
               <h5 className="main-heading">Quick Links</h5>
               <p>
-                <VscLocation style={{ fontSize: "20px" }} /> vijayawada
+                <BiSolidPhoneCall style={{ fontSize: "20px",margin:"5px" }} /> +918106658662
               </p>
               <p>
-                <BiSolidPhoneCall style={{ fontSize: "20px" }} /> +918106658662
+                <FiMail style={{ fontSize: "20px",margin:"5px" }} />
+                explorenexoverseas@gmail.com
               </p>
               <p>
-                <FiMail style={{ fontSize: "20px" }} />
-                vishnu123@gmail.com
-              </p>
-              <p>
-                <AiFillLinkedin style={{ fontSize: "20px" }} />
+                <AiFillLinkedin style={{ fontSize: "20px",margin:"5px" }} />
                 dream2De@linkedin.com
+              </p>
+              <p>
+                <VscLocation style={{ fontSize: "20px",margin:"5px" }} /> 1-28,A-sitaramapuram,Telaprolu,Unguturu,Krishna Dis,AP,521109  
               </p>
               <div className="footer-icons">
                 <a href="">
