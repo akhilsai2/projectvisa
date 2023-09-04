@@ -14,6 +14,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { Dock } from "primereact/dock";
 import { selectExam, selectService, selectStudy } from "../globalstate";
 import { useDispatch } from "react-redux";
+import ReactWhatsapp from 'react-whatsapp';
 const Header = () => {
   const navigate = useNavigate();
   const [visible, setVisible] = useState(false);
@@ -62,15 +63,15 @@ const Header = () => {
   const itemsLogo = [
     {
       label: "Finder",
-      icon: () => <img alt="Finder" src={instaLogo} width="60%" />,
+      icon: () => <a className="ml-1" href="https://instagram.com/explorenexoverseas?utm_source=qr&igshid=MzNlNGNkZWQ4Mg=="><img alt="Finder" src={instaLogo} width="33px" /></a>,
     },
     {
       label: "App Store",
-      icon: () => <img alt="App Store" src={whatsLogo} width="60%" />,
+      icon: () =><ReactWhatsapp number="919182714452" message="I'm interested" style={{backgroundColor:"transparent",border:"none"}}> <img alt="App Store" src={whatsLogo} width="30px"/></ReactWhatsapp>,
     },
     {
       label: "Photos",
-      icon: () => <img alt="Photos" src={facebookLogo} width="60%" />,
+      icon: () => <a className="ml-1"  href="https://www.facebook.com/profile.php?id=61550977888032&mibextid=ZbWKwL"><img alt="Photos" src={facebookLogo} width="33px" /></a> ,
     },
     {
       label: "Trash",
@@ -274,14 +275,14 @@ const Header = () => {
           <div className="left-content">
             <div className="displayPhoneCont pt-3">
               <div className="phoneCont">
-                <img src={phone} className="logo-icon" id="callId" />{" "}
+               <a href="tel:919182714452"> <img src={phone} className="logo-icon" id="callId" /></a>{" "}
                 <p className="call">
-                  +918888888888<span className="secondNum">,+919999999999</span>
+                 <a href="tel:919182714452" style={{color:"white"}}> +919182714452</a> <a href="tel:919866807237"><span className="secondNum" style={{color:"white"}}>,+919866807237</span></a>
                 </p>
               </div>
               <div className="phoneCont">
                 <img src={mail} className="logo-icon" id="mailId" />{" "}
-                <p className="call">explorenex@gmail.com</p>
+                <p className="call"> <a href='mailto:explorenexoverseas@gmail.com?subject=Me&body=Hello!' style={{color:"white"}}>explorenexoverseas@gmail.com</a></p>
               </div>
             </div>
           </div>
