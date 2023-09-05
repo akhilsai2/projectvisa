@@ -2,7 +2,9 @@ const Studyaustralia = () => {
   return (
     <div className="p-1 pt-2">
       <div className="flex flex-column">
-        <h2 style={{ fontWeight: "700" }}>Why Australia ?</h2>
+        <h2 style={{ fontWeight: "700" }} className="text-primary">
+          Why Australia ?
+        </h2>
         <h4 style={{ fontStyle: "italic", textDecoration: "underline" }}>
           Australia - The Land of Endless Possibilities:
         </h4>
@@ -14,50 +16,52 @@ const Studyaustralia = () => {
             lineHeight: "1.5",
           }}
         >
-          The United Kingdom has a long-standing tradition of academic
-          excellence and is home to some of the world's oldest and most
-          prestigious universities. Immerse yourself in the country's rich
-          history and cultural heritage while pursuing top-notch education in
-          diverse fields. Experience a global outlook and engage with a
-          multicultural community of students from around the world.
+          Australia, with its breathtaking landscapes and vibrant cities, has
+          emerged as a popular destination for international students. Renowned
+          for its world-class education and research opportunities, Australian
+          universities offer a wide range of courses across various disciplines.
+          Embrace a friendly and inclusive culture while immersing yourself in a
+          dynamic learning environment that encourages innovation and
+          creativity.
           <br />
-          Indeed, the United Kingdom has a long-standing reputation for hosting
-          some of the top-ranked universities in the world. This reputation has
-          attracted a large number of international students, including over
-          50,000 Indian students annually. The UK's tertiary education system
-          has produced world leaders in various fields such as business,
-          science, technology, and politics, contributing to its global
-          influence. Studying in the UK offers several advantages, one of which
-          is the opportunity to improve English language skills. English is the
-          most widely spoken language globally, and having proficiency in it can
-          enhance employability prospects worldwide.
+          Australia's popularity as a destination for international students is
+          well-deserved, offering a rich tapestry of experiences that blend
+          natural beauty, educational excellence, and cultural diversity.
           <br />
           <br />
-          The UK education system also operates under different national
-          qualification frameworks to standardize and link the levels and credit
-          values of various qualifications: <br />
-          1. The Regulated Qualifications Framework (RQF) governs general and
-          vocational qualifications regulated by Ofqual in England and the
-          Council for the Curriculum, Examinations, and Assessment (CCEA) in
-          Northern Ireland. <br />
-          2. The Credit and Qualifications Framework for Wales (CQFW) applies to
-          all qualifications in Wales and is regulated by Qualifications Wales.{" "}
+          Here are key points elaborating on why Australia is a top choice for
+          international students: <br />
+          1. Australia boasts breathtaking natural landscapes, from the iconic
+          Sydney Harbour and the Great Barrier Reef to rugged outback terrain
+          and lush rainforests. Students have the opportunity to explore diverse
+          ecosystems and unique wildlife.
           <br />
-          3. The Scottish Credit and Qualifications Framework (SCQF) covers all
-          qualifications in Scotland. <br />
-          4. The Frameworks for Higher Education Qualifications of UK
-          Degree-Awarding Bodies (FHEQ) pertains to qualifications awarded by
-          institutions across the UK with degree-awarding powers. <br />
+          2. Australian cities like Sydney, Melbourne, Brisbane, and Perth are
+          known for their vibrancy, offering a blend of cultural activities,
+          entertainment, and a high quality of life. They provide a cosmopolitan
+          backdrop for student life. <br />
+          3. Australian universities consistently rank among the top in the
+          world for academic excellence. They offer a wide range of programs in
+          various disciplines, providing students with access to quality
+          education. <br />
+          4. Australian institutions maintain high academic standards, ensuring
+          that students receive a robust education that is recognized worldwide.{" "}
           <br />
-          Additionally, the UK's degree programs typically have shorter
-          durations compared to many other countries, making them cost-effective
-          and less time-consuming. Undergraduate programs usually last three
-          years, while postgraduate (Master's) programs typically consist of one
-          year of coursework followed by an internship or project. <br />
-          These factors, combined with the academic excellence and cultural
-          diversity offered by UK universities, make studying in the UK an
-          attractive option for many international students seeking a
-          high-quality education and valuable international experience. <br />
+          5.Australia offers post-study work visas that allow international
+          graduates to gain valuable work experience in the country after
+          completing their studies. This can be a pathway to permanent
+          residency.
+          <br />
+          6.Graduates from Australian institutions are highly sought after by
+          employers worldwide due to the country's rigorous education standards.
+          <br />
+          <br />
+          Additionally, Australia's captivating landscapes, world-class
+          education, cultural diversity, and focus on innovation create an
+          appealing environment for international students. It offers a holistic
+          experience that combines academic achievement with personal growth and
+          cultural enrichment.
+          <br />
         </p>
       </div>
     </div>

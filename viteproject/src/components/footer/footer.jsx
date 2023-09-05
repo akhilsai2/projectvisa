@@ -12,60 +12,76 @@ import { VscLocation } from "react-icons/vsc";
 import { BiSolidPhoneCall } from "react-icons/bi";
 import { FiMail } from "react-icons/fi";
 import LeafletMap from "../LeafletMap/LeafletMap";
+import { useDispatch } from "react-redux";
+import { selectStudy } from "../../globalstate";
 const Footer = () => {
+  const dispatch = useDispatch();
+
   return (
     <>
       <div className="Footer footer-card">
         <div className="container">
-          {/* <div className="middle-crad">
-            <div className="footer-subcard" style={{ fontWeight: 400 }}>
-              {" "}
-              <h6>IF YOU HAVE ANY QUREY OR NEED INFORMATION PLEACE CONTACT</h6>
-            </div>
-
-            <div className="sub-middle-card">
-              <h6>+91 8106658662, 123456789</h6>
-            </div>
-          </div> */}
           <div className="row total-footercard">
             <div className="col-md-6 col-lg-4 col-12 ft-1">
-              {/* <img
-                src="https://thumbs.dreamstime.com/b/kids-education-child-boy-study-school-thinking-bubble-dreaming-over-black-chalkboard-75214276.jpg"
-                style={{ height: "100px", width: "100px" }}
-              /> */}
-              <LeafletMap/>
+              <LeafletMap />
             </div>
             <div className="col-md-6 col-lg-3 col-12 ft-2 sub-title ">
               <h5 className="main-heading"> STUDY ABROAD</h5>
               <ul>
                 <li className="nav-item">
-                  <a className="" href="/">
+                  <a
+                    className=""
+                    href="/studies"
+                    onClick={() => dispatch(selectStudy("United Kingdom"))}
+                  >
                     Study in Uk
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="" href="/">
+                  <a
+                    className=""
+                    href="/studies"
+                    onClick={() =>
+                      dispatch(selectStudy("United States of America"))
+                    }
+                  >
                     Study in USA
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="" href="/">
+                  <a
+                    className=""
+                    href="/studies"
+                    onClick={() => dispatch(selectStudy("Canada"))}
+                  >
                     Study in Canada
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="" href="/">
+                  <a
+                    className=""
+                    href="/studies"
+                    onClick={() => dispatch(selectStudy("Australia"))}
+                  >
                     Study in Australia
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="" href="/">
+                  <a
+                    className=""
+                    href="/studies"
+                    onClick={() => dispatch(selectStudy("New Zealand"))}
+                  >
                     Study in New Zealand
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="" href="/">
-                    Study in Europe
+                  <a
+                    className=""
+                    href="/studies"
+                    onClick={() => dispatch(selectStudy("Ireland"))}
+                  >
+                    Study in Ireland
                   </a>
                 </li>
               </ul>
@@ -100,18 +116,34 @@ const Footer = () => {
             <div className="col-md-6 col-lg-3 col-12 ft-3 sub-title">
               <h5 className="main-heading">Quick Links</h5>
               <p>
-               <span> <BiSolidPhoneCall style={{ fontSize: "20px",margin:"5px" }} /><a href="tel:919182714452" style={{color:"white"}}> +919182714452</a> <a href="tel:919866807237"><span className="secondNum" style={{color:"white"}}></span></a></span>
+                <span>
+                  {" "}
+                  <BiSolidPhoneCall
+                    style={{ fontSize: "20px", margin: "5px" }}
+                  />
+                  <a href="tel:919182714452" style={{ color: "white" }}>
+                    {" "}
+                    +919182714452
+                  </a>{" "}
+                  <a href="tel:919866807237">
+                    <span
+                      className="secondNum"
+                      style={{ color: "white" }}
+                    ></span>
+                  </a>
+                </span>
               </p>
               <p>
-                <FiMail style={{ fontSize: "20px",margin:"5px" }} />
+                <FiMail style={{ fontSize: "20px", margin: "5px" }} />
                 explorenexoverseas@gmail.com
               </p>
               <p>
-                <AiFillLinkedin style={{ fontSize: "20px",margin:"5px" }} />
+                <AiFillLinkedin style={{ fontSize: "20px", margin: "5px" }} />
                 dream2De@linkedin.com
               </p>
               <p>
-                <VscLocation style={{ fontSize: "20px",margin:"5px" }} /> 1-28,A-sitaramapuram,Telaprolu,Unguturu,Krishna Dis,AP,521109  
+                <VscLocation style={{ fontSize: "20px", margin: "5px" }} />{" "}
+                1-28,A-sitaramapuram,Telaprolu,Unguturu,Krishna Dis,AP,521109
               </p>
               <div className="footer-icons">
                 <a href="">
@@ -140,7 +172,7 @@ const Footer = () => {
                       fontSize: "30px",
                       color: "white",
                       marginRight: "7px",
-                      borderRadius:"3px"
+                      borderRadius: "3px",
                     }}
                   />
                 </a>

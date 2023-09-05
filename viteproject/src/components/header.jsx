@@ -253,6 +253,7 @@ const Header = () => {
             src={logopng}
             alt="logo"
             className="rounded-circle"
+            onClick={() => navigate("/")}
             style={{ width: "120px", mixBlendMode: "" }}
           />
         </div>
@@ -328,7 +329,7 @@ const Header = () => {
                     to="/trainings"
                     onClick={() => dispatch(selectExam("TOEFL"))}
                   >
-                    Tranings
+                    Trainings
                   </Link>
                 </li>
                 <li>
