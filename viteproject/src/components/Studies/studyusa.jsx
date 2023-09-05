@@ -4,7 +4,9 @@ const Studyusa = () => {
   return (
     <div className="p-1 pt-3">
       <div className="flex flex-column">
-        <h2 style={{ fontWeight: "700" }}>Why USA ?</h2>
+        <h2 style={{ fontWeight: "700" }} className="text-primary">
+          Why USA ?
+        </h2>
         <h4 style={{ fontStyle: "italic", textDecoration: "underline" }}>
           United States - Unlock Your Potential in a Land of Opportunities:
         </h4>

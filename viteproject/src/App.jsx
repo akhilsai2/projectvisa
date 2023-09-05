@@ -1,5 +1,5 @@
 import "./App.css";
-import "./assets/style.css";
+import "./assets/CSS/style.css";
 import "primereact/resources/themes/lara-light-indigo/theme.css"; // theme
 import "primereact/resources/primereact.css"; // core css
 import "primeicons/primeicons.css"; // icons
@@ -7,15 +7,7 @@ import "primeflex/primeflex.css";
 import "font-awesome/css/font-awesome.min.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./components/Home/home";
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-  useLocation,
-  Navigate,
-  useRoutes,
-  redirect,
-} from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Service from "./components/service/service";
 import { Story } from "./components/About/story";
 import Layout from "./components/Layout";

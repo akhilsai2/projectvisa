@@ -23,7 +23,7 @@ const Dialogbox = (props) => {
         visible={visible}
         style={{ width: "95vw" }}
         position="right"
-        onHide={() => setVisible(false)}
+        onHide={() => setVisible(!visible)}
       >
         <FormDataMobile subject={props.subject} value={props.value} />
       </Dialog>
