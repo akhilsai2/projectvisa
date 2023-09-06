@@ -9,9 +9,8 @@ import React from "react";
 import axios from "axios";
 import { Animation } from "react-easy-animations";
 import { BsArrowRight } from "react-icons/bs";
+import graduationDayImg from '../../assets/graduationDay.jpg'
 export const Story = () => {
- 
-
   return (
     <div style={{ width: "100%" }}>
       <div
@@ -29,7 +28,7 @@ export const Story = () => {
         </h1>
       </div>
       <img
-        src="https://cdn.pixabay.com/photo/2015/10/18/19/04/graduation-995042_1280.jpg"
+        src={graduationDayImg}
         className="study_bg"
       />
 

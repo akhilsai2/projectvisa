@@ -5,6 +5,7 @@ import location from "../../assets/placeholder.png";
 import "./contact.css";
 import axios from "axios";
 import ReactWhatsapp from 'react-whatsapp';
+import contactUsImg from './contact asssets/contactUsImg.jpg'
 
 const Contact = () => {
   const [firstName, setfirstName] = React.useState("");
@@ -60,7 +61,7 @@ const Contact = () => {
         <div className="formCont col-12 col-md-7 d-flex flex-wrap align-items-center justify-content-center">
           <div className="col-12 col-md-5">
             <img
-              src="https://st2.depositphotos.com/3922907/12251/i/450/depositphotos_122519302-stock-photo-hand-pressing-telephone-and-mail.jpg"
+              src={contactUsImg}
               style={{ width: "100%", borderRadius: "10px" }}
             />
           </div>
@@ -127,7 +128,7 @@ const Contact = () => {
             className="formCont flex flex-column align-items-center justify-content-center"
             style={{minHeight:"215px" }}
           >
-            <ReactWhatsapp style={{border:"none"}} number="9182714452" message="I'm Interested " ><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1200px-WhatsApp.svg.png" alt="Call" style={{ width: "80px" }} /> </ReactWhatsapp>
+            <ReactWhatsapp style={{border:"none",backgroundColor:"transparent"}} number="9182714452" message="I'm Interested " ><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1200px-WhatsApp.svg.png" alt="Call" style={{ width: "80px" }} /> </ReactWhatsapp>
             
             <h6 className="fw-bold">send Message </h6>
             <p> <a  href="tel:16027606618" style={{color:"black"}}>+16027606618</a> <a href="tel:918499932011" style={{color:"black"}}>+918499932011</a> </p>

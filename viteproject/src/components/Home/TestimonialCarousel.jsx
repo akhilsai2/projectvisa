@@ -74,31 +74,26 @@ const TestimonialCarousel = () => {
           slidesToScroll: 1,
         },
       },
-      
     ],
   };
 
   return (
-    // <div style={{width:"100%"}}>
-
-    <div className="testimonial-slider" style={{width:"100%" , textAlign: "center",padding:'30px' }}>
+    <div
+      className="testimonial-slider"
+      style={{ width: "100%", textAlign: "center", padding: "30px" }}
+    >
       <Slider {...settings}>
-        {testimonials.map((testimonial,idx) => (
-          // <div key={testimonial.id} className="testimonial-item">
-          //   <p>{testimonial.text}</p>
-          //   <div className="testimonial-info">
-          //     <h4>{testimonial.name}</h4>
-          //     <span>{testimonial.designation}</span>
-          //   </div>
-          // </div>
+        {testimonials.map((testimonial, idx) => (
           <figure className="snip1192" key={idx}>
-            <blockquote style={{height:"150px"}}>{testimonial.text}</blockquote>
+            <blockquote style={{ height: "150px" }}>
+              {testimonial.text}
+            </blockquote>
             <div className="author">
               <img
                 src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample1.jpg"
                 alt="sq-sample1"
               />
-              <h5 style={{color:"black"}}>
+              <h5 style={{ color: "black" }}>
                 {testimonial.name} <span> {testimonial.designation}</span>
               </h5>
             </div>
@@ -107,7 +102,6 @@ const TestimonialCarousel = () => {
       </Slider>
     </div>
     // </div>
-
   );
 };
 
