@@ -27,8 +27,13 @@ const Studyeurope = () => {
           <br />
           Certainly, Ireland is indeed an exciting destination for international
           students, offering a unique blend of tradition and modernity.
-          <br /> Here are some key points elaborating on why Ireland is an
-          attractive choice for international students:
+          <br />
+          <br />{" "}
+          <strong>
+            {" "}
+            Here are some key points elaborating on why Ireland is an attractive
+            choice for international students:{" "}
+          </strong>
           <br />
           <br />
           1. Ireland is known for its rich cultural heritage, including music,

@@ -26,8 +26,12 @@ const Studynewzealand = () => {
           New Zealand is undeniably a captivating destination for international
           students, offering a unique blend of natural beauty, educational
           excellence, and adventure. <br />
-          Here are key points to elaborate on why New Zealand is an attractive
-          choice for international students:
+          <br />{" "}
+          <strong>
+            Here are key points to elaborate on why New Zealand is an attractive
+            choice for international students:{" "}
+          </strong>
+          <br />
           <br />
           1. New Zealand is renowned for its stunning landscapes, including
           snow-capped mountains, pristine lakes, lush forests, and picturesque
