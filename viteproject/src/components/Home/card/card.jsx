@@ -3,6 +3,9 @@ import { selectExam } from "../../../globalstate";
 import "bootstrap/dist/css/bootstrap.css";
 import "../home.css";
 import { useNavigate } from "react-router-dom";
+import IELTSCardImg from "./CardsAssets/IELTSCard.jpg";
+import TOEFLCardImg from "./CardsAssets/TOEFLCard.jpg";
+import GMATCardImg from "./CardsAssets/GMATCard.jpg";
 
 const Card = () => {
   const dispatch = useDispatch();
@@ -24,7 +27,7 @@ const Card = () => {
       >
         <img
           className="card-img-top "
-          src="https://t3.ftcdn.net/jpg/02/55/22/68/360_F_255226859_Rhqr5hflr2esVXHQE1sS1bWxmZxs0gWI.jpg"
+          src={IELTSCardImg}
           style={{ height: "90%", width: "100%" }}
           alt="Card image cap"
         />
@@ -61,7 +64,7 @@ const Card = () => {
         </div>
         <img
           className=" col-lg-3 "
-          src="https://images.pexels.com/photos/301920/pexels-photo-301920.jpeg?cs=srgb&dl=pexels-pixabay-301920.jpg&fm=jpg"
+          src={TOEFLCardImg}
           style={{
             height: "50%",
             width: "100%",
@@ -76,7 +79,7 @@ const Card = () => {
       >
         <img
           className="card-img-top"
-          src="https://www.avanse.com/blogs/images/Planning-to-study-abroad.jpg"
+          src={GMATCardImg}
           style={{ height: "100%", width: "100%" }}
           alt="Card image cap"
         />

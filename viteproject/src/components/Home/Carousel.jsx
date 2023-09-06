@@ -1,3 +1,7 @@
+import carouselImg1 from "./carouselAssets/carouselImg1.jpg";
+import carouselImg2 from "./carouselAssets/carouselImg2.jpg";
+import carouselImg3 from "./carouselAssets/carouselImg3.jpg";
+
 const Carousel = () => {
   return (
     <div>
@@ -9,21 +13,21 @@ const Carousel = () => {
         <div className="carousel-inner">
           <div className="carousel-item active">
             <img
-              src="https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1LzQ4Mi1tay02MTUwXzEuanBn.jpg"
+              src={carouselImg1}
               className="d-block w-100 colorImg"
               alt="Motorbike Smoke"
             />
           </div>
           <div className="carousel-item">
             <img
-              src="https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvay02MS1qai0wNzIzOC5qcGc.jpg"
+              src={carouselImg2}
               className="d-block w-100 colorImg"
               alt="Mountaintop"
             />
           </div>
           <div className="carousel-item">
             <img
-              src="https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvay02MS1sZWFybmluZy5qcGc.jpg"
+              src={carouselImg3}
               className="d-block w-100 colorImg"
               alt="Woman Reading a Book"
             />
