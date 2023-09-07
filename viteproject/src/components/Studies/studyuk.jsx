@@ -40,6 +40,7 @@ const Studyuk = () => {
           The UK education system also operates under different national
           qualification frameworks to standardize and link the levels and credit
           values of various qualifications: <br />
+          <br />
           1. The Regulated Qualifications Framework (RQF) governs general and
           vocational qualifications regulated by Ofqual in England and the
           Council for the Curriculum, Examinations, and Assessment (CCEA) in

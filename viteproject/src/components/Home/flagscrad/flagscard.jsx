@@ -8,14 +8,14 @@ import "./flagcard.css";
 import "bootstrap/dist/css/bootstrap.css";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { selectExam } from "../../../globalstate";
+import { selectStudy } from "../../../globalstate";
 
 const Flagscard = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const addtoExam = (Exam) => {
-    dispatch(selectExam(Exam));
+    dispatch(selectStudy(Exam));
     navigate("/studies");
   };
   const contentFlags = [
