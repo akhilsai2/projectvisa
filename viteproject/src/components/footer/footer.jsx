@@ -228,7 +228,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="Last-footer">
-        <p>2023 DREAM2DE All Rights Reserved</p>
+        <p>2023 EXPLORENEX All Rights Reserved</p>
       </div>
     </>
   );
