@@ -285,7 +285,7 @@ const WelcomeSection = () => {
                   >
                     {" "}
                     Your dreams are important to us, and your success is our
-                    ultimate goal. At Dream2Degree, we take pride in empowering
+                    ultimate goal. At EXPLORENEX, we take pride in empowering
                     you with the knowledge and tools necessary to make informed
                     decisions about your academic and professional future.
                   </span>

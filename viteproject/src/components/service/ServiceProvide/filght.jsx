@@ -85,7 +85,7 @@ const Flight = () => {
         tailored and cost-effective travel solutions. From reputable travel
         partners to personalized assistance, our goal is to make your journey to
         your study destination as seamless and enjoyable as possible. With
-        Dream2Degree, you can confidently embark on your academic adventure,
+        EXPLORENEX, you can confidently embark on your academic adventure,
         knowing that your travel arrangements are in capable hands.
       </p>
     </div>
