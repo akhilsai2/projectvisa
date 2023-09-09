@@ -158,16 +158,11 @@ const Footer = () => {
                   />
                   <span href="tel:919182714452" style={{ color: "white" }}>
                     {" "}
-
-                    IN +919182714452,+919182714452 <br /> US +1(602) 760-6618
-           
-                  <a href="tel:919866807237"> 
-
-                    +919182714452
-
-
+                    IN <a href="tel:919182192691">+919182192691</a>
+                    ,<a href="tel:919182714452">+919182714452</a> <br /> US 
+                    <a href="tel:1(602)760-6618">+1(602)760-6618</a>
+                  </span>
                   <span href="tel:919866807237">
-
                     <span
                       className="secondNum"
                       style={{ color: "white" }}
@@ -192,10 +187,10 @@ const Footer = () => {
               </p>
               <p>
                 <VscLocation style={{ fontSize: "20px", margin: "5px" }} />{" "}
-                1-28,A-sitaramapuram,Telaprolu,Unguturu,Krishna Dis,AP,521109
+                1-28,A-sitaramapuram,Telaprolu,Unguturu,Krishna Dist,AP,521109
               </p>
               <div className="footer-icons">
-                <span href="">
+                <a href=""  target="_blank">
                   {" "}
                   <AiFillTwitterCircle
                     style={{
@@ -205,8 +200,8 @@ const Footer = () => {
                     }}
                     className="icons"
                   />
-                </span>
-                <span href="https://www.youtube.com/@explorenexoverseas">
+                </a>
+                <a href="https://www.youtube.com/@explorenexoverseas" target="_blank">
                   <AiFillYoutube
                     style={{
                       fontSize: "30px",
@@ -214,8 +209,8 @@ const Footer = () => {
                       marginRight: "7px",
                     }}
                   />
-                </span>
-                <span href="https://www.facebook.com/profile.php?id=61550977888032&mibextid=ZbWKwL">
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=61550977888032&mibextid=ZbWKwL"  target="_blank">
                   <AiFillFacebook
                     style={{
                       fontSize: "30px",
@@ -224,8 +219,8 @@ const Footer = () => {
                       borderRadius: "3px",
                     }}
                   />
-                </span>
-                <span href="https://instagram.com/explorenexoverseas?utm_source=qr&igshid=MzNlNGNkZWQ4Mg==">
+                </a>
+                <a href="https://instagram.com/explorenexoverseas?utm_source=qr&igshid=MzNlNGNkZWQ4Mg=="  target="_blank">
                   <AiFillInstagram
                     style={{
                       fontSize: "30px",
@@ -233,7 +228,7 @@ const Footer = () => {
                       marginRight: "7px",
                     }}
                   />
-                </span>
+                </a>
               </div>
             </div>
             <hr className="horizental"></hr>

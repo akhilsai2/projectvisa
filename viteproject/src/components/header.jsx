@@ -7,7 +7,7 @@ import { useState } from "react";
 import instaLogo from "../assets/instagram.png";
 import whatsLogo from "../assets/whatsapp.png";
 import facebookLogo from "../assets/facebook.png";
-import twitterLogo from "../assets/twitter.png";
+import linkedInLogo from "../assets/linkedin logo.png";
 import logopng from "../assets/explorenex.png";
 import "./header.css";
 import { Link, useNavigate } from "react-router-dom";
@@ -62,23 +62,24 @@ const Header = () => {
   ];
   const itemsLogo = [
     {
-      label: "Finder",
-      action: () => (
-        <a
-          href="https://instagram.com/explorenexoverseas?utm_source=qr&igshid=MzNlNGNkZWQ4Mg=="
-          target="_blank"
-          aria-label="follow the link"
-          tabIndex={0}
-          role="button"
-          rel="noreferrer"
-        >
-          <img alt="Insta" src={instaLogo} width="33px" />
-        </a>
+      label: "Instagram",
+      icon: () => (
+        <img
+          alt="Insta"
+          src={instaLogo}
+          width="33px"
+          style={{ cursor: "pointer" }}
+        />
       ),
-      icon: () => <img alt="Insta" src={instaLogo} width="33px" />,
+      command: () =>
+        window.open(
+          "https://instagram.com/explorenexoverseas?utm_source=qr&igshid=MzNlNGNkZWQ4Mg==",
+          "_blank",
+          "noreferrer"
+        ),
     },
     {
-      label: "App Store",
+      label: "Whatsapp",
       icon: () => (
         <ReactWhatsapp
           number="919182714452"
@@ -91,19 +92,38 @@ const Header = () => {
       ),
     },
     {
-      label: "Photos",
+      label: "Facebook",
       icon: () => (
-        <Link
-          className="ml-1"
-          href="https://www.facebook.com/profile.php?id=61550977888032&mibextid=ZbWKwL"
-        >
-          <img alt="Photos" src={facebookLogo} width="33px" />
-        </Link>
+        <img
+          alt="Photos"
+          src={facebookLogo}
+          width="33px"
+          style={{ cursor: "pointer" }}
+        />
       ),
+      command: () =>
+        window.open(
+          "https://www.facebook.com/profile.php?id=61550977888032&mibextid=ZbWKwL",
+          "_blank",
+          "noreferrer"
+        ),
     },
     {
-      label: "Trash",
-      icon: () => <img alt="trash" src={twitterLogo} width="60%" />,
+      label: "LinkedIn",
+      icon: () => (
+        <img
+          alt="LinkedIn"
+          src={linkedInLogo}
+          width="53px"
+          style={{ cursor: "pointer" }}
+        />
+      ),
+      command: () =>
+        window.open(
+          "https://www.linkedin.com/in/explorenex-overseas",
+          "_blank",
+          "noreferrer"
+        ),
     },
   ];
   const items = [
@@ -316,7 +336,12 @@ const Header = () => {
                   </a>{" "}
                   <a href="tel:919866807237">
                     <span className="secondNum" style={{ color: "white" }}>
-                      ,+919866807237
+                      ,+919182192691
+                    </span>
+                  </a>
+                  <a href="tel:1(602)760-6618">
+                    <span className="secondNum" style={{ color: "white" }}>
+                      ,+1(602)760-6618
                     </span>
                   </a>
                 </p>
