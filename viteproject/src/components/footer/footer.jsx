@@ -9,7 +9,7 @@ import {
 } from "react-icons/ai";
 import { VscLocation } from "react-icons/vsc";
 import { BiSolidPhoneCall } from "react-icons/bi";
-import { FiMail } from "react-icons/fi";
+import { FiMail,FiLinkedin } from "react-icons/fi";
 import LeafletMap from "../LeafletMap/LeafletMap";
 import { useDispatch } from "react-redux";
 import { selectExam, selectStudy } from "../../globalstate";
@@ -182,17 +182,26 @@ const Footer = () => {
                 </a>
               </p>
               <p>
+              <a
+                  href="https://www.linkedin.com/in/explorenex-overseas"
+                  style={{ color: "white" }}
+                  target="_blank"
+                  rel="noreferrer"
+                 
+                >
                 <AiFillLinkedin style={{ fontSize: "20px", margin: "5px" }} />
-                explorenexoverseas@linkedin.com
+                www.linkedin.com/in/explorenex-overseas
+                  
+                </a>
               </p>
               <p>
                 <VscLocation style={{ fontSize: "20px", margin: "5px" }} />{" "}
                 1-28,A-sitaramapuram,Telaprolu,Unguturu,Krishna Dist,AP,521109
               </p>
               <div className="footer-icons">
-                <a href=""  target="_blank">
+                <a href="https://www.linkedin.com/in/explorenex-overseas"  target="_blank">
                   {" "}
-                  <AiFillTwitterCircle
+                  <FiLinkedin
                     style={{
                       fontSize: "30px",
                       color: "white",
