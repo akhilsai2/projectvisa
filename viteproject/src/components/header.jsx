@@ -312,12 +312,12 @@ const Header = () => {
           style={{ position: "fixed" }}
         />
 
-        {/* <Dock
+        <Dock
           model={itemsLogo}
           position="right"
           className="me-3 border-0 bg-none dock-mobile-item"
           style={{ position: "fixed" }}
-        /> */}
+        />
         <div className="col-lg-12 col-sm-12">
           <div
             className="left-content"

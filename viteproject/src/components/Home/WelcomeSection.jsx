@@ -1,6 +1,8 @@
 import React from "react";
 import { Animation } from "react-easy-animations";
 import decision from "../../assets/decision.png";
+import culture from "../../assets/culture.png";
+import growth from "../../assets/growth.png";
 import priority from "../../assets/priorities.png";
 import support from "../../assets/support.png";
 import influencer from "../../assets/influencer.png";
@@ -221,7 +223,7 @@ const WelcomeSection = () => {
           >
             <div className="flex justify-content-start align-items-center">
               <img
-                src={support}
+                src={culture}
                 alt="decision"
                 className=" mb-3"
                 style={{ width: "50px" }}
@@ -306,7 +308,7 @@ const WelcomeSection = () => {
           >
             <div className="flex justify-content-start align-items-center">
               <img
-                src={priority}
+                src={growth}
                 alt="decision"
                 className=" mb-3"
                 style={{ width: "50px" }}
