@@ -128,10 +128,10 @@ const Contact = () => {
             <p>
               {" "}
               <a href="tel:16027606618" style={{ color: "black" }}>
-                +16027606618
+                +1(602)760-6618
               </a>{" "}
               <a href="tel:918499932011" style={{ color: "black" }}>
-                +918499932011
+                +91 9182714452
               </a>{" "}
             </p>
           </div>
@@ -143,7 +143,7 @@ const Contact = () => {
             <h6 className="fw-bold text-decoration-underline">Locate At US</h6>
             <p className="text-center">
               <strong>Address:</strong>{" "}
-              1-28,A-sitaramapuram,Telaprolu,Unguturu,Krishna Dis,AP
+              1-28,A-sitaramapuram,Telaprolu,Unguturu,Krishna Dist,AP
               <br />
               pincode 521109
             </p>
