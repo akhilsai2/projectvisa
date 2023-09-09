@@ -657,6 +657,7 @@ body {
     visibility: visible;
   }
   .left-content {
+    width: 100vw;
     justify-content: center;
   }
   .displayPhoneCont {

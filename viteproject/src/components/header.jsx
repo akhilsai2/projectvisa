@@ -14,7 +14,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { Dock } from "primereact/dock";
 import { selectExam, selectService, selectStudy } from "../globalstate";
 import { useDispatch } from "react-redux";
-import ReactWhatsapp from 'react-whatsapp';
+import ReactWhatsapp from "react-whatsapp";
 const Header = () => {
   const navigate = useNavigate();
   const [visible, setVisible] = useState(false);
@@ -63,15 +63,43 @@ const Header = () => {
   const itemsLogo = [
     {
       label: "Finder",
-      icon: () => <a className="ml-1" href="https://instagram.com/explorenexoverseas?utm_source=qr&igshid=MzNlNGNkZWQ4Mg=="><img alt="Finder" src={instaLogo} width="33px" /></a>,
+      action: () => (
+        <a
+          href="https://instagram.com/explorenexoverseas?utm_source=qr&igshid=MzNlNGNkZWQ4Mg=="
+          target="_blank"
+          aria-label="follow the link"
+          tabIndex={0}
+          role="button"
+          rel="noreferrer"
+        >
+          <img alt="Insta" src={instaLogo} width="33px" />
+        </a>
+      ),
+      icon: () => <img alt="Insta" src={instaLogo} width="33px" />,
     },
     {
       label: "App Store",
-      icon: () =><ReactWhatsapp number="919182714452" message="I'm interested" style={{backgroundColor:"transparent",border:"none"}}> <img alt="App Store" src={whatsLogo} width="30px"/></ReactWhatsapp>,
+      icon: () => (
+        <ReactWhatsapp
+          number="919182714452"
+          message="I'm interested"
+          style={{ backgroundColor: "transparent", border: "none" }}
+        >
+          {" "}
+          <img alt="App Store" src={whatsLogo} width="30px" />
+        </ReactWhatsapp>
+      ),
     },
     {
       label: "Photos",
-      icon: () => <a className="ml-1"  href="https://www.facebook.com/profile.php?id=61550977888032&mibextid=ZbWKwL"><img alt="Photos" src={facebookLogo} width="33px" /></a> ,
+      icon: () => (
+        <Link
+          className="ml-1"
+          href="https://www.facebook.com/profile.php?id=61550977888032&mibextid=ZbWKwL"
+        >
+          <img alt="Photos" src={facebookLogo} width="33px" />
+        </Link>
+      ),
     },
     {
       label: "Trash",
@@ -263,27 +291,47 @@ const Header = () => {
           className="ms-3 border-0 bg-none dock-item"
           style={{ position: "fixed" }}
         />
-        <Dock
+
+        {/* <Dock
           model={itemsLogo}
           position="right"
           className="me-3 border-0 bg-none dock-mobile-item"
           style={{ position: "fixed" }}
-        />
-        <div
-          className="col-lg-12 col-sm-4"
-          style={{ backgroundColor: !colorChange ? " #012e47" : "#000" }}
-        >
-          <div className="left-content">
+        /> */}
+        <div className="col-lg-12 col-sm-12">
+          <div
+            className="left-content"
+            style={{ backgroundColor: !colorChange ? " #012e47" : "#000" }}
+          >
             <div className="displayPhoneCont pt-3">
               <div className="phoneCont">
-               <a href="tel:919182714452"> <img src={phone} className="logo-icon" id="callId" /></a>{" "}
+                <a href="tel:919182714452">
+                  {" "}
+                  <img src={phone} className="logo-icon" id="callId" />
+                </a>{" "}
                 <p className="call">
-                 <a href="tel:919182714452" style={{color:"white"}}> +919182714452</a> <a href="tel:919866807237"><span className="secondNum" style={{color:"white"}}>,+919866807237</span></a>
+                  <a href="tel:919182714452" style={{ color: "white" }}>
+                    {" "}
+                    +919182714452
+                  </a>{" "}
+                  <a href="tel:919866807237">
+                    <span className="secondNum" style={{ color: "white" }}>
+                      ,+919866807237
+                    </span>
+                  </a>
                 </p>
               </div>
               <div className="phoneCont">
                 <img src={mail} className="logo-icon" id="mailId" />{" "}
-                <p className="call"> <a href='mailto:explorenexoverseas@gmail.com?subject=Me&body=Hello!' style={{color:"white"}}>explorenexoverseas@gmail.com</a></p>
+                <p className="call">
+                  {" "}
+                  <a
+                    href="mailto:explorenexoverseas@gmail.com?subject=Me&body=Hello!"
+                    style={{ color: "white" }}
+                  >
+                    explorenexoverseas@gmail.com
+                  </a>
+                </p>
               </div>
             </div>
           </div>
@@ -368,6 +416,26 @@ const Header = () => {
                     }
                   >
                     Mock Visa Interviews
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/services"
+                    onClick={() =>
+                      dispatch(selectService("Education Loan Help"))
+                    }
+                  >
+                    Education Loan Help
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/services"
+                    onClick={() =>
+                      dispatch(selectService("Flights Tickets Help"))
+                    }
+                  >
+                    Flight Tickets Help
                   </Link>
                 </li>
               </ul>

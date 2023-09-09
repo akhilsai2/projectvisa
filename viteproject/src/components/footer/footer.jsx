@@ -1,4 +1,3 @@
-import React from "react";
 import "./footer.css";
 import "bootstrap/dist/css/bootstrap.css";
 import {
@@ -123,7 +122,7 @@ const Footer = () => {
                   />
                   <a href="tel:919182714452" style={{ color: "white" }}>
                     {" "}
-                    +919182714452
+                    IN +919182714452,+919182714452 <br /> US +1(602) 760-6618
                   </a>{" "}
                   <a href="tel:919866807237">
                     <span
@@ -134,8 +133,15 @@ const Footer = () => {
                 </span>
               </p>
               <p>
-                <FiMail style={{ fontSize: "20px", margin: "5px" }} />
-                explorenexoverseas@gmail.com
+                <a
+                  href="mailto:explorenexoverseas@gmail.com?subject=Me&body=Hello!"
+                  style={{ color: "white" }}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FiMail style={{ fontSize: "20px", margin: "5px" }} />
+                  explorenexoverseas@gmail.com
+                </a>
               </p>
               <p>
                 <AiFillLinkedin style={{ fontSize: "20px", margin: "5px" }} />
