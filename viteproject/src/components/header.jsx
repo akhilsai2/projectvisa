@@ -91,23 +91,23 @@ const Header = () => {
         </ReactWhatsapp>
       ),
     },
-    {
-      label: "Facebook",
-      icon: () => (
-        <img
-          alt="Photos"
-          src={facebookLogo}
-          width="33px"
-          style={{ cursor: "pointer" }}
-        />
-      ),
-      command: () =>
-        window.open(
-          "https://www.facebook.com/profile.php?id=61550977888032&mibextid=ZbWKwL",
-          "_blank",
-          "noreferrer"
-        ),
-    },
+    // {
+    //   label: "Facebook",
+    //   icon: () => (
+    //     <img
+    //       alt="Photos"
+    //       src={facebookLogo}
+    //       width="33px"
+    //       style={{ cursor: "pointer" }}
+    //     />
+    //   ),
+    //   command: () =>
+    //     window.open(
+    //       "https://www.facebook.com/profile.php?id=61550977888032&mibextid=ZbWKwL",
+    //       "_blank",
+    //       "noreferrer"
+    //     ),
+    // },
     {
       label: "LinkedIn",
       icon: () => (
