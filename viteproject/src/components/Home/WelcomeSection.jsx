@@ -24,20 +24,16 @@ const WelcomeSection = () => {
           className="col-md-6"
         >
           <div className="col-12 col-md-6 w-100 h-100">
-
-          <img
-            src={studyAb}
-            // src="https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvNDgyLW1rLTU4MDQtMDFfMy5qcGc.jpg"
-            alt="degree"
-            // className="col-6  rounded-circle"
-            style={{
-              width: "100%",
-              height:"100%",
-              // boxShadow: "0px 4px 16px 0px #bfbfbf",
-            }}
-            className="rounded-5 welcomeImg "
+            <img
+              src={studyAb}
+              alt="degree"
+              style={{
+                width: "100%",
+                height: "100%",
+              }}
+              className="rounded-5 welcomeImg "
             />
-            </div>
+          </div>
         </Animation>
         <Animation
           type="fadeInFromTop"
@@ -67,7 +63,7 @@ const WelcomeSection = () => {
           </div>
         </Animation>
       </div>
-      <div className="d-flex flex-wrap align-items-center justify-content-between">
+      <div className="d-flex flex-wrap align-items-start justify-content-between">
         <div className="mt-4 col-12 col-md-6 col-lg-8">
           <div className="mb-2">
             <span
@@ -76,8 +72,8 @@ const WelcomeSection = () => {
                 letterSpacing: "1px",
                 fontWeight: "700",
                 color: "#014585",
-                textAlign:"center",
-                width:"100%"
+                textAlign: "center",
+                width: "100%",
               }}
             >
               Why Choose ExploreNex?
@@ -125,7 +121,6 @@ const WelcomeSection = () => {
                 </p>
               </div>
             </div>
-            
           </Animation>
 
           <Animation
@@ -290,7 +285,7 @@ const WelcomeSection = () => {
                   >
                     {" "}
                     Your dreams are important to us, and your success is our
-                    ultimate goal. At Dream2Degree, we take pride in empowering
+                    ultimate goal. At EXPLORENEX, we take pride in empowering
                     you with the knowledge and tools necessary to make informed
                     decisions about your academic and professional future.
                   </span>
@@ -343,15 +338,22 @@ const WelcomeSection = () => {
           </Animation>
         </div>
         <div className="mt-4 col-12 col-md-6 col-lg-4">
-          <h3>Start Your Journey Today!</h3>
-          <p>
+          <h3 className="fw-bold" style={{ color: "#014585" }}>
+            Start Your Journey Today!
+          </h3>
+          <p
+            style={{
+              fontSize: "15px",
+              color: "#4a4a4a",
+            }}
+          >
             Join the ranks of ambitious students who have trusted [Your
             Consultancy Name] to guide them on their educational odysseys. Your
             global adventure begins with a single step – contact us today to
             explore the endless possibilities that await you. Ready to embrace
             the world? Let's make your study abroad dreams a reality!
           </p>
-          <FormData mobile={false}/>
+          <FormData mobile={false} />
         </div>
       </div>
     </div>

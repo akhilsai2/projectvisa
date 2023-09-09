@@ -26,8 +26,13 @@ const Studycanada = () => {
           society that celebrates individuality and inclusivity.
           <br />
           <br />
-          Here are some key points elaborating on why Canada is a preferred
-          destination for international students: <br />
+          <strong>
+            {" "}
+            Here are some key points elaborating on why Canada is a preferred
+            destination for international students:
+          </strong>{" "}
+          <br />
+          <br />
           1. Canadian universities and colleges consistently rank among the best
           in the world. They offer world-class education, advanced research
           facilities, and innovative teaching methods, ensuring students receive

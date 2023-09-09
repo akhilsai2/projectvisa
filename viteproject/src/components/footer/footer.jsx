@@ -12,9 +12,11 @@ import { BiSolidPhoneCall } from "react-icons/bi";
 import { FiMail } from "react-icons/fi";
 import LeafletMap from "../LeafletMap/LeafletMap";
 import { useDispatch } from "react-redux";
-import { selectStudy } from "../../globalstate";
+import { selectExam, selectStudy } from "../../globalstate";
+import { useNavigate } from "react-router-dom";
 const Footer = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   return (
     <>
@@ -28,60 +30,70 @@ const Footer = () => {
               <h5 className="main-heading"> STUDY ABROAD</h5>
               <ul>
                 <li className="nav-item">
-                  <a
-                    className=""
-                    href="/studies"
-                    onClick={() => dispatch(selectStudy("United Kingdom"))}
+                  <span
+                    className="text-white"
+                    onClick={() => {
+                      navigate("/studies");
+                      dispatch(selectStudy("United Kingdom"));
+                    }}
                   >
                     Study in Uk
-                  </a>
+                  </span>
                 </li>
                 <li className="nav-item">
-                  <a
-                    className=""
-                    href="/studies"
-                    onClick={() =>
-                      dispatch(selectStudy("United States of America"))
-                    }
+                  <span
+                    className="text-white"
+                    onClick={() => {
+                      navigate("/studies");
+                      dispatch(selectStudy("United States of America"));
+                    }}
                   >
                     Study in USA
-                  </a>
+                  </span>
                 </li>
                 <li className="nav-item">
-                  <a
-                    className=""
-                    href="/studies"
-                    onClick={() => dispatch(selectStudy("Canada"))}
+                  <span
+                    className="text-white"
+                    onClick={() => {
+                      navigate("/studies");
+                      dispatch(selectStudy("Canada"));
+                    }}
                   >
                     Study in Canada
-                  </a>
+                  </span>
                 </li>
                 <li className="nav-item">
-                  <a
-                    className=""
-                    href="/studies"
-                    onClick={() => dispatch(selectStudy("Australia"))}
+                  <span
+                    className="text-white"
+                    onClick={() => {
+                      navigate("/studies");
+                      dispatch(selectStudy("Australia"));
+                    }}
                   >
                     Study in Australia
-                  </a>
+                  </span>
                 </li>
                 <li className="nav-item">
-                  <a
-                    className=""
-                    href="/studies"
-                    onClick={() => dispatch(selectStudy("New Zealand"))}
+                  <span
+                    className="text-white"
+                    onClick={() => {
+                      navigate("/studies");
+                      dispatch(selectStudy("New Zealand"));
+                    }}
                   >
                     Study in New Zealand
-                  </a>
+                  </span>
                 </li>
                 <li className="nav-item">
-                  <a
-                    className=""
-                    href="/studies"
-                    onClick={() => dispatch(selectStudy("Ireland"))}
+                  <span
+                    className="text-white"
+                    onClick={() => {
+                      navigate("/studies");
+                      dispatch(selectStudy("Ireland"));
+                    }}
                   >
                     Study in Ireland
-                  </a>
+                  </span>
                 </li>
               </ul>
             </div>
@@ -90,24 +102,48 @@ const Footer = () => {
               <h5 className="main-heading"> TRAINING</h5>
               <ul>
                 <li className="nav-item">
-                  <a className="" href="/">
+                  <span
+                    className="text-white"
+                    onClick={() => {
+                      navigate("/trainings");
+                      dispatch(selectExam("IELTS"));
+                    }}
+                  >
                     IELTS
-                  </a>
+                  </span>
                 </li>
                 <li className="nav-item">
-                  <a className="" href="/">
-                    TOFEL
-                  </a>
+                  <span
+                    className="text-white"
+                    onClick={() => {
+                      navigate("/trainings");
+                      dispatch(selectExam("TOEFL"));
+                    }}
+                  >
+                    TOEFL
+                  </span>
                 </li>
                 <li className="nav-item">
-                  <a className="" href="/">
+                  <span
+                    className="text-white"
+                    onClick={() => {
+                      navigate("/trainings");
+                      dispatch(selectExam("GMAT"));
+                    }}
+                  >
                     GMAT
-                  </a>
+                  </span>
                 </li>
                 <li className="nav-item">
-                  <a className="" href="/">
+                  <span
+                    className="text-white"
+                    onClick={() => {
+                      navigate("/trainings");
+                      dispatch(selectExam("GRE"));
+                    }}
+                  >
                     GRE
-                  </a>
+                  </span>
                 </li>
               </ul>
             </div>
@@ -120,16 +156,23 @@ const Footer = () => {
                   <BiSolidPhoneCall
                     style={{ fontSize: "20px", margin: "5px" }}
                   />
-                  <a href="tel:919182714452" style={{ color: "white" }}>
+                  <span href="tel:919182714452" style={{ color: "white" }}>
                     {" "}
+
                     IN +919182714452,+919182714452 <br /> US +1(602) 760-6618
-                  </a>{" "}
-                  <a href="tel:919866807237">
+           
+                  <a href="tel:919866807237"> 
+
+                    +919182714452
+
+
+                  <span href="tel:919866807237">
+
                     <span
                       className="secondNum"
                       style={{ color: "white" }}
                     ></span>
-                  </a>
+                  </span>
                 </span>
               </p>
               <p>
@@ -145,14 +188,14 @@ const Footer = () => {
               </p>
               <p>
                 <AiFillLinkedin style={{ fontSize: "20px", margin: "5px" }} />
-                dream2De@linkedin.com
+                explorenexoverseas@linkedin.com
               </p>
               <p>
                 <VscLocation style={{ fontSize: "20px", margin: "5px" }} />{" "}
                 1-28,A-sitaramapuram,Telaprolu,Unguturu,Krishna Dis,AP,521109
               </p>
               <div className="footer-icons">
-                <a href="">
+                <span href="">
                   {" "}
                   <AiFillTwitterCircle
                     style={{
@@ -162,8 +205,8 @@ const Footer = () => {
                     }}
                     className="icons"
                   />
-                </a>
-                <a href="https://www.youtube.com/@explorenexoverseas">
+                </span>
+                <span href="https://www.youtube.com/@explorenexoverseas">
                   <AiFillYoutube
                     style={{
                       fontSize: "30px",
@@ -171,8 +214,8 @@ const Footer = () => {
                       marginRight: "7px",
                     }}
                   />
-                </a>
-                <a href="https://www.facebook.com/profile.php?id=61550977888032&mibextid=ZbWKwL">
+                </span>
+                <span href="https://www.facebook.com/profile.php?id=61550977888032&mibextid=ZbWKwL">
                   <AiFillFacebook
                     style={{
                       fontSize: "30px",
@@ -181,8 +224,8 @@ const Footer = () => {
                       borderRadius: "3px",
                     }}
                   />
-                </a>
-                <a href="https://instagram.com/explorenexoverseas?utm_source=qr&igshid=MzNlNGNkZWQ4Mg==">
+                </span>
+                <span href="https://instagram.com/explorenexoverseas?utm_source=qr&igshid=MzNlNGNkZWQ4Mg==">
                   <AiFillInstagram
                     style={{
                       fontSize: "30px",
@@ -190,7 +233,7 @@ const Footer = () => {
                       marginRight: "7px",
                     }}
                   />
-                </a>
+                </span>
               </div>
             </div>
             <hr className="horizental"></hr>
@@ -198,7 +241,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="Last-footer">
-        <p>2023 DREAM2DE All Rights Reserved</p>
+        <p>2023 EXPLORENEX All Rights Reserved</p>
       </div>
     </>
   );

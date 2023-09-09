@@ -1,6 +1,6 @@
 const Ielts = () => {
   return (
-    <div className="p-1 pt-3">
+    <div className="p-1 pt-3 flex flex-column align-items-start">
       <h3 className="text-primary fw-bold">
         International English Language Testing System
       </h3>

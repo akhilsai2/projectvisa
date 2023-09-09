@@ -28,9 +28,13 @@ const Studyaustralia = () => {
           well-deserved, offering a rich tapestry of experiences that blend
           natural beauty, educational excellence, and cultural diversity.
           <br />
+          <br />{" "}
+          <strong>
+            Here are key points elaborating on why Australia is a top choice for
+            international students:{" "}
+          </strong>{" "}
           <br />
-          Here are key points elaborating on why Australia is a top choice for
-          international students: <br />
+          <br />
           1. Australia boasts breathtaking natural landscapes, from the iconic
           Sydney Harbour and the Great Barrier Reef to rugged outback terrain
           and lush rainforests. Students have the opportunity to explore diverse

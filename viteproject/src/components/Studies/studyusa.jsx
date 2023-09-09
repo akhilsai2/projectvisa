@@ -24,6 +24,7 @@ const Studyusa = () => {
           make studying in the USA an unparalleled choice for your educational
           journey:
           <br />
+          <br />
           1. Global Reputation and Excellence: The USA's educational reputation
           is unmatched, ensuring world-class teaching and groundbreaking
           research opportunities.
@@ -71,7 +72,9 @@ const Studyusa = () => {
           chance to thrive in an environment characterized by diversity,
           individualism, and practicality.
           <br />
-          Here's a glimpse of what awaits:
+          <br />
+          <strong>Here's a glimpse of what awaits:</strong>
+          <br />
           <br />
           -Multifaceted Cultural Scene Join a global community with 35% of
           students hailing from around the world, fostering a rich multicultural

@@ -4,8 +4,8 @@ import call from "../../assets/call.png";
 import location from "../../assets/placeholder.png";
 import "./contact.css";
 import axios from "axios";
-import ReactWhatsapp from 'react-whatsapp';
-import contactUsImg from './contact asssets/contactUsImg.jpg'
+import ReactWhatsapp from "react-whatsapp";
+import contactUsImg from "./contact asssets/contactUsImg.jpg";
 
 const Contact = () => {
   const [firstName, setfirstName] = React.useState("");
@@ -22,10 +22,18 @@ const Contact = () => {
       number: number,
       Message: msg,
     };
-    axios.post(
-      "https://sheet.best/api/sheets/3e947f87-4162-451f-aaa7-747f31a6268d",
-      data
-    );
+    axios
+      .post(
+        "https://sheet.best/api/sheets/3e947f87-4162-451f-aaa7-747f31a6268d",
+        data
+      )
+      .then((response) => {
+        setfirstName(" ");
+        setlastname(" ");
+        setemail(" ");
+        setnumber(" ");
+        setmsg(" ");
+      });
   };
   return (
     <div style={{ minHeight: "100vh" }}>
@@ -45,19 +53,9 @@ const Contact = () => {
       </div>
       <img src={contact} className="study_bg" />
 
-        {/* /////////////////heading part end///////////////////////// */}
+      {/* /////////////////heading part end///////////////////////// */}
 
-
-
-
-
-
-
-      <div className="flex flex-wrap justify-content-between p-5  align-items-center w-100">
-
-
-
-
+      <div className="flex flex-wrap justify-content-around p-5  align-items-center w-100">
         <div className="formCont col-12 col-md-7 d-flex flex-wrap align-items-center justify-content-center">
           <div className="col-12 col-md-5">
             <img
@@ -72,23 +70,23 @@ const Contact = () => {
                 Name
               </label>
               <input
-              style={{color:'black'}}
+                style={{ color: "black" }}
                 id="Name"
                 className="inputcontact"
                 type="text"
                 placeholder="Name"
-                onChange={(e)=>setfirstName(e.target.value)}
+                onChange={(e) => setfirstName(e.target.value)}
               />
               <label htmlFor="email" className="label">
                 Email
               </label>
               <input
-              style={{color:"black"}}
+                style={{ color: "black" }}
                 id="email"
                 className="inputcontact"
                 type="text"
                 placeholder="Email"
-                onChange={(e)=>setemail(e.target.value)}
+                onChange={(e) => setemail(e.target.value)}
               />
               <label htmlFor="msg" className="label">
                 Message
@@ -99,8 +97,8 @@ const Contact = () => {
                 placeholder="Enter Message..."
                 rows={6}
                 cols={29}
-                style={{color:"black"}}
-                onChange={(e)=>setmsg(e.target.value)}
+                style={{ color: "black" }}
+                onChange={(e) => setmsg(e.target.value)}
               />
               <button type="submit" className="submitbtn">
                 Send
@@ -109,40 +107,45 @@ const Contact = () => {
           </div>
         </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         <div className="d-flex flex-column justify-content-between align-items-center col-12 col-md-3">
           <div
             className="formCont flex flex-column align-items-center justify-content-center"
-            style={{minHeight:"215px" }}
+            style={{ minHeight: "215px" }}
           >
-            <ReactWhatsapp style={{border:"none",backgroundColor:"transparent"}} number="9182714452" message="I'm Interested " ><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1200px-WhatsApp.svg.png" alt="Call" style={{ width: "80px" }} /> </ReactWhatsapp>
-            
+            <ReactWhatsapp
+              style={{ border: "none", backgroundColor: "transparent" }}
+              number="9182714452"
+              message="I'm Interested "
+            >
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1200px-WhatsApp.svg.png"
+                alt="Call"
+                style={{ width: "80px" }}
+              />{" "}
+            </ReactWhatsapp>
+
             <h6 className="fw-bold">send Message </h6>
-            <p> <a  href="tel:16027606618" style={{color:"black"}}>+16027606618</a> <a href="tel:918499932011" style={{color:"black"}}>+918499932011</a> </p>
+            <p>
+              {" "}
+              <a href="tel:16027606618" style={{ color: "black" }}>
+                +16027606618
+              </a>{" "}
+              <a href="tel:918499932011" style={{ color: "black" }}>
+                +918499932011
+              </a>{" "}
+            </p>
           </div>
           <div
-            className="formCont flex flex-column align-items-center justify-content-center"
-            style={{ minHeight:"215px" }}
+            className="formCont d-flex flex-column align-items-center justify-content-center"
+            style={{ minHeight: "215px" }}
           >
-            <img src={location} alt="Call" style={{ width: "80px" }} />
-            <h6 className="fw-bold">Locate At US</h6>
+            <img src={location} alt="Call" style={{ width: "60px" }} />
+            <h6 className="fw-bold text-decoration-underline">Locate At US</h6>
             <p className="text-center">
-              Address: xxxxxxxx,xxxxxxx,xxxxxxxx,xxxx,
+              <strong>Address:</strong>{" "}
+              1-28,A-sitaramapuram,Telaprolu,Unguturu,Krishna Dis,AP
               <br />
-              zipcode 90999
+              pincode 521109
             </p>
           </div>
         </div>
